@@ -1,137 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <meta name="description" content="FawaStudios Games" />
-	    <meta name="keywords" content="FawaStudios, Fawas, Clown, Sheep, Games, Game Development" />
- 	    <meta content="https://www.fawastudios.com/games" property="og:url" />
-    	    <meta content="#3F3787" data-react-helmet="true" name="theme-color" />
-	    <meta property="og:image" content="https://fawastudios.com/images/General/FawaStudios_Icon.png" />
+    <meta name="description" content="List of FawaStudios Games">
+    <meta name="keywords" content="FawaStudios, Fawas, Clown, Sheep, Games, Game Development">
+    <meta content="https://www.fawastudios.com/games" property="og:url">
+    <meta content="#3F3787" data-react-helmet="true" name="theme-color">
+    <meta property="og:image" content="https://fawastudios.com/images/General/FawaStudios_Icon.png">
     <title>Games - FawaStudios</title>
     <link rel="shortcut icon" type="image/png" href="images/General/FawaStudios_Icon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/bootstrap.js"></script>
 </head>
+
 <body class="body-games" style="background-color: black">
-    <!------nav bar-------->
-    <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="images/General/FawaStudios_Logo.png"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
 
-                        <li class="nav-item"> <a class="nav-link" href="https://www.fawastudios.com/">HOME</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="about">ABOUT</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="news">NEWS</a> </li>
-                        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="gamesl">GAMES</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="contact">CONTACT</a> </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                SOCIALS
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="position: absolute; background-color: #2A2727;">
-                                <li><a class="dropdown-item" href="https://twitter.com/FawaStudios">Twitter</a></li>
-                                <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCGdYveTA3CWhVC4xYAPHcRw">YouTube</a></li>
-                                <li><a class="dropdown-item" href="https://discord.com/invite/BGg7pRxaUe ">Discord</a></li>
-                                <li><a class="dropdown-item" href="https://www.reddit.com/r/FawaStudios/">Reddit</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </section>
-
-    <!--------main section---------->
-    <div class="introduction">
-        <p></p>
-        <h1>GAMES</h1>
-    </div>
-
-    <div class="btn-toolbar" role="toolbar">
-        <div class="btn-group mr-2" style="margin: auto" role="group">
-            <button class="btn btn-dark" onclick="filterSelection('all')">Show All</button>
-            <button class="btn btn-dark" onclick="filterSelection('released')">Released</button>
-            <button class="btn btn-dark" onclick="filterSelection('comingsoon')">Coming Soon</button>
-        </div>
-    </div>
-
-    <section id="games-list">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-3 game text-center filterDiv comingsoon">
-                    <img src="images/Games/ClownClear/ClownClear.png" class="game-img" />
-                    <p></p>
-                    <h2 class="game-txt">Clown Clear</h2>
-                    <a href="games/clownclear"><button type="button" class="btn btn-dark">About</button></a>
-                    <button type="button" class="btn btn-dark">Coming Soon</button>
-                </div>
-
-                <div class="col-md-3 game text-center filterDiv released">
-                    <img src="images/Games/ConcessionObsession/ConcessionObsession.png" class="game-img" />
-                    <p></p>
-                    <h2 class="game-txt">Concession Obsession</h2>
-                    <a href="games/concessionobsession"><button type="button" class="btn btn-dark">About</button></a>
-                    <a href="https://fawastudios.itch.io/concession-obsession"><button type="button" class="btn btn-dark">Play Now (Itch.io)</button></a>
-                </div>
-
-                <div class="col-md-3 game text-center filterDiv released">
-                    <img src="images/Games/PlaceboParadise/PlaceboParadise.png" class="game-img" />
-                    <p></p>
-                    <h2 class="game-txt">Placebo Paradise</h2>
-                    <a href="games/placeboparadise"><button type="button" class="btn btn-dark">About</button></a>
-                    <a href="https://fawastudios.itch.io/placebo-paradise"><button type="button" class="btn btn-dark">Play Now (Itch.io)</button></a>
-                </div>
-
-                <div class="col-md-3 game text-center filterDiv comingsoon">
-                    <img src="images/Games/ChimpChowder/ChimpChowder.png" class="game-img" />
-                    <p></p>
-                    <h2 class="game-txt">Chimp Chowder</h2>
-                    <a href="games/chimpchowder"><button type="button" class="btn btn-dark">About</button></a>
-                    <button type="button" class="btn btn-dark">Planned</button>
-                </div>
-
-                <div class="col-md-3 game text-center filterDiv released">
-                    <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" />
-                    <p></p>
-                    <h2 class="game-txt">Click Or Treat</h2>
-                    <a href="games/clickortreat"><button type="button" class="btn btn-dark">About</button></a>
-                    <a href="https://www.clownclear.com/clickortreat"><button type="button" class="btn btn-dark">Play Now (clownclear.com)</button></a>
-                </div>
-
-                <div class="col-md-3 game text-center filterDiv comingsoon">
-                    <img src="images/Games/MrCrane/MrCrane.png" class="game-img" />
-                    <p></p>
-                    <h2 class="game-txt">Mr. Crane</h2>
-                    <a href="games/mrcrane"><button type="button" class="btn btn-dark">About</button></a>
-                    <button type="button" class="btn btn-dark">Planned</button>
-                </div>
-
+<!-- Navbar -->
+<section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/General/FawaStudios_Logo.png" alt="FawaStudios Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"> <a class="nav-link" href="index/">HOME</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="news">ABOUT</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="news">NEWS</a> </li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">GAMES</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="news">CONTACT</a> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            SOCIALS
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="position: absolute; background-color: #2A2727;">
+                            <li><a class="dropdown-item" href="https://twitter.com/FawaStudios">Twitter</a></li>
+                            <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCGdYveTA3CWhVC4xYAPHcRw">YouTube</a></li>
+                            <li><a class="dropdown-item" href="https://discord.com/invite/BGg7pRxaUe ">Discord</a></li>
+                            <li><a class="dropdown-item" href="https://www.reddit.com/r/FawaStudios/">Reddit</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
+    </nav>
+</section>
 
-    <!-- cookie popup -->
-    <script async src="js/fawastudios_cookie.js"></script>
+<!-- Main Content -->
+<div class="introduction">
+    <p></p>
+    <h1>GAMES</h1>
+</div>
 
-    <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
-        🍪🐑 This website uses cookies to improve your experience.
-        <a href="cookiepolicy.html">Learn more</a>
-        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
-            I Got It
-        </button>
+<!-- Filter Buttons -->
+<div class="btn-toolbar" role="toolbar">
+    <div class="btn-group mr-2" style="margin: auto" role="group">
+        <button class="btn btn-dark" onclick="filterSelection('all')">Show All</button>
+        <button class="btn btn-dark" onclick="filterSelection('released')">Released</button>
+        <button class="btn btn-dark" onclick="filterSelection('comingsoon')">Coming Soon</button>
     </div>
-    <!-- cookie popup end -->
+</div>
+
+<!-- Games List -->
+<section id="games-list">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3 game text-center filterDiv comingsoon">
+                <img src="images/Games/ClownClear/ClownClear.png" class="game-img" />
+                <p></p>
+                <h2 class="game-txt">Clown Clear</h2>
+                <a href="games/clownclear"><button type="button" class="btn btn-dark">About</button></a>
+                <button type="button" class="btn btn-dark">Coming Soon</button>
+            </div>
+
+            <div class="col-md-3 game text-center filterDiv released">
+                <img src="images/Games/ConcessionObsession/ConcessionObsession.png" class="game-img" />
+                <p></p>
+                <h2 class="game-txt">Concession Obsession</h2>
+                <a href="games/concessionobsession"><button type="button" class="btn btn-dark">About</button></a>
+                <a href="https://fawastudios.itch.io/concession-obsession"><button type="button" class="btn btn-dark">Play Now (Itch.io)</button></a>
+            </div>
+
+            <div class="col-md-3 game text-center filterDiv released">
+                <img src="images/Games/PlaceboParadise/PlaceboParadise.png" class="game-img" />
+                <p></p>
+                <h2 class="game-txt">Placebo Paradise</h2>
+                <a href="games/placeboparadise"><button type="button" class="btn btn-dark">About</button></a>
+                <a href="https://fawastudios.itch.io/placebo-paradise"><button type="button" class="btn btn-dark">Play Now (Itch.io)</button></a>
+            </div>
+
+            <div class="col-md-3 game text-center filterDiv comingsoon">
+                <img src="images/Games/ChimpChowder/ChimpChowder.png" class="game-img" />
+                <p></p>
+                <h2 class="game-txt">Chimp Chowder</h2>
+                <a href="games/chimpchowder"><button type="button" class="btn btn-dark">About</button></a>
+                <button type="button" class="btn btn-dark">Planned</button>
+            </div>
+
+            <div class="col-md-3 game text-center filterDiv released">
+                <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" />
+                <p></p>
+                <h2 class="game-txt">Click Or Treat</h2>
+                <a href="games/clickortreat"><button type="button" class="btn btn-dark">About</button></a>
+                <a href="https://www.clownclear.com/clickortreat"><button type="button" class="btn btn-dark">Play Now (clownclear.com)</button></a>
+            </div>
+
+            <div class="col-md-3 game text-center filterDiv comingsoon">
+                <img src="images/Games/MrCrane/MrCrane.png" class="game-img" />
+                <p></p>
+                <h2 class="game-txt">Mr. Crane</h2>
+                <a href="games/mrcrane"><button type="button" class="btn btn-dark">About</button></a>
+                <button type="button" class="btn btn-dark">Planned</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Cookie Popup -->
+<script async src="js/fawastudios_cookie.js"></script>
+<div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
+    🍪🐑 This website uses cookies to improve your experience.
+    <a href="cookiepolicy.html">Learn more</a>
+    <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
+        I Got It
+    </button>
+</div>
+
+</body>
+
 </html>
 
+<!-- Contain this later, script for the filter buttons -->
 <script>
     filterSelection("all")
     function filterSelection(c) {

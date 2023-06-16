@@ -1,4 +1,7 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,82 +16,87 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/bootstrap.js"></script>
 </head>
+
 <body class="body-about" style="background-color: black">
-    <!------nav bar-------->
-    <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="images/General/FawaStudios_Logo.png"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
 
-                        <li class="nav-item"> <a class="nav-link" href="https://www.fawastudios.com/">HOME</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="about">ABOUT</a> </li>
-                        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="">NEWS</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="games">GAMES</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="contact">CONTACT</a> </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                SOCIALS
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="position: absolute; background-color: #2A2727;">
-                                <li><a class="dropdown-item" href="https://twitter.com/FawaStudios">Twitter</a></li>
-                                <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCGdYveTA3CWhVC4xYAPHcRw">YouTube</a></li>
-                                <li><a class="dropdown-item" href="https://discord.com/invite/BGg7pRxaUe ">Discord</a></li>
-                                <li><a class="dropdown-item" href="https://www.reddit.com/r/FawaStudios/">Reddit</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+<!-- Navbar -->
+<section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/General/FawaStudios_Logo.png" alt="FawaStudios Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"> <a class="nav-link" href="index/">HOME</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="news">ABOUT</a> </li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">NEWS</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="news">GAMES</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="news">CONTACT</a> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            SOCIALS
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="position: absolute; background-color: #2A2727;">
+                            <li><a class="dropdown-item" href="https://twitter.com/FawaStudios">Twitter</a></li>
+                            <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCGdYveTA3CWhVC4xYAPHcRw">YouTube</a></li>
+                            <li><a class="dropdown-item" href="https://discord.com/invite/BGg7pRxaUe ">Discord</a></li>
+                            <li><a class="dropdown-item" href="https://www.reddit.com/r/FawaStudios/">Reddit</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </section>
-
-    <!--------main section---------->
-    <article class="grid">
-        <div class="aboutme-text">
-            <p></p>
-            <h1>LATEST NEWS</h1>
-
-            <div class="btn-toolbar" role="toolbar">
-                <div class="btn-group mr-2" style="margin: auto" role="group">
-                    <button class="btn btn-dark" onclick="filterSelection('all')">Show All</button>
-                    <button class="btn btn-dark" onclick="filterSelection('clownclear')">Clown Clear</button>
-                    <button class="btn btn-dark" onclick="filterSelection('fawastudios')">FawaStudios</button>
-                </div>
-            </div>
-
-            <p></p>
-	    <h5 class="filterDiv clownclear show"><b>NEW: "<a href="news/2023/04/impulsive-game-news">Impulsive Game News</a>"</b> | April 22, 2023</h5>
-	    <h5 class="filterDiv clownclear show"><b>"<a href="news/2023/04/setting-the-stage">Setting The Stage</a>"</b> | April 9, 2023</h5>
-	    <h5 class="filterDiv clownclear show"><b>"<a href="news/2023/04/game-modes-galore">Game Modes Galore</a>"</b> | April 2, 2023</h5>
-	    <h5 class="filterDiv clownclear show"><b>"<a href="news/2023/04/clown-clear-kids-edition">Clown Clear | Kid's Edition</a>"</b> | April 1, 2023</h5>
-            <h5 class="filterDiv clownclear show"><b>"<a href="news/2023/03/in-tents-combat">In-Tents Combat</a>"</b> | March 25, 2023</h5>
-            <h5 class="filterDiv fawastudios"><b>"<a href="news/2023/01/new-websites-and-cool-stuff">New Websites & Cool Stuff</a>"</b> | January 9, 2023</h5>
-            <h5 class="filterDiv clownclear"><b>"<a href="news/2022/12/modder-fodder-clown-clear">Modder Fodder (Clown Clear)</a>"</b> | December 17, 2022</h5>
-            <h5 class="filterDiv fawastudios clownclear"><b>"<a href="news/2022/12/fawas-and-the-near-future">Fawas And The Near Future</a>"</b> | December 10, 2022</h5>
-            <h5 class="filterDiv fawastudios clownclear"><b>"<a href="news/2022/12/sprucing-things-up">Sprucing Things Up</a>"</b> | December 3, 2022</h5>
-            <h5 class="filterDiv clownclear"><b>"<a href="news/2022/11/more-clowns-less-frowns">More Clowns, Less Frowns</a>"</b> | November 25, 2022</h5>
         </div>
-        
-    </article>
+    </nav>
+</section>
 
-    <!-- cookie popup -->
-    <script async src="js/fawastudios_cookie.js"></script>
+<!-- Main Content -->
+<article class="grid">
+    <div class="aboutme-text">
+        <p></p>
+        <h1>LATEST NEWS</h1>
 
-    <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
-        🍪🐑 This website uses cookies to improve your experience.
-        <a href="cookiepolicy.html">Learn more</a>
-        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
-            I Got It
-        </button>
+        <!-- Filter Buttons -->
+        <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group mr-2" style="margin: auto" role="group">
+                <button class="btn btn-dark" onclick="filterSelection('all')">Show All</button>
+                <button class="btn btn-dark" onclick="filterSelection('clownclear')">Clown Clear</button>
+                <button class="btn btn-dark" onclick="filterSelection('fawastudios')">FawaStudios</button>
+            </div>
+        </div>
+
+        <p></p>
+
+        <!-- News List -->
+        <h5 class="filterDiv clownclear show"><b>NEW: "<a href="news/2023/04/impulsive-game-news">Impulsive Game News</a>"</b> | April 22, 2023</h5>
+        <h5 class="filterDiv clownclear show"><b>"<a href="news/2023/04/setting-the-stage">Setting The Stage</a>"</b> | April 9, 2023</h5>
+        <h5 class="filterDiv clownclear show"><b>"<a href="news/2023/04/game-modes-galore">Game Modes Galore</a>"</b> | April 2, 2023</h5>
+        <h5 class="filterDiv clownclear show"><b>"<a href="news/2023/04/clown-clear-kids-edition">Clown Clear | Kid's Edition</a>"</b> | April 1, 2023</h5>
+        <h5 class="filterDiv clownclear show"><b>"<a href="news/2023/03/in-tents-combat">In-Tents Combat</a>"</b> | March 25, 2023</h5>
+        <h5 class="filterDiv fawastudios"><b>"<a href="news/2023/01/new-websites-and-cool-stuff">New Websites & Cool Stuff</a>"</b> | January 9, 2023</h5>
+        <h5 class="filterDiv clownclear"><b>"<a href="news/2022/12/modder-fodder-clown-clear">Modder Fodder (Clown Clear)</a>"</b> | December 17, 2022</h5>
+        <h5 class="filterDiv fawastudios clownclear"><b>"<a href="news/2022/12/fawas-and-the-near-future">Fawas And The Near Future</a>"</b> | December 10, 2022</h5>
+        <h5 class="filterDiv fawastudios clownclear"><b>"<a href="news/2022/12/sprucing-things-up">Sprucing Things Up</a>"</b> | December 3, 2022</h5>
+        <h5 class="filterDiv clownclear"><b>"<a href="news/2022/11/more-clowns-less-frowns">More Clowns, Less Frowns</a>"</b> | November 25, 2022</h5>
     </div>
-    <!-- cookie popup end -->
-</body></html>
+</article>
 
+<!-- Cookie Popup -->
+<script async src="js/fawastudios_cookie.js"></script>
+<div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
+    🍪🐑 This website uses cookies to improve your experience.
+    <a href="cookiepolicy.html">Learn more</a>
+    <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
+        I Got It
+    </button>
+</div>
+
+</body>
+
+</html>
+
+<!-- Contain this later, script for the filter buttons -->
 <script>
     filterSelection("all")
     function filterSelection(c) {
