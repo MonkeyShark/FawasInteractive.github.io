@@ -79,6 +79,88 @@
     text-shadow: #000000 1px 0 10px;
 }
 
+/*-----------News----------*/
+.news-text {
+    color: lightgray;
+    text-align: center;
+    text-shadow: #000000 1px 0 10px;
+}
+
+.blog-post {
+  background-color: #111;
+  padding: 30px; /* Increase the padding to make the cards bigger */
+  border-radius: 5px;
+  color: #fff;
+  margin-bottom: 20px;
+  width: 100%; /* Adjust the width of the card */
+}
+
+.blog-post .thumbnail-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%; /* 4:3 aspect ratio (change as needed) */
+  overflow: hidden;
+}
+
+.blog-post .thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-post .content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-post .post-title {
+  margin-top: 10px; /* Add margin between the thumbnail and post title */
+  font-size: 20px; /* Increase the font size for the post title */
+}
+
+.blog-post .publication-date {
+  font-size: 14px; /* Adjust the font size for the publication date */
+  margin-bottom: 5px; /* Adjust the bottom margin for spacing between date and description */
+}
+
+.blog-post .publication-date::before {
+  content: "Published on: ";
+  color: lightgray; /* Set the color for "Published on:" text */
+}
+
+.blog-post .publication-date {
+  color: #ff7f7f; /* Set the color for the date text */
+  font-size: 14px; /* Adjust the font size for the date */
+}
+
+.blog-post .post-description {
+  margin-top: 5px; /* Adjust the top margin for spacing between date and description */
+}
+
+/* Adjust the width of the cards for different screen sizes */
+@media (min-width: 576px) {
+  .row-cols-md-3 .col {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+@media (min-width: 768px) {
+  .row-cols-lg-3 .col {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+
+
+
+
 /*-----------Games----------*/
 .body-games 
 {
