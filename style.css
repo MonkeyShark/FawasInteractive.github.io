@@ -268,6 +268,15 @@
     background-attachment: fixed;
 }
 
+/*-----------404----------*/
+.missing-page-text {
+    max-width: 760px;
+    font-family: sans-serif;
+    color: lightgray;
+    text-align: center;
+    text-shadow: #000000 1px 0 10px;
+}
+
 /*-----------Cookie Policy----------*/
 #cookie-popup {
     position: fixed;
