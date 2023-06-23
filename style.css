@@ -206,6 +206,14 @@
   }
 }
 
+.blog-subpage-text {
+    max-width: 760px;
+    font-family: sans-serif;
+    color: lightgray;
+    text-align: center;
+    text-shadow: #000000 1px 0 10px;
+}
+
 /*-----------Games----------*/
 .body-games 
 {
@@ -243,6 +251,8 @@
 }
 
 .games-subpage-text {
+    max-width: 760px;
+    font-family: sans-serif;
     color: lightgray;
     text-align: center;
     text-shadow: #000000 1px 0 10px;
