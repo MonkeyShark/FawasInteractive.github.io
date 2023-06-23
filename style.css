@@ -242,6 +242,12 @@
     display: block;
 }
 
+.games-subpage-text {
+    color: lightgray;
+    text-align: center;
+    text-shadow: #000000 1px 0 10px;
+}
+
 /*-----------Contact----------*/
 .body-contact {
     font-family: sans-serif;
