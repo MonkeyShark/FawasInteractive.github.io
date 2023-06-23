@@ -63,20 +63,69 @@
 }
 
 /*-----------About----------*/
-.body-about 
-{
-    font-family: sans-serif;
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-shadow: #000000 1px 0 10px;
+}
+.about-header {
+    color: lightgray;
+    text-align: center;
+    text-shadow: #000000 1px 0 10px;
+}
+
+.about-card {
+    /*background-color: #0003;*/
+    background-image: linear-gradient(#0000002b, #00000017);
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.about-card-wide {
+    max-width: 1200px;
+    text-align: center;
+}
+
+.about-card h1,
+.about-card h3 {
+    text-align: center;
+    color: #fff;
+}
+
+.about-card hr {
+    border-color: #fff;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    margin-bottom: 20px;
+}
+
+.about-card ul {
+    padding-left: 20px;
+}
+
+.about-card a {
+    color: #fff;
+}
+
+.about-card a:hover {
+    text-decoration: underline;
+}
+
+.body-about  {
     background-image: url("images/Banners/About.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-.aboutme-text {
-    max-width: 760px;
+    font-family: sans-serif;
     color: lightgray;
-    text-align: center;
-    text-shadow: #000000 1px 0 10px;
 }
 
 /*-----------News----------*/
@@ -156,10 +205,6 @@
     max-width: 33.3333%;
   }
 }
-
-
-
-
 
 /*-----------Games----------*/
 .body-games 
