@@ -191,6 +191,14 @@
   margin-top: 5px; /* Adjust the top margin for spacing between date and description */
 }
 
+.blog-subpage-text {
+    max-width: 760px;
+    font-family: sans-serif;
+    color: lightgray;
+    text-align: center;
+    text-shadow: #000000 1px 0 10px;
+}
+
 /* Adjust the width of the cards for different screen sizes */
 @media (min-width: 576px) {
   .row-cols-md-3 .col {
@@ -204,14 +212,6 @@
     flex: 0 0 33.3333%;
     max-width: 33.3333%;
   }
-}
-
-.blog-subpage-text {
-    max-width: 760px;
-    font-family: sans-serif;
-    color: lightgray;
-    text-align: center;
-    text-shadow: #000000 1px 0 10px;
 }
 
 /*-----------Games----------*/
