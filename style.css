@@ -4,14 +4,14 @@
     padding: 0
 }
 
-/* scrollbar design */
+/*-----------Scrollbar Design----------*/
     body::-webkit-scrollbar {
       width: 10px;
       background-color: rgba(114, 137, 218, 0.1); /* Blurple color */
       border-radius: 8px; /* Rounded edges */
     }
 
-    body::-webkit-scrollbar-thumb { /*the thingy that actually moves */
+    body::-webkit-scrollbar-thumb { /* The thingy that actually moves */
       background: linear-gradient(180deg, rgba(114, 137, 218, 0.5), rgba(155, 89, 182, 0.5)); /* Gradient from blurple to purple */
       border-radius: 8px; /* Rounded edges */
     }
@@ -25,8 +25,7 @@
       border-radius: 8px; /* Rounded edges */
     }
 
-
-
+/*-----------Navbar----------*/
 #nav-bar
 {
     position: sticky;
