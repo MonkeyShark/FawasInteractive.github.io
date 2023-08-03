@@ -54,50 +54,139 @@
 <div class="introduction">
     <p></p>
     <h1>CHANGELOG</h1>
-    
-    <b>6/25/2023:</b><br>
-    <li>Added custom scrollbar (Thanks Jorge)</li>
 
-    <br>
-    <b>6/23/2023:</b><br>
-    <li>Updated "About" page layout and rewrote some of the text.</li>
-    <li>Fixed "Clown Clear" reference links to *actually* redirect to the clownclear.com website.</li>
-    <li>Fixed a few backend CSS references.</li>
-    <li>Click or Treat "Play Now" redirects to Itch.io instead of clownclear.com.</li>
+    <!-- Changelog Accordion -->
+    <div class="container">
+        <div id="changelog-accordion">
 
-    <br>
-    <b>6/22/2023:</b><br>
-    <li>Replaced link stack with grid-based layout with blog cards on "News" page.</li>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                        8/3/2023
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#changelog-accordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Changed cookie policy popup from white to black.</li>
+                            <li>Remade "Home" page background to use a higher resolution Fawas.</li>
+                            <li>Replaced the logo in the corner.</li>
+                            <li>Changed global website font.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-    <br>
-    <b>6/19/2023:</b><br>
-    <li>Updated "Clown Clear" reference links to redirect to the new clownclear.com website.</li>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                        6/25/2023
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#changelog-accordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Added custom scrollbar (Thanks Jorge)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-    <br>
-    <b>6/15/2023:</b><br>
-    <li>Optimized / Reorganized The Pages "Index", "About", "Contact", "Games", & "News".</li>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        6/23/2023
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#changelog-accordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Updated "About" page layout and rewrote some of the text.</li>
+                            <li>Fixed "Clown Clear" reference links to *actually* redirect to the clownclear.com website.</li>
+                            <li>Fixed a few backend CSS references.</li>
+                            <li>Click or Treat "Play Now" redirects to Itch.io instead of clownclear.com.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-    <br>
-    <b>6/15/2023:</b><br>
-    <li>Created Changelog page (meta 😳).</li>
-    <li>Added "Placebo Paradise" to the "Games" page.</li>
-    <li>Re-ordered the games on the "Games" page.</li>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        6/22/2023
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#changelog-accordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Replaced link stack with grid-based layout with blog cards on "News" page.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-    <br>
-    <b>Pre-6/15/2023:</b><br>
-    <p>[Yet to be documented]</p>
-</div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        6/19/2023
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#changelog-accordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Updated "Clown Clear" reference links to redirect to the new clownclear.com website.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-<!-- cookie popup -->
-<script async src="js/fawastudios_cookie.js"></script>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        6/15/2023
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#changelog-accordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Optimized / Reorganized The Pages "Index", "About", "Contact", "Games", & "News".</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-<div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
-    🍪🐑 This website uses cookies to improve your experience.
-    <a href="cookiepolicy.html">Learn more</a>
-    <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
-        I Got It
-    </button>
-</div>
-<!-- cookie popup end -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        6/15/2023
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#changelog-accordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Created Changelog page (meta 😳).</li>
+                            <li>Added "Placebo Paradise" to the "Games" page.</li>
+                            <li>Re-ordered the games on the "Games" page.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add similar entries for other dates -->
+        </div>
+    </div>
+    <!-- End of Changelog Accordion -->
+
+    <!-- cookie popup -->
+    <script async src="js/fawastudios_cookie.js"></script>
+
+    <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
+        🍪🐑 This website uses cookies to improve your experience.
+        <a href="cookiepolicy.html">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
+            I Got It
+        </button>
+    </div>
+    <!-- cookie popup end -->
 </body>
 </html>

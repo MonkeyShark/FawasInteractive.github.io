@@ -70,7 +70,6 @@
 /*-----------Home----------*/
 .body-home 
 {
-    font-family: sans-serif;
     background-image: url("images/Banners/Home.png");
     background-size: cover;
     background-position: center center;
@@ -99,7 +98,7 @@
 
 .about-card {
     /*background-color: #0003;*/
-    background-image: linear-gradient(#0000002b, #00000017);
+    background-image: linear-gradient(#0000001f, #00000054);
     color: #fff;
     border-radius: 10px;
     padding: 20px;
@@ -146,7 +145,6 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: sans-serif;
     color: lightgray;
 }
 
@@ -215,7 +213,6 @@
 
 .blog-subpage-text {
     max-width: 760px;
-    font-family: sans-serif;
     color: lightgray;
     text-align: center;
     text-shadow: #000000 1px 0 10px;
@@ -239,7 +236,6 @@
 /*-----------Games----------*/
 .body-games 
 {
-    font-family: sans-serif;
     background-image: url("images/Banners/Games.png");
     background-size: cover;
     background-position: center center;
@@ -274,7 +270,6 @@
 
 .games-subpage-text {
     max-width: 760px;
-    font-family: sans-serif;
     color: lightgray;
     text-align: center;
     text-shadow: #000000 1px 0 10px;
@@ -282,7 +277,6 @@
 
 /*-----------Contact----------*/
 .body-contact {
-    font-family: sans-serif;
     background-image: url("images/Banners/Games.png");
     background-size: cover;
     background-position: center center;
@@ -293,11 +287,25 @@
 /*-----------404----------*/
 .missing-page-text {
     max-width: 760px;
-    font-family: sans-serif;
     color: lightgray;
     text-align: center;
     text-shadow: #000000 1px 0 10px;
 }
+
+/*-----------Changelog----------*/
+.accordion-button {
+    background-color: #222452 !important;
+    color: white !important; /* Text color, you can change it to any color you prefer */
+}
+
+.accordion-item {
+    background-color: #35386f !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
 
 /*-----------Cookie Policy----------*/
 #cookie-popup {
@@ -305,10 +313,12 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    color: white;
+    border-color: #383838;
+    background-image: linear-gradient(to right, #000000, #2B2828);
 }
 
 .body-missing {
-    font-family: sans-serif;
     background-image: url("images/Banners/Missing.png");
     background-size: cover;
     background-position: center center;
