@@ -211,11 +211,24 @@
   margin-top: 5px; /* Adjust the top margin for spacing between date and description */
 }
 
+.blog-subpage-panel {
+    background-color: #00000024;
+    padding-inline: 40px;
+}
+
 .blog-subpage-text {
     max-width: 760px;
     color: lightgray;
     text-align: center;
     text-shadow: #000000 1px 0 10px;
+}
+
+.blog-subpage-title {
+    color: #cecece;
+}
+
+.blog-subpage-date {
+    color: #ff7f7f; /* Set the color for the date text */
 }
 
 /* Adjust the width of the cards for different screen sizes */
