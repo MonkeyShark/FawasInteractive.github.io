@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\news",
+    "\\news\\2023",
+    "\\news\\2023\\08"
   ],
-  "SelectedNode": "\\news\\2023\\04",
+  "SelectedNode": "\\news.html",
   "PreviewInSolutionExplorer": false
 }
