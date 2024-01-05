@@ -225,10 +225,12 @@
 
 .blog-subpage-title {
     color: #cecece;
+    text-align: center; /* Center the title text */
 }
 
 .blog-subpage-date {
     color: #ff7f7f; /* Set the color for the date text */
+    text-align: center; /* Center the title text */
 }
 
 /* Adjust the width of the cards for different screen sizes */
@@ -381,4 +383,54 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+
+/*-----------Character Reveal Blog----------*/
+
+.char-blog-subpage-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #00000024;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+
+.char-blog-subpage-header {
+    margin-bottom: 20px;
+    text-shadow: #000000 1px 0 10px;
+}
+
+.char-blog-subpage-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.char-blog-subpage-content-left {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.char-blog-subpage-text {
+    max-width: 60%;
+    color: lightgray;
+
+    text-shadow: #000000 1px 0 10px;
+    margin: 20px 0;
+}
+
+.char-image {
+    max-width: 30%;
+    max-height: 100%; /* Set a maximum height for the images */
+    height: auto;
+    object-fit: contain; /* or "cover" based on your preference */
 }
