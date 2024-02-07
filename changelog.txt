@@ -1,0 +1,42 @@
+Navigation Bar:
+-Added "|" dividers between "News" and "Contact" to the Index page. In between the dividers, three pages: "Games, Mods, Tutorials".
+
+"Home" Page:
+-Added Changelog box with recent changes.
+-Added FawaStudios logo after "Welcome To"
+-Added "Latest News:" Card
+-Separated Fawas from Background
+-Added Text Box above Fawas with randomly selected splash text
+-Added "Full Changelog" button to "Changelog" box
+-Mobile Support for Redesign
+
+"Games" Page:
+-Content Box behind Game Icons
+-Description Box underneath Game Icons
+-Removed "About" and "Play" Buttons
+-Removed Filter Buttons
+-Added Categories
+-Added carousel functionality for each category when game amount exceeds 6
+-Added links to the correct pages when clicking on game slots
+-Mobile Support for Redesign
+
+"Mods" Page:
+-Created Mods page
+-Same layout as "Games", but features Project Zomboid category with mods
+-Mobile Support for Redesign
+
+"News" Page:
+-Changed Filters from "Show All, Clown Clear, FawaStudios" to "Show All, News & Dev, Tutorials, Clown Clear, FawaStudios"
+-Changed slot limit per row from 3 to 4
+-Changed header styling for consistency
+-Mobile Support for Redesign (Tags / Filter Buttons only)
+
+"About" Page:
+-Changed panel colors for consistency
+-Changed header styling for consistency
+-Mobile Support for Redesign
+
+"News" Sub-Pages:
+-Content Box behind text
+-Added thumbnail at the top
+-Changed text alignment to the left

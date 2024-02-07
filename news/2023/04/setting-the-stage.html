@@ -4,10 +4,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Setting The Stage - FawaStudios</title>
-    <link rel="shortcut icon" type="/image/png" href="/images/General/FawaStudios_Icon.png">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <script src="/js/bootstrap.js"></script>
+    <link rel="shortcut icon" type="../../../image/png" href="/images/General/FawaStudios_Icon.png">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="../../../css/bootstrap.css">
+    <script src="../../../js/bootstrap.js"></script>
 </head>
 <body class="body-contact" style="background-color: black">
     <!------nav bar-------->
@@ -24,7 +24,11 @@
                         <li class="nav-item"> <a class="nav-link" href="https://www.fawastudios.com/">HOME</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="/about">ABOUT</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="/news">NEWS</a> </li>
+                        <li class="nav-item divider">&vert;</li>
                         <li class="nav-item"> <a class="nav-link" href="/games">GAMES</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="/mods">MODS</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="/news">TUTORIALS</a> </li>
+                        <li class="nav-item divider">&vert;</li>
                         <li class="nav-item"> <a class="nav-link" href="/contact">CONTACT</a> </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -43,15 +47,26 @@
         </nav>
     </section>
 
+    <!-- Main Content -->
+    <div class="introduction">
+        <p></p>
+        <h1 style="font-size: 60px;color: white;text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">NEWS</h1>
+    </div>
+
     <!--------main section---------->
-    <article class="grid">
+    <div class="blog-subpage-content-box">
         <div class="blog-subpage-panel">
             <div class="blog-subpage-text">
                 <p></p>
-                <h1 class="blog-subpage-title">Setting The Stage</h1>
 
-                <h5 class="blog-subpage-date">4/9/23 | 10:45 PM EST</h5>
+                <h1 class="blog-subpage-title"><i>Setting The Stage</i></h1>
+
+                <h5 class="blog-subpage-tag-and-date">News & Dev<span style="color:white;"> | April 9, 2023 <span style="color:white; font-size: 14px">(10:45 PM EST)</span></h5>
+
+                <img class="blog-subpage-thumbnail" src="../../../images/Blogs/Thumbnails/SettingTheStage.png" alt="Image of CNC characters">
+
                 <hr>
+
                 <p>
                     Happy Easter for those who celebrate, and welcome back, this time for the third edition of the special edition weekly Clown Clear blog trilogy (aka a poor attempt at a marketing strategy). If you haven’t read the previous two about combat and game modes, you can do so at these links: <a href="https://www.fawastudios.com/news/2023/03/in-tents-combat">In-Tents Combat</a> | <a href="https://www.fawastudios.com/news/2023/04/game-modes-galore">Game Modes Galore.</a>
                     <br /><br />
@@ -113,6 +128,18 @@
 
             </div>
         </div>
-    </article>
+    </div>
+
+    <!-- cookie popup -->
+    <script async src="../../../js/fawastudios_cookie.js"></script>
+
+    <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
+        🍪🐑 This website uses cookies to improve your experience.
+        <a href="cookiepolicy.html">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
+            I Got It
+        </button>
+    </div>
+    <!-- cookie popup end -->
 </body>
 </html>

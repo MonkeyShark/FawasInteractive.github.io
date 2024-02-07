@@ -13,126 +13,260 @@
     <link rel="shortcut icon" type="image/png" href="images/General/FawaStudios_Icon.png">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 </head>
 <body class="body-games" style="background-color: black">
 
-<!-- Navbar -->
-<section id="nav-bar">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="images/General/FawaStudios_Logo.png" alt="FawaStudios Logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"> <a class="nav-link" href="/">HOME</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="about">ABOUT</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="news">NEWS</a> </li>
-                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">GAMES</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="contact">CONTACT</a> </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            SOCIALS
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="position: absolute; background-color: #2A2727;">
-                            <li><a class="dropdown-item" href="https://twitter.com/intent/user?screen_name=FawaStudios">Twitter</a></li>
-                            <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCGdYveTA3CWhVC4xYAPHcRw">YouTube</a></li>
-                            <li><a class="dropdown-item" href="https://discord.com/invite/BGg7pRxaUe ">Discord</a></li>
-                            <li><a class="dropdown-item" href="https://www.reddit.com/r/FawaStudios/">Reddit</a></li>
-                        </ul>
-                    </li>
-                </ul>
+    <!-- Navbar -->
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"><img src="images/General/FawaStudios_Logo.png" alt="FawaStudios Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"> <a class="nav-link" href="/">HOME</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="about">ABOUT</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="news">NEWS</a> </li>
+                        <li class="nav-item divider">&vert;</li>
+                        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">GAMES</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="mods">MODS</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="news">TUTORIALS</a> </li>
+                        <li class="nav-item divider">&vert;</li>
+                        <li class="nav-item"> <a class="nav-link" href="contact">CONTACT</a> </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                SOCIALS
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="position: absolute; background-color: #2A2727;">
+                                <li><a class="dropdown-item" href="https://twitter.com/intent/user?screen_name=FawaStudios">Twitter</a></li>
+                                <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCGdYveTA3CWhVC4xYAPHcRw">YouTube</a></li>
+                                <li><a class="dropdown-item" href="https://discord.com/invite/BGg7pRxaUe ">Discord</a></li>
+                                <li><a class="dropdown-item" href="https://www.reddit.com/r/FawaStudios/">Reddit</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</section>
+        </nav>
+    </section>
 
-<!-- Main Content -->
-<div class="introduction">
-    <p></p>
-    <h1>GAMES</h1>
-</div>
-
-<!-- Filter Buttons -->
-<div class="btn-toolbar" role="toolbar">
-    <div class="btn-group mr-2" style="margin: auto" role="group">
-        <button class="btn btn-dark" onclick="filterSelection('all')">Show All</button>
-        <button class="btn btn-dark" onclick="filterSelection('released')">Released</button>
-        <button class="btn btn-dark" onclick="filterSelection('comingsoon')">Coming Soon</button>
+    <!-- Main Content -->
+    <div class="introduction">
+        <p></p>
+        <h1 style="font-size: 60px;color: white;text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">GAMES</h1>
     </div>
-</div>
 
-<!-- Games List -->
-<section id="games-list">
-    <div class="container">
-        <div class="row">
 
-            <div class="col-md-3 game text-center filterDiv comingsoon">
-                <img src="images/Games/ClownClear/ClownClear.png" class="game-img" />
-                <p></p>
-                <h2 class="game-txt">Clown Clear</h2>
-                <a href="https://www.clownclear.com"><button type="button" class="btn btn-dark">About</button></a>
-                <button type="button" class="btn btn-dark">Coming Soon</button>
+    <!-- Games List -->
+    <div class="games-content-box">
+        <section id="games-list">
+            <div class="container">
+                <!-- Released Games -->
+                <div class="row released-games">
+                    <h4 class="games-section-header">Released</h4>
+
+                    <div id="released-carousel" class="released-carousel">
+
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <a href="https://www.fawastudios.com/clickortreat2" style="text-decoration:none">
+                                <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" />
+                                <h2 class="game-txt">Click Or Treat</h2>
+
+                                <div class="game-description-text-box">
+                                    <img src="images/Games/DescriptionBubble.png" class="game-description-img" />
+                                    <p class="game-description-txt">Click on doors and hire monsters for candy.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <a href="https://fawastudios.itch.io/concession-obsession" style="text-decoration:none">
+                                <img src="images/Games/ConcessionObsession/ConcessionObsession.png" class="game-img" />
+                                <h2 class="game-txt">Concession Obsession</h2>
+
+                                <div class="game-description-text-box">
+                                    <img src="images/Games/DescriptionBubble.png" class="game-description-img" />
+                                    <p class="game-description-txt">Can you resist the temptation?</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <a href="https://fawastudios.itch.io/placebo-paradise" style="text-decoration:none">
+                                <img src="images/Games/PlaceboParadise/PlaceboParadise.png" class="game-img" />
+                                <h2 class="game-txt">Placebo Paradise</h2>
+
+                                <div class="game-description-text-box">
+                                    <img src="images/Games/DescriptionBubble.png" class="game-description-img" />
+                                    <p class="game-description-txt">Contribute to society's downfall!</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Coming Soon Games -->
+                <div class="row coming-soon-games">
+                    <h4 class="games-section-header">Coming Soon</h4>
+
+                    <div id="comingsoon-carousel" class="comingsoon-carousel">
+
+                        <div class="col-md-2 game text-center filterDiv comingsoon">
+                            <a href="https://www.clownclear.com" style="text-decoration:none">
+                                <img src="images/Games/ClownClear/ClownClear.png" class="game-img" />
+                                <h2 class="game-txt">Clown Clear</h2>
+
+                                <div class="game-description-text-box">
+                                    <img src="images/Games/DescriptionBubble.png" class="game-description-img" />
+                                    <p class="game-description-txt">Fight hordes of mutant clown zombies.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 game text-center filterDiv comingsoon">
+                            <a href="https://www.fawastudios.com/games/chimpchowder" style="text-decoration:none">
+                                <img src="images/Games/ChimpChowder/ChimpChowder.png" class="game-img" />
+                                <h2 class="game-txt">Chimp Chowder</h2>
+
+                                <div class="game-description-text-box">
+                                    <img src="images/Games/DescriptionBubble.png" class="game-description-img" />
+                                    <p class="game-description-txt">Keep the chimps well fed, or else...</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Planned Games -->
+                <div class="row planned-games">
+                    <h4 class="games-section-header">Planned</h4>
+
+                    <div id="planned-carousel" class="planned-carousel">
+
+                        <div class="col-md-2 game text-center filterDiv comingsoon">
+                            <a href="https://www.fawastudios.com/games/mrcrane" style="text-decoration:none">
+                                <img src="images/Games/MrCrane/MrCrane.png" class="game-img" />
+                                <h2 class="game-txt">Mr. Crane</h2>
+
+                                <div class="game-description-text-box">
+                                    <img src="images/Games/DescriptionBubble.png" class="game-description-img" />
+                                    <p class="game-description-txt">Keep your candy-powered lantern lit.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-
-            <div class="col-md-3 game text-center filterDiv released">
-                <img src="images/Games/ConcessionObsession/ConcessionObsession.png" class="game-img" />
-                <p></p>
-                <h2 class="game-txt">Concession Obsession</h2>
-                <a href="games/concessionobsession"><button type="button" class="btn btn-dark">About</button></a>
-                <a href="https://fawastudios.itch.io/concession-obsession"><button type="button" class="btn btn-dark">Play Now (Itch.io)</button></a>
-            </div>
-
-            <div class="col-md-3 game text-center filterDiv released">
-                <img src="images/Games/PlaceboParadise/PlaceboParadise.png" class="game-img" />
-                <p></p>
-                <h2 class="game-txt">Placebo Paradise</h2>
-                <a href="games/placeboparadise"><button type="button" class="btn btn-dark">About</button></a>
-                <a href="https://fawastudios.itch.io/placebo-paradise"><button type="button" class="btn btn-dark">Play Now (Itch.io)</button></a>
-            </div>
-
-            <div class="col-md-3 game text-center filterDiv comingsoon">
-                <img src="images/Games/ChimpChowder/ChimpChowder.png" class="game-img" />
-                <p></p>
-                <h2 class="game-txt">Chimp Chowder</h2>
-                <a href="games/chimpchowder"><button type="button" class="btn btn-dark">About</button></a>
-                <button type="button" class="btn btn-dark">Planned</button>
-            </div>
-
-            <div class="col-md-3 game text-center filterDiv released">
-                <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" />
-                <p></p>
-                <h2 class="game-txt">Click Or Treat</h2>
-                <a href="games/clickortreat"><button type="button" class="btn btn-dark">About</button></a>
-                <a href="https://fawastudios.com/clickortreat2"><button type="button" class="btn btn-dark">Play Now (FawaStudios.com)</button></a>
-            </div>
-
-            <div class="col-md-3 game text-center filterDiv comingsoon">
-                <img src="images/Games/MrCrane/MrCrane.png" class="game-img" />
-                <p></p>
-                <h2 class="game-txt">Mr. Crane</h2>
-                <a href="games/mrcrane"><button type="button" class="btn btn-dark">About</button></a>
-                <button type="button" class="btn btn-dark">Planned</button>
-            </div>
-
-        </div>
+        </section>
     </div>
-</section>
 
-<!-- Cookie Popup -->
-<script async src="js/fawastudios_cookie.js"></script>
-<div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
-    🍪🐑 This website uses cookies to improve your experience.
-    <a href="cookiepolicy.html">Learn more</a>
-    <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
-        I Got It
-    </button>
-</div>
-    
-<script src="js/bootstrap.js"></script>
+    <!-- Cookie Popup -->
+    <script async src="js/fawastudios_cookie.js"></script>
+    <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
+        🍪🐑 This website uses cookies to improve your experience.
+        <a href="cookiepolicy.html">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
+            I Got It
+        </button>
+    </div>
+
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>
+
+<!-- Slick Carousel Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+    function initializeCarousel(carouselClass) {
+        $(carouselClass).slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 6,
+            slidesToScroll: 2,
+            prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+            nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
+            responsive: [
+                {
+                    breakpoint: 1024, // Tablet breakpoint
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 768, // Mobile breakpoint
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+    }
+
+    // Initialize carousels
+    initializeCarousel('.released-carousel');
+    initializeCarousel('.comingsoon-carousel');
+    initializeCarousel('.planned-carousel');
+</script>
 
 <!-- Contain this later, script for the filter buttons -->
 <script>

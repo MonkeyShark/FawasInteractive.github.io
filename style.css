@@ -1,7 +1,7 @@
 *
 {
-    margin: 0
-    padding: 0
+    margin: 0;
+    padding: 0;
 }
 
 /*-----------Scrollbar Design----------*/
@@ -52,6 +52,13 @@
     float: right;
     text-align: left;
 }
+.divider {
+    padding: 0 0.5rem; /* Adjust the padding as needed */
+    color: #fff; /* Set the color to match the link color */
+    line-height: 2.5rem; /* Adjust the line height for vertical centering */
+    text-align: right;
+}
+
 .navbar-toggler
 {
     outline: none;
@@ -70,18 +77,137 @@
 /*-----------Home----------*/
 .body-home 
 {
-    background-image: url("images/Banners/HomeOriginal.png");
+    background-image: url("images/Banners/HomeBanner.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.introduction {
-    
+.introduction
+{
     color: lightgray;
     text-align: center;
     text-shadow: #000000 1px 0 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 1%;
 }
+
+.intro-logo {
+    width: 30%;
+    max-width: 100%;
+    filter: drop-shadow(5px 4px 4px #000000);
+    padding-bottom: 10%;
+}
+
+.content-box {
+    position: absolute;
+    top: 12%;
+    left: 8%;
+    bottom: 8%;
+    width: 22%;
+    background-color: #121212;
+    border-radius: 15px;
+    filter: drop-shadow(5px 4px 4px #000000);
+
+    text-align: center;
+    color: white;
+}
+
+.sheep-section {
+    position: absolute;
+    top: 12%;
+    right: 8%;
+    bottom: 8%;
+    width: 26%;
+}
+
+.sheep-image {
+    width: 120%;
+    max-width: 100%;
+    border-radius: 10px;
+    top: 50%;
+    position: absolute;
+}
+
+.text-bubble-image {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 80%;
+}
+
+.text-bubble-image img {
+    width: 100%; /* Make sure the speech bubble image fills the container */
+}
+
+.text-inside-bubble {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 150%;
+    font-family: cursive;
+    width: 70%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .introduction {
+        text-align: center;
+    }
+
+    .intro-logo
+    {
+        width: 100%;
+    }
+
+    .sheep-section {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .sheep-image {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+        top: 90%;
+        left: 5%;
+    }
+
+    .text-bubble-image {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .text-inside-bubble {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .content-box {
+        display: none;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .mx-auto {
+        max-width: 100% !important;
+    }
+}
+
 
 /*-----------About----------*/
 .about {
@@ -97,18 +223,19 @@
 }
 
 .about-card {
-    /*background-color: #0003;*/
-    background-image: linear-gradient(#0000001f, #00000054);
+    /*background-color: #11111170;*/
+    /*background-image: linear-gradient(#0000001f, #00000054);*/
+    background-image: linear-gradient(#1f1f1f, #101010);
     color: #fff;
     border-radius: 10px;
     padding: 20px;
     margin: 20px;
-    max-width: 600px;
+    max-width: 30%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .about-card-wide {
-    max-width: 1200px;
+    max-width: 60%;
     text-align: center;
 }
 
@@ -148,30 +275,54 @@
     color: lightgray;
 }
 
+.about-logo
+{
+    border-radius: 15px;
+    margin-top: -5px;
+    width: 50%;
+    height: auto;
+}
+
+@media (max-width: 768px) 
+{
+    .about-card
+    {
+        max-width: 100%;
+    }
+
+    .about-logo
+    {
+        width: 90%;
+    }
+}
+
 /*-----------News----------*/
-.news-text {
+.news-text
+{
     color: lightgray;
     text-align: center;
     text-shadow: #000000 1px 0 10px;
 }
 
-.blog-post {
-  background-color: #111;
-  padding: 30px; /* Increase the padding to make the cards bigger */
-  border-radius: 5px;
-  color: #fff;
-  margin-bottom: 20px;
-  width: 100%; /* Adjust the width of the card */
+.blog-post
+{
+    background-image: linear-gradient(#1f1f1f, #101010);
+    padding: 20px; /* Increase the padding to make the cards bigger */
+    border-radius: 5px;
+    color: #fff;
+    width: 100%; /* Adjust the width of the card */
 }
 
-.blog-post .thumbnail-container {
+.blog-post .thumbnail-container 
+{
   position: relative;
   width: 100%;
   padding-bottom: 50%; /* 4:3 aspect ratio (change as needed) */
   overflow: hidden;
 }
 
-.blog-post .thumbnail {
+.blog-post .thumbnail
+{
   position: absolute;
   top: 0;
   left: 0;
@@ -180,7 +331,19 @@
   object-fit: cover;
 }
 
-.blog-post .content {
+.blog-subpage-thumbnail {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+    outline-style: solid;
+    outline-color: black;
+}
+
+.blog-post .content
+{
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -188,64 +351,91 @@
 }
 
 .blog-post .post-title {
-  margin-top: 10px; /* Add margin between the thumbnail and post title */
-  font-size: 20px; /* Increase the font size for the post title */
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 .blog-post .publication-date {
-  font-size: 14px; /* Adjust the font size for the publication date */
-  margin-bottom: 5px; /* Adjust the bottom margin for spacing between date and description */
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 .blog-post .publication-date::before {
   content: "Published on: ";
-  color: lightgray; /* Set the color for "Published on:" text */
+  color: lightgray;
 }
 
 .blog-post .publication-date {
-  color: #ff7f7f; /* Set the color for the date text */
-  font-size: 14px; /* Adjust the font size for the date */
+  color: #ff7f7f;
+  font-size: 14px;
 }
 
 .blog-post .post-description {
-  margin-top: 5px; /* Adjust the top margin for spacing between date and description */
+  margin-top: 5px;
 }
 
 .blog-subpage-panel {
-    background-color: #00000024;
-    padding-inline: 40px;
+    padding-inline: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .blog-subpage-text {
-    max-width: 760px;
     color: lightgray;
-    text-align: center;
+    text-align: left;
     text-shadow: #000000 1px 0 10px;
 }
 
 .blog-subpage-title {
     color: #cecece;
-    text-align: center; /* Center the title text */
+    text-align: left;
 }
 
-.blog-subpage-date {
-    color: #ff7f7f; /* Set the color for the date text */
-    text-align: center; /* Center the title text */
+.blog-subpage-tag-and-date {
+    color: red;
+    text-align: left;
 }
 
-/* Adjust the width of the cards for different screen sizes */
-@media (min-width: 576px) {
-  .row-cols-md-3 .col {
-    flex: 0 0 33.3333%;
-    max-width: 33.3333%;
-  }
+.blog-subpage-content-box {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 70%;
+    max-width: 90%;
+    /* background-color: #212121; */
+    background-image: linear-gradient(#1f1f1f, #101010);
+    border-radius: 15px;
+    filter: drop-shadow(5px 4px 4px #000000);
+    text-align: center;
+    color: white;
+    padding-right: 2%;
+    padding-left: 2%;
 }
 
-@media (min-width: 768px) {
-  .row-cols-lg-3 .col {
-    flex: 0 0 33.3333%;
-    max-width: 33.3333%;
-  }
+@media (max-width: 768px) 
+{
+
+  .row-cols-lg-3 .col 
+    {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+
+    .blog-subpage-content-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .blog-subpage-tag-and-date
+    {
+        font-size: 100%;
+    }
+
+    .blog-subpage-thumbnail
+    {
+        height: 20%;
+    }
+
 }
 
 /*-----------Games----------*/
@@ -262,19 +452,46 @@
 {
     padding: 0px 0;
 }
-.game-img
-{
+.game-img {
     width: 100%;
     margin-top: 20px;
+    border-radius: 15px;
 }
 .game-txt {
     color: white;
     text-shadow: #000000 1px 0 10px;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 5px;
+    font-family: cursive;
 }
 
+.game-description-text-box {
+    position: relative;
+}
+
+.game-description-img {
+    width: 100%;
+    /*filter: drop-shadow(5px 4px 4px #000000);*/
+}
+
+.game-description-txt {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 95%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+
+    font-size: 13px;
+    -webkit-text-size-adjust: none;
+    font-family: cursive;
+}
+
+
 /* These are used for "Games" filtering */
-.filterDiv
-{
+.filterDiv {
     display: none; /* Hidden by default */
 }
 
@@ -288,6 +505,74 @@
     color: lightgray;
     text-align: center;
     text-shadow: #000000 1px 0 10px;
+}
+
+.games-content-box {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 70%;
+    max-width: 90%;
+    background-image: linear-gradient(#1f1f1f, #101010);
+    border-radius: 15px;
+    filter: drop-shadow(5px 4px 4px #000000);
+    text-align: center;
+    color: white;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 1%;
+}
+
+.games-section-header
+{
+    margin-bottom: 0px;
+    margin-top: 2%;
+}
+
+.slick-prev {
+    position: absolute;
+    top: 0;
+    left: -2%;
+    height: 100%;
+    width: 3%;
+    z-index: 99;
+    background-color: #705373;
+    font-size: 150%;
+    border-color: #705373;
+    border-radius: 6px;
+}
+
+.slick-next {
+    position: absolute;
+    top: 0;
+    right: -2.5%;
+    height: 100%;
+    width: 3%;
+    z-index: 99;
+    background-color: #705373;
+    font-size: 150%;
+    border-color: #705373;
+    border-radius: 6px;
+}
+
+.slick-slide {
+    padding-right: 7.5px;
+    padding-left: 7.5px;
+}
+
+@media (max-width: 768px)
+{
+    .games-content-box
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .slick-prev,
+    .slick-next
+    {
+        width: 5%;
+    }
 }
 
 /*-----------Contact----------*/
@@ -422,6 +707,7 @@
 
 .char-blog-subpage-text {
     max-width: 60%;
+    font-size: 20px;
     color: lightgray;
 
     text-shadow: #000000 1px 0 10px;
@@ -433,4 +719,22 @@
     max-height: 100%; /* Set a maximum height for the images */
     height: auto;
     object-fit: contain; /* or "cover" based on your preference */
+}
+
+@media (max-width: 768px) {
+    .char-blog-subpage-text
+    {
+        max-width: 100%;
+    }
+
+    .char-blog-subpage-content-left,
+    .char-blog-subpage-content
+    {
+        display: block;
+    }
+
+    .char-image {
+        margin-left: 10%;
+        max-width: 80%;
+    }
 }

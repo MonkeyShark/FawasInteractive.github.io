@@ -4,9 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>In-Tents Combat - FawaStudios</title>
     <link rel="shortcut icon" type="/image/png" href="/images/General/FawaStudios_Icon.png">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <script src="/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="../../../css/bootstrap.css">
+    <script src="../../../js/bootstrap.js"></script>
 </head>
 <body class="body-contact" style="background-color: black">
     <!------nav bar-------->
@@ -23,7 +23,11 @@
                         <li class="nav-item"> <a class="nav-link" href="https://www.fawastudios.com/">HOME</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="/about">ABOUT</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="/news">NEWS</a> </li>
+                        <li class="nav-item divider">&vert;</li>
                         <li class="nav-item"> <a class="nav-link" href="/games">GAMES</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="/mods">MODS</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="/news">TUTORIALS</a> </li>
+                        <li class="nav-item divider">&vert;</li>
                         <li class="nav-item"> <a class="nav-link" href="/contact">CONTACT</a> </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,15 +46,26 @@
         </nav>
     </section>
 
+        <!-- Main Content -->
+    <div class="introduction">
+        <p></p>
+        <h1 style="font-size: 60px;color: white;text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">NEWS</h1>
+    </div>
+
     <!--------main section---------->
-    <article class="grid">
+    <div class="blog-subpage-content-box">
         <div class="blog-subpage-panel">
             <div class="blog-subpage-text">
                 <p></p>
-                <h1 class="blog-subpage-title">In-Tents Combat</h1>
 
-                <h5 class="blog-subpage-date">3/25/23 | 5:54 PM EST</h5>
+                <h1 class="blog-subpage-title"><i>In-Tents Combat</i></h1>
+
+                <h5 class="blog-subpage-tag-and-date">News & Dev<span style="color:white;"> | March 25, 2023 <span style="color:white; font-size: 14px">(5:54 PM EST)</span></h5>
+
+                <img class="blog-subpage-thumbnail" src="../../../images/Blogs/Thumbnails/InTentsCombat.png" alt="Image of CNC characters">
+
                 <hr>
+
                 <p>
                     Welcome to yet another edition of the FawaStudios™ blog, where only the most insightful and jaw-dropping collections of words are found. I made a poll about which Clown Clear topic I should cover first, and the “Item & Inventory” system came out victorious, if you’d like to participate in future polls make sure to check out my Twitter page (at <a href="https://twitter.com/intent/user?screen_name=FawaStudios">twitter.com/FawaStudios</a>).
                 </p>
@@ -85,6 +100,18 @@
                 <p>That’s all for this update, hopefully soon I’ll be posting some clips of the combat (an early version of course) in action. I’m also going to be posting two more Clown Clear-related blog posts in the coming weeks, so look forward to those. Thanks for reading, and see you in next week’s update.</p>
             </div>
         </div>
-    </article>
+    </div>
+
+    <!-- cookie popup -->
+    <script async src="../../../js/fawastudios_cookie.js"></script>
+
+    <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
+        🍪🐑 This website uses cookies to improve your experience.
+        <a href="cookiepolicy.html">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
+            I Got It
+        </button>
+    </div>
+    <!-- cookie popup end -->
 </body>
 </html>

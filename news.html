@@ -29,10 +29,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"> <a class="nav-link" href="/">HOME</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="about">ABOUT</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="/about">ABOUT</a> </li>
                     <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">NEWS</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="games">GAMES</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="contact">CONTACT</a> </li>
+                    <li class="nav-item divider">&vert;</li>
+                    <li class="nav-item"> <a class="nav-link" href="/games">GAMES</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="/mods">MODS</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="/news">TUTORIALS</a> </li>
+                    <li class="nav-item divider">&vert;</li>
+                    <li class="nav-item"> <a class="nav-link" href="/contact">CONTACT</a> </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             SOCIALS
@@ -54,26 +58,37 @@
 <article class="grid">
     <div class="news-text">
         <p></p>
-        <h1>LATEST NEWS</h1>
+        <h1 style="font-size: 60px;color: white;text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">NEWS</h1>
 
         <!-- Filter Buttons -->
         <div class="btn-toolbar" role="toolbar">
-            <div class="btn-group mr-2" style="margin: auto" role="group">
+            <div class="btn-group mr-2" style="margin: auto; display: block;" role="group">
                 <button class="btn btn-dark" onclick="filterSelection('all')">Show All</button>
+                <button class="btn btn-dark" onclick="filterSelection('news')">News & Dev</button>
+                <button class="btn btn-dark" onclick="filterSelection('tutorials')">Tutorials</button>
                 <button class="btn btn-dark" onclick="filterSelection('clownclear')">Clown Clear</button>
                 <button class="btn btn-dark" onclick="filterSelection('fawastudios')">FawaStudios</button>
             </div>
         </div>
+
+        <!-- Below is a test for a search bar. Might not be in this update, but either way the proportions are correct, but make it look like an actual search bar -->
+
+        <!-- <p></p> -->
+
+        <!-- Filter Buttons -->
+        <!-- <div class="btn-toolbar" role="toolbar">  -->
+        <!--     <button style="width: 100%" class="btn btn-dark" onclick="filterSelection('all')">Enter search...</button>  -->
+        <!-- </div>  -->
 
         <p></p>
     </div>
 
     <!-- News List -->
     <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
 
             <!-- Character Reveals - Clown Clear -->
-            <div class="col filterDiv clownclear show">
+            <div class="col filterDiv news clownclear show">
                 <div class="blog-post">
                     <div class="content">
                         <div class="thumbnail-container">
@@ -87,7 +102,7 @@
                 </div>
             </div>
             <!-- Been A While - Clown Clear -->
-            <div class="col filterDiv clownclear show">
+            <div class="col filterDiv news clownclear show">
                 <div class="blog-post">
                     <div class="content">
                         <div class="thumbnail-container">
@@ -101,7 +116,7 @@
                 </div>
             </div>
             <!-- Fawas Halloween (And More) -->
-            <div class="col filterDiv clownclear show">
+            <div class="col filterDiv news clownclear show">
                 <div class="blog-post">
                     <div class="content">
                         <div class="thumbnail-container">
@@ -115,7 +130,7 @@
                 </div>
             </div>
             <!-- Clowns, Candy, Chimps, and Cranes -->
-            <div class="col filterDiv clownclear show">
+            <div class="col filterDiv news clownclear show">
                 <div class="blog-post">
                     <div class="content">
                         <div class="thumbnail-container">
@@ -129,7 +144,7 @@
                 </div>
             </div>
             <!-- Impulsive Game News -->
-            <div class="col filterDiv clownclear show">
+            <div class="col filterDiv news clownclear show">
                 <div class="blog-post">
                     <div class="content">
                         <div class="thumbnail-container">
@@ -143,7 +158,7 @@
                 </div>
             </div>
             <!-- Setting The Stage -->
-            <div class="col filterDiv clownclear show">
+            <div class="col filterDiv news clownclear show">
                 <div class="blog-post">
                     <div class="content">
                         <div class="thumbnail-container">
@@ -157,7 +172,7 @@
                 </div>
             </div>
             <!-- Game Modes Galore -->
-            <div class="col filterDiv clownclear show">
+            <div class="col filterDiv news clownclear show">
                 <div class="blog-post">
                     <div class="thumbnail-container">
                         <img class="thumbnail" src="images/Blogs/Thumbnails/GameModesGalore.png" alt="Thumbnail 1">
@@ -171,7 +186,7 @@
                 </div>
             </div>
             <!-- Clown Clear | Kid's Edition -->
-            <div class="col filterDiv clownclear show">
+            <div class="col filterDiv news clownclear show">
                 <div class="blog-post">
                     <div class="thumbnail-container">
                         <img class="thumbnail" src="images\Blogs\ClownClearKidsEdition/ClownClearKids_Logo.png" alt="Thumbnail 1">
@@ -185,7 +200,7 @@
                 </div>
             </div>
             <!-- In-Tents Combat -->
-            <div class="col filterDiv clownclear show">
+            <div class="col filterDiv news clownclear show">
                 <div class="blog-post">
                     <div class="thumbnail-container">
                         <img class="thumbnail" src="images/Blogs/Thumbnails/InTentsCombat.png" alt="Thumbnail 1">
@@ -199,7 +214,7 @@
                 </div>
             </div>
             <!-- New Websites & Cool Stuff -->
-            <div class="col filterDiv fawastudios show">
+            <div class="col filterDiv news fawastudios show">
                 <div class="blog-post">
                     <div class="thumbnail-container">
                         <img class="thumbnail" src="images/Blogs/Thumbnails/NewWebsitesAndCoolStuff.png" alt="Thumbnail 1">
@@ -213,7 +228,7 @@
                 </div>
             </div>
             <!-- Modder Fodder (Clown Clear) -->
-            <div class="col filterDiv clownclear show">
+            <div class="col filterDiv news clownclear show">
                 <div class="blog-post">
                     <div class="thumbnail-container">
                         <img class="thumbnail" src="images/Blogs/Thumbnails/ModderFodder.png" alt="Thumbnail 1">
@@ -227,7 +242,7 @@
                 </div>
             </div>
             <!-- Fawas And The Near Future -->
-            <div class="col filterDiv fawastudios clownclear show">
+            <div class="col filterDiv news fawastudios clownclear show">
                 <div class="blog-post">
                     <div class="thumbnail-container">
                         <img class="thumbnail" src="images/Blogs/FawasAndTheNearFuture/Joke_Quote.png" alt="Thumbnail 1">
@@ -241,7 +256,7 @@
                 </div>
             </div>
             <!-- Sprucing Things Up -->
-            <div class="col filterDiv fawastudios clownclear show">
+            <div class="col filterDiv news fawastudios clownclear show">
                 <div class="blog-post">
                     <div class="thumbnail-container">
                         <img class="thumbnail" src="images/Blogs/SprucingThingsUp/Fawas_Winter_Banner.jpg" alt="Thumbnail 1">
@@ -254,8 +269,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Impulsive Game News -->
-            <div class="col filterDiv clownclear show">
+            <!-- More Clowns, Less Frowns -->
+            <div class="col filterDiv news clownclear show">
                 <div class="blog-post">
                     <div class="thumbnail-container">
                         <img class="thumbnail" src="images/Games/ClownClear/ClownClear_Banner.png" alt="Thumbnail 1">
