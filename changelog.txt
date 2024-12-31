@@ -1,2 +1,3 @@
 12/30/24
 -Added two new Project Zomboid mods
+-Replaced changelog box on home page with recent updates
