@@ -6,3 +6,4 @@ Plans:
 -Replaced changelog box on home page with recent updates
 -Removed unused listing in mods.html
 -Replaced "Tutorials" tab with "Projects"
+-Removed "Show All" in news.html
