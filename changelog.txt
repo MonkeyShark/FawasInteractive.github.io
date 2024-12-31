@@ -7,3 +7,4 @@ Plans:
 -Removed unused listing in mods.html
 -Replaced "Tutorials" tab with "Projects"
 -Removed "Show All" in news.html
+-Replaced "FawaStudios" with "Fawas Interactive" tab in news.html
