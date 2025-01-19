@@ -5,6 +5,7 @@ Plans:
 -Updated code on the backend to make navbar functionality isolated in its own file. Previously it was copy pasted to every page, EXTREMELY slow lol.
 -Fixed cookie policy popup not closing in news.html
 -Removed "Left 4 Dead Action Figures" from mods.html
+-Added, changed, and removed some splashes
 
 1/2/24
 -Finished updating all news pages
