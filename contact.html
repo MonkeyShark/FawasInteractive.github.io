@@ -18,65 +18,40 @@
 
 <body class="body-contact" style="background-color: black">
 
-<!-- Navbar -->
-<section id="nav-bar">
-    <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="images/General/FawasInteractive_Logo.png" alt="FawaStudios Logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"> <a class="nav-link" href="/">HOME</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="about">ABOUT</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="news">NEWS</a> </li>
-                    <li class="nav-item divider">&vert;</li>
-                    <li class="nav-item"> <a class="nav-link" href="games">GAMES</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="mods">MODS</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="news">PROJECTS</a> </li>
-                    <li class="nav-item divider">&vert;</li>
-                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">CONTACT</a> </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            SOCIALS
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="position: absolute; background-color: #2A2727;">
-                            <li><a class="dropdown-item" href="https://twitter.com/intent/user?screen_name=FawasInteract">Twitter</a></li>
-                            <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCGdYveTA3CWhVC4xYAPHcRw">YouTube</a></li>
-                            <li><a class="dropdown-item" href="https://discord.com/invite/BGg7pRxaUe ">Discord</a></li>
-                            <li><a class="dropdown-item" href="https://www.reddit.com/r/FawaStudios/">Reddit</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</section>
+    <!------nav bar-------->
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
 
-<!-- Main Content -->
-<div class="introduction">
-    <h1>Need Something?</h1>
-    <p>Contact us on <a href="https://twitter.com/messages/compose?recipient_id=1243019567594704897">Twitter</a> or send us an email at <a href="mailto:fawastudios@gmail.com">fawastudios@gmail.com</a></p>
-    <hr>
-    <p><i>Have some feedback? Fill out this form!</i></p>
-</div>
+    <!-- Main Content -->
+    <div class="introduction">
+        <h1>Need Something?</h1>
+        <p>Contact us on <a href="https://twitter.com/messages/compose?recipient_id=1243019567594704897">Twitter</a> or send us an email at <a href="mailto:fawastudios@gmail.com">fawastudios@gmail.com</a></p>
+        <hr>
+        <p><i>Have some feedback? Fill out this form!</i></p>
+    </div>
 
-<!-- Google Forms Embed -->
-<article class="grid">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd2K2fwwmtmBFtjsoC6KD4ciCn6lQjDATz0zjO4ym3BBVeXqg/viewform?embedded=true" width="90%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</article>
+    <!-- Google Forms Embed -->
+    <article class="grid">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd2K2fwwmtmBFtjsoC6KD4ciCn6lQjDATz0zjO4ym3BBVeXqg/viewform?embedded=true" width="90%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </article>
 
-<!-- Cookie Popup -->
-<script async src="js/fawastudios_cookie.js"></script>
-<div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
-    🍪🐑 This website uses cookies to improve your experience.
-    <a href="cookiepolicy.html">Learn more</a>
-    <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
-        I Got It
-    </button>
-</div>
+    <!-- Cookie Popup -->
+    <script async src="js/fawastudios_cookie.js"></script>
+    <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
+        🍪🐑 This website uses cookies to improve your experience.
+        <a href="cookiepolicy.html">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
+            I Got It
+        </button>
+    </div>
 
-<script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>

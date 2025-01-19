@@ -1,51 +1,26 @@
 <html lang="en">
 <head>
+    <base href="../../../">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clown Clear | Kid's Edition - Fawas Interactive</title>
     <link rel="shortcut icon" type="/image/png" href="/images/General/FawasInteractive_Icon.png">
-    <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="../../../css/bootstrap.css">
-    <script src="../../../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="/js/bootstrap.js"></script>
 </head>
 <body class="body-contact" style="background-color: black">
     <!------nav bar-------->
-    <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="/images/General/FawasInteractive_Logo.png"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
-
-                        <li class="nav-item"> <a class="nav-link" href="https://www.fawasinteractive.com/">HOME</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="/about">ABOUT</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="/news">NEWS</a> </li>
-                        <li class="nav-item divider">&vert;</li>
-                        <li class="nav-item"> <a class="nav-link" href="/games">GAMES</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="/mods">MODS</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="/news">PROJECTS</a> </li>
-                        <li class="nav-item divider">&vert;</li>
-                        <li class="nav-item"> <a class="nav-link" href="/contact">CONTACT</a> </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                SOCIALS
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="position: absolute; background-color: #2A2727;">
-                                <li><a class="dropdown-item" href="https://twitter.com/intent/user?screen_name=FawasInteract">Twitter</a></li>
-                                <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCGdYveTA3CWhVC4xYAPHcRw">YouTube</a></li>
-                                <li><a class="dropdown-item" href="https://discord.com/invite/BGg7pRxaUe ">Discord</a></li>
-                                <li><a class="dropdown-item" href="https://www.reddit.com/r/FawaStudios/">Reddit</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </section>
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
 
     <!-- Main Content -->
     <div class="introduction">

@@ -18,302 +18,275 @@
 
 <body class="body-about" style="background-color: black">
 
-<!-- Navbar -->
-<section id="nav-bar">
-    <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="images/General/FawasInteractive_Logo.png" alt="FawaStudios Logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"> <a class="nav-link" href="/">HOME</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="/about">ABOUT</a> </li>
-                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">NEWS</a> </li>
-                    <li class="nav-item divider">&vert;</li>
-                    <li class="nav-item"> <a class="nav-link" href="/games">GAMES</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="/mods">MODS</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="/news">PROJECTS</a> </li>
-                    <li class="nav-item divider">&vert;</li>
-                    <li class="nav-item"> <a class="nav-link" href="/contact">CONTACT</a> </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            SOCIALS
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="position: absolute; background-color: #2A2727;">
-                            <li><a class="dropdown-item" href="https://twitter.com/intent/user?screen_name=FawasInteract">Twitter</a></li>
-                            <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCGdYveTA3CWhVC4xYAPHcRw">YouTube</a></li>
-                            <li><a class="dropdown-item" href="https://discord.com/invite/BGg7pRxaUe ">Discord</a></li>
-                            <li><a class="dropdown-item" href="https://www.reddit.com/r/FawaStudios/">Reddit</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</section>
+    <!------nav bar-------->
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
 
-<!-- Main Content -->
-<article class="grid">
-    <div class="news-text">
-        <p></p>
-        <h1 style="font-size: 60px;color: white;text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">NEWS</h1>
+    <!-- Main Content -->
+    <article class="grid">
+        <div class="news-text">
+            <p></p>
+            <h1 style="font-size: 60px;color: white;text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">NEWS</h1>
 
-        <!-- Filter Buttons -->
-        <div class="btn-toolbar" role="toolbar">
-            <div class="btn-group mr-2" style="margin: auto; display: block;" role="group">
-                <button class="btn btn-dark" onclick="filterSelection('news')">News & Dev</button>
-                <button class="btn btn-dark" onclick="filterSelection('tutorials')">Tutorials</button>
-                <button class="btn btn-dark" onclick="filterSelection('clownclear')">Clown Clear</button>
-                <button class="btn btn-dark" onclick="filterSelection('fawasinteractive')">Fawas Interactive</button>
+            <!-- Filter Buttons -->
+            <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group mr-2" style="margin: auto; display: block;" role="group">
+                    <button class="btn btn-dark" onclick="filterSelection('news')">News & Dev</button>
+                    <button class="btn btn-dark" onclick="filterSelection('tutorials')">Tutorials</button>
+                    <button class="btn btn-dark" onclick="filterSelection('clownclear')">Clown Clear</button>
+                    <button class="btn btn-dark" onclick="filterSelection('fawasinteractive')">Fawas Interactive</button>
+                </div>
             </div>
+
+            <!-- Below is a test for a search bar. Might not be in this update, but either way the proportions are correct, but make it look like an actual search bar -->
+            <!-- <p></p> -->
+            <!-- Filter Buttons -->
+            <!-- <div class="btn-toolbar" role="toolbar">  -->
+            <!--     <button style="width: 100%" class="btn btn-dark" onclick="filterSelection('all')">Enter search...</button>  -->
+            <!-- </div>  -->
+
+            <p></p>
         </div>
 
-        <!-- Below is a test for a search bar. Might not be in this update, but either way the proportions are correct, but make it look like an actual search bar -->
+        <!-- News List -->
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
 
-        <!-- <p></p> -->
+                <!-- Fawas Interactive & Game Updates -->
+                <div class="col filterDiv news fawasinteractive clownclear show">
+                    <div class="blog-post">
+                        <div class="content">
+                            <div class="thumbnail-container">
+                                <img class="thumbnail" src="images/Blogs/Thumbnails/FawasInteractiveNewLogo.jpg" alt="Image of new Fawas Interactive logo">
+                            </div>
+                            <h5 class="post-title">Fawas Interactive & Game Updates</h5>
+                            <p class="publication-date">May 5, 2024</p>
+                            <p class="post-description">FawaStudios rebranding, FawasVoxels, and Clown Clear.</p>
+                            <a href="news/2024/05/fawas-interactive-and-game-updates.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Character Reveals - Clown Clear -->
+                <div class="col filterDiv news clownclear show">
+                    <div class="blog-post">
+                        <div class="content">
+                            <div class="thumbnail-container">
+                                <img class="thumbnail" src="images/Blogs/Thumbnails/CNCChars.png" alt="Image of CNC characters">
+                            </div>
+                            <h5 class="post-title">Character Reveals - Clown Clear</h5>
+                            <p class="publication-date">January 4, 2024</p>
+                            <p class="post-description">Clown Clear character images & bios.</p>
+                            <a href="news/2024/01/clown-clear-character-reveals.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Been A While - Clown Clear -->
+                <div class="col filterDiv news clownclear show">
+                    <div class="blog-post">
+                        <div class="content">
+                            <div class="thumbnail-container">
+                                <img class="thumbnail" src="images/Blogs/Thumbnails/BeenAWhile.jpg" alt="Image of a forest from Pexels.com">
+                            </div>
+                            <h5 class="post-title">Been A While - Clown Clear</h5>
+                            <p class="publication-date">December 27, 2023</p>
+                            <p class="post-description">Hey all, quick blog post to give a quick progress update. Probably...</p>
+                            <a href="news/2023/12/been-a-while-clown-clear.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fawas Halloween (And More) -->
+                <div class="col filterDiv news clownclear show">
+                    <div class="blog-post">
+                        <div class="content">
+                            <div class="thumbnail-container">
+                                <img class="thumbnail" src="images/Blogs/FawasHalloweenAndMore/FawaStudiosTwitter.png" alt="Image of FawaStudios Twitter showcasing Halloween logos">
+                            </div>
+                            <h5 class="post-title">Fawas Halloween (And More)</h5>
+                            <p class="publication-date">September 16, 2023</p>
+                            <p class="post-description">Welcome back to another exciting, enticing, enthralling, very cool...</p>
+                            <a href="news/2023/09/fawas-halloween-and-more.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Clowns, Candy, Chimps, and Cranes -->
+                <div class="col filterDiv news clownclear show">
+                    <div class="blog-post">
+                        <div class="content">
+                            <div class="thumbnail-container">
+                                <img class="thumbnail" src="images\Blogs\ClownsCandyChimpsCranes\ChimpChowderNeglect.png" alt="Meme of Chimp Chowder drowning while Fawas lifts Clown Clear">
+                            </div>
+                            <h5 class="post-title">Clowns, Candy, Chimps, and Cranes</h5>
+                            <p class="publication-date">August 18, 2023</p>
+                            <p class="post-description">Hello and welcome back to the official FawaStudios™ blog, it’s been...</p>
+                            <a href="news/2023/08/clowns-candy-chimps-and-cranes.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Impulsive Game News -->
+                <div class="col filterDiv news clownclear show">
+                    <div class="blog-post">
+                        <div class="content">
+                            <div class="thumbnail-container">
+                                <img class="thumbnail" src="images/Blogs/Thumbnails/ImpulsiveGameNews.png" alt="Thumbnail 1">
+                            </div>
+                            <h5 class="post-title">Impulsive Game News</h5>
+                            <p class="publication-date">April 22, 2023</p>
+                            <p class="post-description">Today I’d like to give some information on my plans for my various games, as well...</p>
+                            <a href="news/2023/04/impulsive-game-news.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Setting The Stage -->
+                <div class="col filterDiv news clownclear show">
+                    <div class="blog-post">
+                        <div class="content">
+                            <div class="thumbnail-container">
+                                <img class="thumbnail" src="images/Blogs/Thumbnails/SettingTheStage.png" alt="Thumbnail 2">
+                            </div>
+                            <h5 class="post-title">Setting The Stage</h5>
+                            <p class="publication-date">April 9, 2023</p>
+                            <p class="post-description">Happy Easter for those who celebrate, and welcome back, this time for the third...</p>
+                            <a href="news/2023/04/setting-the-stage.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Game Modes Galore -->
+                <div class="col filterDiv news clownclear show">
+                    <div class="blog-post">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="images/Blogs/Thumbnails/GameModesGalore.png" alt="Thumbnail 1">
+                        </div>
+                        <div class="content">
+                            <h5 class="post-title">Game Modes Galore</h5>
+                            <p class="publication-date">April 2, 2023</p>
+                            <p class="post-description">Welcome to part two of the epic Clown Clear content blog trilogy, if you haven’t...</p>
+                            <a href="news/2023/04/game-modes-galore.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Clown Clear | Kid's Edition -->
+                <div class="col filterDiv news clownclear show">
+                    <div class="blog-post">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="images\Blogs\ClownClearKidsEdition/ClownClearKids_Logo.png" alt="Thumbnail 1">
+                        </div>
+                        <div class="content">
+                            <h5 class="post-title">Clown Clear | Kid's Edition</h5>
+                            <p class="publication-date">April 1, 2023</p>
+                            <p class="post-description">As all of you know, FawaStudios values family and morality more than anything...</p>
+                            <a href="news/2023/04/clown-clear-kids-edition.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- In-Tents Combat -->
+                <div class="col filterDiv news clownclear show">
+                    <div class="blog-post">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="images/Blogs/Thumbnails/InTentsCombat.png" alt="Thumbnail 1">
+                        </div>
+                        <div class="content">
+                            <h5 class="post-title">In-Tents Combat</h5>
+                            <p class="publication-date">March 25, 2023</p>
+                            <p class="post-description">Welcome to yet another edition of the FawaStudios™ blog, where only...</p>
+                            <a href="news/2023/03/in-tents-combat.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Websites & Cool Stuff -->
+                <div class="col filterDiv news fawasinteractive show">
+                    <div class="blog-post">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="images/Blogs/Thumbnails/NewWebsitesAndCoolStuff.png" alt="Thumbnail 1">
+                        </div>
+                        <div class="content">
+                            <h5 class="post-title">New Websites & Cool Stuff</h5>
+                            <p class="publication-date">January 9, 2023</p>
+                            <p class="post-description">Good afternoon my friends. Today’s blog will be mostly focused on the miscellaneous...</p>
+                            <a href="news/2023/01/new-websites-and-cool-stuff.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modder Fodder (Clown Clear) -->
+                <div class="col filterDiv news clownclear show">
+                    <div class="blog-post">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="images/Blogs/Thumbnails/ModderFodder.png" alt="Thumbnail 1">
+                        </div>
+                        <div class="content">
+                            <h5 class="post-title">Modder Fodder (Clown Clear)</h5>
+                            <p class="publication-date">December 17, 2022</p>
+                            <p class="post-description">Hola, payaso enthuasticos. Today’s blog is all about mod support and how I plan...</p>
+                            <a href="news/2022/12/modder-fodder-clown-clear.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fawas And The Near Future -->
+                <div class="col filterDiv news fawasinteractive clownclear show">
+                    <div class="blog-post">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="images/Blogs/FawasAndTheNearFuture/Joke_Quote.png" alt="Thumbnail 1">
+                        </div>
+                        <div class="content">
+                            <h5 class="post-title">Fawas And The Near Future</h5>
+                            <p class="publication-date">December 10, 2022</p>
+                            <p class="post-description">Salutations, and welcome once again to the official FawaStudios™ blog, where...</p>
+                            <a href="news/2022/12/fawas-and-the-near-future.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sprucing Things Up -->
+                <div class="col filterDiv news fawasinteractive clownclear show">
+                    <div class="blog-post">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="images/Blogs/SprucingThingsUp/Fawas_Winter_Banner.jpg" alt="Thumbnail 1">
+                        </div>
+                        <div class="content">
+                            <h5 class="post-title">Sprucing Things Up</h5>
+                            <p class="publication-date">December 3, 2022</p>
+                            <p class="post-description">Hello again! As you all may know, the holiday season is upon us, which means it's...</p>
+                            <a href="news/2022/12/sprucing-things-up.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- More Clowns, Less Frowns -->
+                <div class="col filterDiv news clownclear show">
+                    <div class="blog-post">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="images/Games/ClownClear/ClownClear_Banner.png" alt="Thumbnail 1">
+                        </div>
+                        <div class="content">
+                            <h5 class="post-title">More Clowns, Less Frowns</h5>
+                            <p class="publication-date">November 25, 2022</p>
+                            <p class="post-description">Hello fellow sheep enthusiasts, and welcome to the very first publication of the official...</p>
+                            <a href="news/2022/11/more-clowns-less-frowns.html" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Filter Buttons -->
-        <!-- <div class="btn-toolbar" role="toolbar">  -->
-        <!--     <button style="width: 100%" class="btn btn-dark" onclick="filterSelection('all')">Enter search...</button>  -->
-        <!-- </div>  -->
+            </div>
+        </div>
+    </article>
 
-        <p></p>
+
+
+    <!-- Cookie Popup -->
+    <script async src="js/fawasinteractive_cookie.js"></script>
+    <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
+        🍪🐑 This website uses cookies to improve your experience.
+        <a href="cookiepolicy.html">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
+            I Got It
+        </button>
     </div>
 
-    <!-- News List -->
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-            
-            <!-- Fawas Interactive & Game Updates -->
-            <div class="col filterDiv news fawasinteractive clownclear show">
-                <div class="blog-post">
-                    <div class="content">
-                        <div class="thumbnail-container">
-                            <img class="thumbnail" src="images/Blogs/Thumbnails/FawasInteractiveNewLogo.jpg" alt="Image of new Fawas Interactive logo">
-                        </div>
-                        <h5 class="post-title">Fawas Interactive & Game Updates</h5>
-                        <p class="publication-date">May 5, 2024</p>
-                        <p class="post-description">FawaStudios rebranding, FawasVoxels, and Clown Clear.</p>
-                        <a href="news/2024/05/fawas-interactive-and-game-updates.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Character Reveals - Clown Clear -->
-            <div class="col filterDiv news clownclear show">
-                <div class="blog-post">
-                    <div class="content">
-                        <div class="thumbnail-container">
-                            <img class="thumbnail" src="images/Blogs/Thumbnails/CNCChars.png" alt="Image of CNC characters">
-                        </div>
-                        <h5 class="post-title">Character Reveals - Clown Clear</h5>
-                        <p class="publication-date">January 4, 2024</p>
-                        <p class="post-description">Clown Clear character images & bios.</p>
-                        <a href="news/2024/01/clown-clear-character-reveals.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Been A While - Clown Clear -->
-            <div class="col filterDiv news clownclear show">
-                <div class="blog-post">
-                    <div class="content">
-                        <div class="thumbnail-container">
-                            <img class="thumbnail" src="images/Blogs/Thumbnails/BeenAWhile.jpg" alt="Image of a forest from Pexels.com">
-                        </div>
-                        <h5 class="post-title">Been A While - Clown Clear</h5>
-                        <p class="publication-date">December 27, 2023</p>
-                        <p class="post-description">Hey all, quick blog post to give a quick progress update. Probably...</p>
-                        <a href="news/2023/12/been-a-while-clown-clear.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Fawas Halloween (And More) -->
-            <div class="col filterDiv news clownclear show">
-                <div class="blog-post">
-                    <div class="content">
-                        <div class="thumbnail-container">
-                            <img class="thumbnail" src="images/Blogs/FawasHalloweenAndMore/FawaStudiosTwitter.png" alt="Image of FawaStudios Twitter showcasing Halloween logos">
-                        </div>
-                        <h5 class="post-title">Fawas Halloween (And More)</h5>
-                        <p class="publication-date">September 16, 2023</p>
-                        <p class="post-description">Welcome back to another exciting, enticing, enthralling, very cool...</p>
-                        <a href="news/2023/09/fawas-halloween-and-more.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Clowns, Candy, Chimps, and Cranes -->
-            <div class="col filterDiv news clownclear show">
-                <div class="blog-post">
-                    <div class="content">
-                        <div class="thumbnail-container">
-                            <img class="thumbnail" src="images\Blogs\ClownsCandyChimpsCranes\ChimpChowderNeglect.png" alt="Meme of Chimp Chowder drowning while Fawas lifts Clown Clear">
-                        </div>
-                        <h5 class="post-title">Clowns, Candy, Chimps, and Cranes</h5>
-                        <p class="publication-date">August 18, 2023</p>
-                        <p class="post-description">Hello and welcome back to the official FawaStudios™ blog, it’s been...</p>
-                        <a href="news/2023/08/clowns-candy-chimps-and-cranes.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Impulsive Game News -->
-            <div class="col filterDiv news clownclear show">
-                <div class="blog-post">
-                    <div class="content">
-                        <div class="thumbnail-container">
-                            <img class="thumbnail" src="images/Blogs/Thumbnails/ImpulsiveGameNews.png" alt="Thumbnail 1">
-                        </div>
-                        <h5 class="post-title">Impulsive Game News</h5>
-                        <p class="publication-date">April 22, 2023</p>
-                        <p class="post-description">Today I’d like to give some information on my plans for my various games, as well...</p>
-                        <a href="news/2023/04/impulsive-game-news.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Setting The Stage -->
-            <div class="col filterDiv news clownclear show">
-                <div class="blog-post">
-                    <div class="content">
-                        <div class="thumbnail-container">
-                            <img class="thumbnail" src="images/Blogs/Thumbnails/SettingTheStage.png" alt="Thumbnail 2">
-                        </div>
-                        <h5 class="post-title">Setting The Stage</h5>
-                        <p class="publication-date">April 9, 2023</p>
-                        <p class="post-description">Happy Easter for those who celebrate, and welcome back, this time for the third...</p>
-                        <a href="news/2023/04/setting-the-stage.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Game Modes Galore -->
-            <div class="col filterDiv news clownclear show">
-                <div class="blog-post">
-                    <div class="thumbnail-container">
-                        <img class="thumbnail" src="images/Blogs/Thumbnails/GameModesGalore.png" alt="Thumbnail 1">
-                    </div>
-                    <div class="content">
-                        <h5 class="post-title">Game Modes Galore</h5>
-                        <p class="publication-date">April 2, 2023</p>
-                        <p class="post-description">Welcome to part two of the epic Clown Clear content blog trilogy, if you haven’t...</p>
-                        <a href="news/2023/04/game-modes-galore.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Clown Clear | Kid's Edition -->
-            <div class="col filterDiv news clownclear show">
-                <div class="blog-post">
-                    <div class="thumbnail-container">
-                        <img class="thumbnail" src="images\Blogs\ClownClearKidsEdition/ClownClearKids_Logo.png" alt="Thumbnail 1">
-                    </div>
-                    <div class="content">
-                        <h5 class="post-title">Clown Clear | Kid's Edition</h5>
-                        <p class="publication-date">April 1, 2023</p>
-                        <p class="post-description">As all of you know, FawaStudios values family and morality more than anything...</p>
-                        <a href="news/2023/04/clown-clear-kids-edition.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- In-Tents Combat -->
-            <div class="col filterDiv news clownclear show">
-                <div class="blog-post">
-                    <div class="thumbnail-container">
-                        <img class="thumbnail" src="images/Blogs/Thumbnails/InTentsCombat.png" alt="Thumbnail 1">
-                    </div>
-                    <div class="content">
-                        <h5 class="post-title">In-Tents Combat</h5>
-                        <p class="publication-date">March 25, 2023</p>
-                        <p class="post-description">Welcome to yet another edition of the FawaStudios™ blog, where only...</p>
-                        <a href="news/2023/03/in-tents-combat.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- New Websites & Cool Stuff -->
-            <div class="col filterDiv news fawasinteractive show">
-                <div class="blog-post">
-                    <div class="thumbnail-container">
-                        <img class="thumbnail" src="images/Blogs/Thumbnails/NewWebsitesAndCoolStuff.png" alt="Thumbnail 1">
-                    </div>
-                    <div class="content">
-                        <h5 class="post-title">New Websites & Cool Stuff</h5>
-                        <p class="publication-date">January 9, 2023</p>
-                        <p class="post-description">Good afternoon my friends. Today’s blog will be mostly focused on the miscellaneous...</p>
-                        <a href="news/2023/01/new-websites-and-cool-stuff.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Modder Fodder (Clown Clear) -->
-            <div class="col filterDiv news clownclear show">
-                <div class="blog-post">
-                    <div class="thumbnail-container">
-                        <img class="thumbnail" src="images/Blogs/Thumbnails/ModderFodder.png" alt="Thumbnail 1">
-                    </div>
-                    <div class="content">
-                        <h5 class="post-title">Modder Fodder (Clown Clear)</h5>
-                        <p class="publication-date">December 17, 2022</p>
-                        <p class="post-description">Hola, payaso enthuasticos. Today’s blog is all about mod support and how I plan...</p>
-                        <a href="news/2022/12/modder-fodder-clown-clear.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Fawas And The Near Future -->
-            <div class="col filterDiv news fawasinteractive clownclear show">
-                <div class="blog-post">
-                    <div class="thumbnail-container">
-                        <img class="thumbnail" src="images/Blogs/FawasAndTheNearFuture/Joke_Quote.png" alt="Thumbnail 1">
-                    </div>
-                    <div class="content">
-                        <h5 class="post-title">Fawas And The Near Future</h5>
-                        <p class="publication-date">December 10, 2022</p>
-                        <p class="post-description">Salutations, and welcome once again to the official FawaStudios™ blog, where...</p>
-                        <a href="news/2022/12/fawas-and-the-near-future.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Sprucing Things Up -->
-            <div class="col filterDiv news fawasinteractive clownclear show">
-                <div class="blog-post">
-                    <div class="thumbnail-container">
-                        <img class="thumbnail" src="images/Blogs/SprucingThingsUp/Fawas_Winter_Banner.jpg" alt="Thumbnail 1">
-                    </div>
-                    <div class="content">
-                        <h5 class="post-title">Sprucing Things Up</h5>
-                        <p class="publication-date">December 3, 2022</p>
-                        <p class="post-description">Hello again! As you all may know, the holiday season is upon us, which means it's...</p>
-                        <a href="news/2022/12/sprucing-things-up.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- More Clowns, Less Frowns -->
-            <div class="col filterDiv news clownclear show">
-                <div class="blog-post">
-                    <div class="thumbnail-container">
-                        <img class="thumbnail" src="images/Games/ClownClear/ClownClear_Banner.png" alt="Thumbnail 1">
-                    </div>
-                    <div class="content">
-                        <h5 class="post-title">More Clowns, Less Frowns</h5>
-                        <p class="publication-date">November 25, 2022</p>
-                        <p class="post-description">Hello fellow sheep enthusiasts, and welcome to the very first publication of the official...</p>
-                        <a href="news/2022/11/more-clowns-less-frowns.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</article>
-
-
-
-<!-- Cookie Popup -->
-<script async src="js/fawasinteractive_cookie.js"></script>
-<div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
-    🍪🐑 This website uses cookies to improve your experience.
-    <a href="cookiepolicy.html">Learn more</a>
-    <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
-        I Got It
-    </button>
-</div>
-
-<script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>
 

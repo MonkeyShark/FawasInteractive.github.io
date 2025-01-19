@@ -1,6 +1,9 @@
 Plans:
 -Remake Games page, smaller format, hide unnecessary info
 
+1/19/25
+-Updated code on the backend to make navbar functionality isolated in its own file. Previously it was copy pasted to every page, EXTREMELY slow lol.
+
 1/2/24
 -Finished updating all news pages
 

@@ -17,41 +17,16 @@
 </head>
 <body class="body-games" style="background-color: black">
 
-    <!-- Navbar -->
-    <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/"><img src="images/General/FawasInteractive_Logo.png" alt="FawaStudios Logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"> <a class="nav-link" href="/">HOME</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="about">ABOUT</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="news">NEWS</a> </li>
-                        <li class="nav-item divider">&vert;</li>
-                        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">GAMES</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="mods">MODS</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="news">PROJECTS</a> </li>
-                        <li class="nav-item divider">&vert;</li>
-                        <li class="nav-item"> <a class="nav-link" href="contact">CONTACT</a> </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                SOCIALS
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="position: absolute; background-color: #2A2727;">
-                                <li><a class="dropdown-item" href="https://twitter.com/intent/user?screen_name=FawasInteract">Twitter</a></li>
-                                <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCGdYveTA3CWhVC4xYAPHcRw">YouTube</a></li>
-                                <li><a class="dropdown-item" href="https://discord.com/invite/BGg7pRxaUe ">Discord</a></li>
-                                <li><a class="dropdown-item" href="https://www.reddit.com/r/FawaStudios/">Reddit</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </section>
+    <!------nav bar-------->
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
 
     <!-- Main Content -->
     <div class="introduction">
@@ -61,7 +36,6 @@
 
 
     <!-- Games List -->
-    <div class="games-black-bar"></div>
     <div class="games-content-box">
         <section id="games-list">
             <div class="container">

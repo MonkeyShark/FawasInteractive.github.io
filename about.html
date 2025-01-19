@@ -18,89 +18,64 @@
 
 <body class="body-about" style="background-color: black">
 
-<!-- Navbar -->
-<section id="nav-bar">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="images/General/FawasInteractive_Logo.png" alt="FawaStudios Logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"> <a class="nav-link" href="/">HOME</a> </li>
-                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">ABOUT</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="news">NEWS</a> </li>
-                    <li class="nav-item divider">&vert;</li>
-                    <li class="nav-item"> <a class="nav-link" href="games">GAMES</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="mods">MODS</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="news">PROJECTS</a> </li>
-                    <li class="nav-item divider">&vert;</li>
-                    <li class="nav-item"> <a class="nav-link" href="contact">CONTACT</a> </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            SOCIALS
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="position: absolute; background-color: #2A2727;">
-                            <li><a class="dropdown-item" href="https://twitter.com/intent/user?screen_name=FawasInteract">Twitter</a></li>
-                            <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCGdYveTA3CWhVC4xYAPHcRw">YouTube</a></li>
-                            <li><a class="dropdown-item" href="https://discord.com/invite/BGg7pRxaUe">Discord</a></li>
-                            <li><a class="dropdown-item" href="https://www.reddit.com/r/FawaStudios/">Reddit</a></li>
-                        </ul>
-                    </li>
-                </ul>
+    <!------nav bar-------->
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <!-- Main Content -->
+    <div class="about-header">
+        <p></p>
+        <h1 style="font-size: 60px;color: white;text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">ABOUT US</h1>
+    </div>
+    <section class="about">
+        <div class="about-card">
+            <div class="about-content">
+                <h3><strong><u>Fawas Interactive</u></strong></h3>
+                <hr>
+                <p>Fawas Interactive first made its entry into the game industry to fulfill the creative itch of an avid gamer, with the goal of creating various amounts of fun and unique experiences.</p>
+                <p>Beginning in 2017 (under the former name: FawaStudios), a large amount of nearly lost-to-time projects were created, some bad, and some downright horrible. However, amidst that steaming pile of garbage came some very valuable lessons and a lot of experience.</p>
+                <p>Flashing forward, Fawas Interactive is still moving along in pursuit of its original goal, with no plans to stop. We sincerely hope you join us as we continue to learn, grow, and create.</p>
             </div>
         </div>
-    </nav>
-</section>
-
-<!-- Main Content -->
-<div class="about-header">
-    <p></p>
-    <h1 style="font-size: 60px;color: white;text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">ABOUT US</h1>
-</div>
-<section class="about">
-    <div class="about-card">
-        <div class="about-content">
-            <h3><strong><u>Fawas Interactive</u></strong></h3>
-            <hr>
-            <p>Fawas Interactive first made its entry into the game industry to fulfill the creative itch of an avid gamer, with the goal of creating various amounts of fun and unique experiences.</p>
-            <p>Beginning in 2017 (under the former name: FawaStudios), a large amount of nearly lost-to-time projects were created, some bad, and some downright horrible. However, amidst that steaming pile of garbage came some very valuable lessons and a lot of experience.</p>
-            <p>Flashing forward, Fawas Interactive is still moving along in pursuit of its original goal, with no plans to stop. We sincerely hope you join us as we continue to learn, grow, and create.</p>
+        <div class="about-card">
+            <div class="about-content">
+                <h3><strong><u>Meet the Team (of One)</u></strong></h3>
+                <hr>
+                <p>As for me, my name's Ethan, and I'm the creative force behind Fawas Interactive. I'm a picky game enthusiast from the United States with a love of most things programming, messing with other creative skills such as: marketing, art, and pretty much everything required for solo development.</p>
+                <p>I'm very passionate about what I do, and Fawas Interactive gives me an outlet to bring out and share my love for things like Halloween, first-person shooters, camping, and all things spooky.</p>
+                <p>When I'm not incessantly rambling to peers about my game dev endeavors, I can be found coming up with overcomplicated lore in Minecraft, playing my thousandth hour in Left 4 Dead 2, or grinding my crowbar skills in Project Zomboid.</p>
+            </div>
         </div>
-    </div>
-    <div class="about-card">
-        <div class="about-content">
-            <h3><strong><u>Meet the Team (of One)</u></strong></h3>
-            <hr>
-            <p>As for me, my name's Ethan, and I'm the creative force behind Fawas Interactive. I'm a picky game enthusiast from the United States with a love of most things programming, messing with other creative skills such as: marketing, art, and pretty much everything required for solo development.</p>
-            <p>I'm very passionate about what I do, and Fawas Interactive gives me an outlet to bring out and share my love for things like Halloween, first-person shooters, camping, and all things spooky.</p>
-            <p>When I'm not incessantly rambling to peers about my game dev endeavors, I can be found coming up with overcomplicated lore in Minecraft, playing my thousandth hour in Left 4 Dead 2, or grinding my crowbar skills in Project Zomboid.</p>
+        <div class="about-card about-card-wide">
+            <div class="about-content">
+                <h3><strong><u>Quick Trivia</u></strong></h3>
+                <hr>
+                <p>Now that you've finished reading my long-winded introductions, get to know Fawas Interactive further with some quick trivia!</p>
+                <strong>Fawas The Sheep:</strong><br>You may have noticed the adorable sheep mascot scattered throughout our branding, we call him Fawas, short for "Fleece As White As Snow".<br><br>
+                <strong>Clown Clear:</strong><br>Clown Clear is currently our most heavily developed project and has been steadily moving forward for a few years now. You can find out more at: <a href="https://www.clownclear.com/about.html">www.clownclear.com/about</a><br><br>
+                <strong>First Game:</strong><br>Our first video game ever made was entitled “Box Game”. It featured a simple player controller, a weird bean-stalk looking thing, and a big brick box only accessible after some simple parkour. If you were lucky enough to make it through the 5 jumps using our extremely primitive movement system, you would find yourself in the box. Quick spoiler warning, but upon entering the box, you’d discover the most shocking plot twist displayed in modern media—a sphere. (I'm a genius, I know)
+            </div>
         </div>
-    </div>
-    <div class="about-card about-card-wide">
-        <div class="about-content">
-            <h3><strong><u>Quick Trivia</u></strong></h3>
-            <hr>
-            <p>Now that you've finished reading my long-winded introductions, get to know Fawas Interactive further with some quick trivia!</p>
-            <strong>Fawas The Sheep:</strong><br>You may have noticed the adorable sheep mascot scattered throughout our branding, we call him Fawas, short for "Fleece As White As Snow".<br><br>
-            <strong>Clown Clear:</strong><br>Clown Clear is currently our most heavily developed project and has been steadily moving forward for a few years now. You can find out more at: <a href="https://www.clownclear.com/about.html">www.clownclear.com/about</a><br><br>
-            <strong>First Game:</strong><br>Our first video game ever made was entitled “Box Game”. It featured a simple player controller, a weird bean-stalk looking thing, and a big brick box only accessible after some simple parkour. If you were lucky enough to make it through the 5 jumps using our extremely primitive movement system, you would find yourself in the box. Quick spoiler warning, but upon entering the box, you’d discover the most shocking plot twist displayed in modern media—a sphere. (I'm a genius, I know)
-        </div>
-    </div>
-    <img src="images/Banners/About_Logo.png" class="about-logo">
-</section>
+        <img src="images/Banners/About_Logo.png" class="about-logo">
+    </section>
 
-<!-- Cookie Popup -->
-<script async src="js/fawastudios_cookie.js"></script>
-<div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
-    🍪🐑 This website uses cookies to improve your experience.
-    <a href="cookiepolicy.html">Learn more</a>
-    <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
-        I Got It
-    </button>
-</div>
+    <!-- Cookie Popup -->
+    <script async src="js/fawastudios_cookie.js"></script>
+    <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
+        🍪🐑 This website uses cookies to improve your experience.
+        <a href="cookiepolicy.html">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
+            I Got It
+        </button>
+    </div>
 
-<script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>
