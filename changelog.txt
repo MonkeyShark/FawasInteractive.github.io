@@ -1,6 +1,9 @@
 Plans:
 -Remake Games page, smaller format, hide unnecessary info
 
+1/2/24
+-Finished updating all news pages
+
 12/30/24
 -Added two new Project Zomboid mods
 -Replaced changelog box on home page with recent updates

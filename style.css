@@ -392,16 +392,64 @@
     color: lightgray;
     text-align: left;
     text-shadow: #000000 1px 0 10px;
+    font-size: 17px;
+    font-family: monospace;
 }
 
 .blog-subpage-title {
     color: #cecece;
     text-align: left;
+    font-family: fantasy;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .blog-subpage-tag-and-date {
-    color: red;
+    color: indianred;
     text-align: left;
+}
+
+.blog-subpage-header {
+    font-family: fantasy;
+    padding-top: 40px;
+}
+
+.blog-subpage-spacer
+{
+    padding-top:30px;
+}
+
+.blog-subpage-black-bar {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 70%;
+    max-width: 100%;
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding-right: 3%;
+    padding-left: 3%;
+    padding-bottom: 3%;
+}
+
+.blog-subpage-black-bar-content {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 90%;
+    max-width: 90%;
+    text-align: left;
+    color: white;
+    padding-right: 2%;
+    padding-left: 2%;
+    filter: drop-shadow(0px 2px 2px #000000);
+    padding-inline: 5%;
+}
+
+.blog-subpage-black-bar-gobackbtn {
+    background-color: #212529 !important;
+    border-color: #212529 !important;
 }
 
 .blog-subpage-content-box {
@@ -409,15 +457,29 @@
     left: 50%;
     transform: translate(-50%, 0%);
     width: 70%;
-    max-width: 90%;
+    max-width: 100%;
     /* background-color: #212121; */
     background-image: linear-gradient(#1f1f1f, #101010);
-    border-radius: 15px;
-    filter: drop-shadow(5px 4px 4px #000000);
+
+    text-align: center;
+
+    color: white;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.blog-subpage-content {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 90%;
+    max-width: 90%;
+    background-color: #181818;
     text-align: center;
     color: white;
     padding-right: 2%;
     padding-left: 2%;
+    filter: drop-shadow(0px 2px 2px #000000);
 }
 
 @media (max-width: 768px) 
@@ -515,14 +577,28 @@
     text-shadow: #000000 1px 0 10px;
 }
 
+.games-black-bar {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    max-width: 100%;
+    background-color: black;
+    filter: drop-shadow(5px 4px 4px #000000);
+    text-align: center;
+    color: white;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+}
+
 .games-content-box {
     position: relative;
     left: 50%;
     transform: translate(-50%, 0%);
-    width: 70%;
-    max-width: 90%;
+    width: 100%;
+    max-width: 100%;
     background-image: linear-gradient(#1f1f1f, #101010);
-    border-radius: 15px;
     filter: drop-shadow(5px 4px 4px #000000);
     text-align: center;
     color: white;
