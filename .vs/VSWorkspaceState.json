@@ -1,11 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\js",
     "\\news",
     "\\news\\2022",
-    "\\news\\2022\\11"
+    "\\news\\2022\\11",
+    "\\resources"
   ],
-  "SelectedNode": "\\news\\2022\\11\\more-clowns-less-frowns.html",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }

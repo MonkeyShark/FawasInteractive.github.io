@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="List of FawaStudios Games">
+    <meta name="keywords" content="Fawas Interactive, FawaStudios, Fawas, Clown, Sheep, Games, Game Development">
+    <meta property="og:url" content="https://www.fawasinteractive.com/games">
+    <meta name="theme-color" content="#3F3787">
+    <meta property="og:image" content="https://fawasinteractive.com/images/General/FawasInteractive_Icon.png">
+    <title>Games - Fawas Interactive</title>
+    <link rel="shortcut icon" type="image/png" href="images/General/FawasInteractive_Icon.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+</head>
+<body class="body-games" style="background-color: black">
+
+    <!------nav bar-------->
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <!-- Main Content -->
+    <div class="introduction">
+        <p></p>
+        <h1 style="font-size: 60px;color: white;text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">GAMES</h1>
+    </div>
+
+
+    <!-- Games List -->
+    <div class="games-content-box">
+        <section id="games-list">
+            <div class="container">
+                <!-- Released Games -->
+                <div class="row released-games">
+                    <h4 class="games-section-header">Released</h4>
+
+                    <div id="released-carousel" class="released-carousel">
+
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <a href="https://fawasinteractive.itch.io/click-or-treat" style="text-decoration:none">
+                                <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" />
+                                <h2 class="game-txt">Click Or Treat (Classic)</h2>
+
+                                <div class="game-description-text-box">
+                                    <img src="images/Games/DescriptionBubble.png" class="game-description-img" />
+                                    <p class="game-description-txt">Original version of Click or Treat.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <a href="https://fawasinteractive.itch.io/concession-obsession" style="text-decoration:none">
+                                <img src="images/Games/ConcessionObsession/ConcessionObsession.png" class="game-img" />
+                                <h2 class="game-txt">Concession Obsession</h2>
+
+                                <div class="game-description-text-box">
+                                    <img src="images/Games/DescriptionBubble.png" class="game-description-img" />
+                                    <p class="game-description-txt">Can you resist the temptation?</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <a href="https://fawasinteractive.itch.io/placebo-paradise" style="text-decoration:none">
+                                <img src="images/Games/PlaceboParadise/PlaceboParadise.png" class="game-img" />
+                                <h2 class="game-txt">Placebo Paradise</h2>
+
+                                <div class="game-description-text-box">
+                                    <img src="images/Games/DescriptionBubble.png" class="game-description-img" />
+                                    <p class="game-description-txt">Contribute to society's downfall!</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Coming Soon Games -->
+                <div class="row coming-soon-games">
+                    <h4 class="games-section-header">Coming Soon</h4>
+
+                    <div id="comingsoon-carousel" class="comingsoon-carousel">
+
+                        <div class="col-md-2 game text-center filterDiv comingsoon">
+                            <a href="https://www.clownclear.com" style="text-decoration:none">
+                                <img src="images/Games/ClownClear/ClownClear.png" class="game-img" />
+                                <h2 class="game-txt">Clown Clear</h2>
+
+                                <div class="game-description-text-box">
+                                    <img src="images/Games/DescriptionBubble.png" class="game-description-img" />
+                                    <p class="game-description-txt">Fight hordes of mutant clown zombies.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <a href="https://www.fawasinteractive.com/clickortreat2" style="text-decoration:none">
+                                <img src="images/Games/ClickOrTreat/ClickOrTreat2.png" class="game-img" />
+                                <h2 class="game-txt">Click Or Treat: v2.1</h2>
+
+                                <div class="game-description-text-box">
+                                    <img src="images/Games/DescriptionBubble.png" class="game-description-img" />
+                                    <p class="game-description-txt">Click on doors and hire monsters for candy.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Planned Games -->
+                <div class="row planned-games">
+                    <h4 class="games-section-header">Planned</h4>
+
+                    <div id="planned-carousel" class="planned-carousel">
+
+                        <div class="col-md-2 game text-center filterDiv comingsoon">
+                            <a href="https://www.fawasinteractive.com/games/chimpchowder" style="text-decoration:none">
+                                <img src="images/Games/ChimpChowder/ChimpChowder.png" class="game-img" />
+                                <h2 class="game-txt">Chimp Chowder</h2>
+
+                                <div class="game-description-text-box">
+                                    <img src="images/Games/DescriptionBubble.png" class="game-description-img" />
+                                    <p class="game-description-txt">Keep the chimps well fed, or else...</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 game text-center filterDiv comingsoon">
+                            <a href="https://www.youtube.com/watch?v=mxCkJqwES88" style="text-decoration:none">
+                                <img src="images/Games/FawasVoxels/FawasVoxels.png" class="game-img" />
+                                <h2 class="game-txt">FawasVoxels</h2>
+
+                                <div class="game-description-text-box">
+                                    <img src="images/Games/DescriptionBubble.png" class="game-description-img" />
+                                    <p class="game-description-txt">Mine, craft, build, murder, in any order.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 game text-center filterDiv comingsoon">
+                            <a href="https://www.fawasinteractive.com/games/mrcrane" style="text-decoration:none">
+                                <img src="images/Games/MrCrane/MrCrane.png" class="game-img" />
+                                <h2 class="game-txt">Mr. Crane</h2>
+
+                                <div class="game-description-text-box">
+                                    <img src="images/Games/DescriptionBubble.png" class="game-description-img" />
+                                    <p class="game-description-txt">Keep your candy-powered lantern lit.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+                        <div class="col-md-2 game text-center filterDiv released">
+                            <img src="images/Games/ClickOrTreat/ClickOrTreat.png" class="game-img" style="filter:brightness(0)" />
+                            <h2 class="game-txt">???</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Cookie Popup -->
+    <script async src="js/fawastudios_cookie.js"></script>
+    <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
+        🍪🐑 This website uses cookies to improve your experience.
+        <a href="cookiepolicy.html">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
+            I Got It
+        </button>
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
+
+<!-- Slick Carousel Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+    function initializeCarousel(carouselClass) {
+        $(carouselClass).slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 6,
+            slidesToScroll: 2,
+            prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+            nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
+            responsive: [
+                {
+                    breakpoint: 1024, // Tablet breakpoint
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 768, // Mobile breakpoint
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+    }
+
+    // Initialize carousels
+    initializeCarousel('.released-carousel');
+    initializeCarousel('.comingsoon-carousel');
+    initializeCarousel('.planned-carousel');
+</script>
+
+<!-- Contain this later, script for the filter buttons -->
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c == "all") c = "";
+        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+        for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+    }
+
+    // Show filtered elements
+    function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {
+                element.className += " " + arr2[i];
+            }
+        }
+    }
+
+    // Hide elements that are not selected
+    function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current control button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+</script>

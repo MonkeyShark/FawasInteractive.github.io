@@ -61,13 +61,15 @@
         <h2 style="padding-top: 5%; margin-bottom: 5%;">Quick Update</h2>
         <hr style="width: 90%; margin: 0 auto;">
         <p style="margin-top: 5%; margin-left: 3%; margin-right: 3%;">
-            12/30/24:
+            3/18/25:
             <br><br>
-            Renovated the Discord server.
+            Revamped the navigation bar and animated stuff.
             <br><br>
-            Website updates coming soon!
+            More website updates coming soon!
             <br><br>
-            About to release a game called <b>"Wool Worms"</b>! Play as Fawas, fight parasite-ridden enemies for 15 minutes until a boss spawns.
+            Working heavily on Clown Clear recently, getting tons of stuff done in the S&box engine and I hope to have some sort of closed alpha test within the next month :)
+            <br><br>
+            Remind me to release my game called <b>"Wool Worms"</b>! Play as Fawas, fight parasite-ridden enemies for 15 minutes until a boss spawns.
             <br><br>
             You can select from a list of random cards to upgrade your character in preparation for the boss.
         </p>
@@ -99,34 +101,45 @@
     </div>
 
     <script>
-        // Function to load and set random splash text
+        function typeWriter(text, element, speed = 100) {
+            let i = 0;
+            element.textContent = ''; // Clear existing text
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
         function loadRandomSplash() {
-            const splashesFile = 'splashes.txt';
-
-            // Fetch the content of the splashes.txt file
+            const splashesFile = '/resources/splashes.txt';
             fetch(splashesFile)
-                .then(response => response.text())
+                .then(response => {
+                    if (!response.ok) throw new Error('File not found or empty');
+                    return response.text();
+                })
                 .then(text => {
-                    // Split lines into an array
-                    const splashesArray = text.split('\n');
-
-                    // Get a random index
+                    const splashesArray = text.split('\n').filter(line => line.trim() !== '');
+                    if (splashesArray.length === 0) throw new Error('No valid splash text');
                     const randomIndex = Math.floor(Math.random() * splashesArray.length);
-
-                    // Set the random splash text inside the text-inside-bubble element
                     const textInsideBubble = document.getElementById('text-inside-bubble');
-
-                    // Check if the element exists before updating its text content
                     if (textInsideBubble) {
-                        textInsideBubble.textContent = splashesArray[randomIndex];
+                        typeWriter(splashesArray[randomIndex], textInsideBubble, 100);
                     } else {
                         console.error('Element with id "text-inside-bubble" not found.');
                     }
                 })
-                .catch(error => console.error('Error fetching splashes:', error));
+                .catch(error => {
+                    console.error('Error fetching splashes:', error);
+                    const textInsideBubble = document.getElementById('text-inside-bubble');
+                    if (textInsideBubble) textInsideBubble.textContent = "I'm a sheep :)"; // Fallback
+                });
         }
 
-        // Call the function to load random splash text when the page has fully loaded
+        // Ensure this runs when the page loads
         window.addEventListener('load', loadRandomSplash);
     </script>
 
