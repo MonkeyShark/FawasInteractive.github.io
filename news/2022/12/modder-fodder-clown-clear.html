@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <base href="../../../">
@@ -35,79 +36,58 @@
                 <div class="blog-subpage-text">
                     <p></p>
 
-                    <h5 class="blog-subpage-tag-and-date">News & Dev<span style="color: lightgray;"> | December 17, 2022 <span style="color: lightgray; font-size: 14px">(8:05 PM EST)</span></h5>
+                    <h5 class="blog-subpage-tag-and-date">News & Dev<span style="color:white;"> | December 17, 2022 <span style="color:lightgray; font-size: 14px">(8: 05 PM EST)</span></h5>
 
                     <h1 class="blog-subpage-title">Modder Fodder (Clown Clear)</h1>
 
                     <img class="blog-subpage-thumbnail" src="/images/Blogs/Thumbnails/ModderFodder.png" alt="Image of CNC characters">
 
-                    <hr>
+                    <hr />
 
-                    <p>
-                        Hola, payaso enthuasticos. Today’s blog is all about mod support and how I plan (or hope) to incorporate it in Clown Clear. It should be said that these are currently just ideas and are subject to change before release, so please keep that in mind.
-                        <br><br>
-                        I would also like to mention that some of this may seem ramble-y, but the point is to explain my current thought process and how I plan on tackling it, and all of these ideas are solely coming from a few days worth of research, no physical testing.
-                    </p>
+                    <p>Hola, payaso enthuasticos. Today’s blog is all about mod support and how I plan (or hope) to incorporate it in <em>Clown Clear</em>. It should be said that these are currently just ideas and are subject to change before release, so please keep that in mind.</p>
+<p>I would also like to mention that some of this may seem ramble-y, but the point is to explain my current thought process and how I plan on tackling it, and all of these ideas are solely coming from a few days worth of research — no physical testing has been done yet.</p>
+<h2 class="blog-subpage-header">Overall Goals</h2>
+<hr>
+To start off, there are three main components, or goals, that I’m keeping in mind while conceptualizing these systems: **freedom**, **ease of use**, and **consistency**. I explain these further below, but if you want to skip to the custom modifier & level editor information, just scroll down until you see the “Modifier Editor” heading.
 
-                    <h2 class="blog-subpage-header">Overall Goals</h2>
-                    <hr>
-                    <p>
-                        To start off, there are three main components, or goals, that I’m keeping in mind while conceptualizing these systems, those being freedom, ease of use, and consistency. I explain these further in the following “sub-paragraphs”, but if you want to skip to the custom modifier &amp; level editor information, just scroll down until you see the “Modifier Editor” heading.
-                        <br>
-                    </p>
+<h4 class="blog-subpage-header">Freedom</h4>
+Freedom is arguably the most important because it dictates how much the player is allowed to change. Some games feature simple mod support — allowing you to create alternate skins for characters or build levels with primitive editors. While this might be preferable for simpler games, more complex projects usually benefit from deeper modding tools — things like swapping out any model, texture, etc.
 
-                    <h4 class="blog-subpage-header">Freedom</h4>
-                    <p>Freedom is arguably the most important because it dictates how much the player is allowed to change. Some games feature simple mod support, allowing you to create alternate skins for the character, or create levels with a primitive editor. While this may be preferable for simpler games, more complex projects might want a more complex solution, which can include things like the ability to swap out any model, texture, etc.<br><br>Currently I’m looking into a mix between the two, as while I’d love to give the player ultimate freedom, implementing a system both capable of importing and replacing assets in-game requires a significant amount of work. As of now I’m mostly focusing on built-in modifier &amp; level editors, but to reiterate, all of this is subject to change.</p>
+<p>Currently I&#39;m looking into a mix between the two extremes. While I&#39;d love to give players ultimate freedom, implementing a system capable of importing and replacing assets in-game requires a significant amount of work. For now, I’m mostly focusing on built-in modifier and level editors, though everything is still subject to change.</p>
+<h4 class="blog-subpage-header">Ease of Use</h4>
+Ease of use is another very important component since it opens modding to a lot more people. Unfortunately, more freedom usually equates to less ease of use, but it's still possible to organize everything in a way that balances it out.
 
-                    <h4 class="blog-subpage-header">Ease of Use</h4>
-                    <p>
-                        Ease of use is another very important component since it opens modding to a lot more people. Unfortunately, more freedom usually equates to less ease of use, but it’s still possible to organize everything in a way that balances it out.
-                        <br><br>
-                        As such, I’ve been working on some very early concepts for the modifier &amp; level editors, which I think strike a good balance, but it’s still a heavy work in progress.
-                    </p>
+<p>As such, I’ve been working on some very early concepts for the modifier and level editors, which I think strike a good balance — but again, it’s still a heavy work in progress.</p>
+<h4 class="blog-subpage-header">Consistency</h4>
+Consistency (and organization in general, I guess) is the final component I’m going to mention. It might not be as obvious as the others, but it’s still something to consider.
 
-                    <h4 class="blog-subpage-header">Consistency</h4>
-                    <p>
-                        Consistency (and organization in general, I guess) is the final component I’m going to mention, it might not be as obvious as the others, but it’s still something to consider.
-                        <br><br>
-                        My current plan is to have an overarching “Mods” menu, which contains every type of mod, a enable/disable button, mod info, etc., and a conflicting mods system, but there might also be some sort of required mods system in-place for mod makers to assign maps to modifiers. Every variant of mod will be packaged and assigned to the main “Mods” menu, but enabled mods will be shown in their respective categories as well.
-                    </p>
+<p>My current plan is to have an overarching “Mods” menu, which contains every type of mod — with enable/disable buttons, mod info, and even a conflicting mods system. There might also be a required mods system in place for mod makers to assign maps to modifiers. Every variant of mod will be packaged and assigned to the main “Mods” menu, but enabled mods will also appear in their respective categories.</p>
+<h2 class="blog-subpage-header">Modifier Editor</h2>
+<hr>
+I’m not sure how much information I've given on the "Modifier" system already, but in short — they’re kind of like “mini-game modes”, comparable to “Mutations” in Left 4 Dead. I’m hoping for these to be created by players through a simple editor showing a huge variety of variables and categories.
 
-                    <h2 class="blog-subpage-header">Modifier Editor</h2>
-                    <hr>
-                    <p>
-                        I’m not sure how much information I’ve given on the “Modifier” system, but in short—they’re kind of like of “mini-game modes” comparable to “Mutations” in Left 4 Dead. I’m hoping for these to be created by players in a simple editor showing a huge variety of variables and categories.
-                        <br><br>
-                        For example, if you wanted to create a modifier that changes the gameplay to be more like, once again, Left 4 Dead: you could toggle a check which disables aim down sights, change the properties for each weapon to have less hip-fire spread, modify the enemy and player walk speeds, and disable spawning for certain types of weapons.
-                        <br><br>
-                        Having multiple categories and sub-categories for each feature might be the best way of keeping this system organized, but I have yet to come up with a good solution.
-                    </p>
+<p>For example, if you wanted to create a modifier that changes gameplay to feel more like Left 4 Dead, you could toggle a check which disables aim down sights, change the properties for each weapon to have less hip-fire spread, modify enemy and player walk speeds, and disable spawning for certain types of weapons.</p>
+<p>Having multiple categories and sub-categories for each feature might be the best way of keeping this system organized, but I have yet to come up with a perfect solution.</p>
+<h2 class="blog-subpage-header">Level Editor</h2>
+<hr>
+A level editor is something I’ve been especially considering recently, but would require a lot more work than the custom modifiers. If I were to implement one, it’d probably be fairly simple, but still flexible enough for player-generated maps comparable to the official ones.
 
-                    <h2 class="blog-subpage-header">Level Editor</h2>
-                    <hr>
-                    <p>
-                        A level editor is something I’ve been especially considering recently, but would require a lot more work than the custom modifiers. If I were to implement one, it’d probably be kind of simple, but still flexible enough for player-generated maps comparable to the official ones.
-                        <br><br>
-                        The current method would be a lot simpler than something like Valve’s “Hammer” editor, but it’d still contain essential features like placing down props, items, and mission objects, along with lighting settings, room creation, and hopefully terrain editing.
-                        <br><br>
-                        The most difficult aspect of this seems to relate to how the map data will actually be saved, it needs to store every prop, item, etc., along with all of the settings. I haven’t actually worked on this in-engine yet, so it could be startlingly easy or horrifically painful, it really just depends.
-                    </p>
+<p>The current method would be a lot simpler than something like Valve’s “Hammer” editor, but it’d still contain essential features like placing props, items, and mission objects, along with lighting settings, room creation, and hopefully terrain editing.</p>
+<p>The most difficult aspect of this seems to relate to how the map data will actually be saved — it needs to store every prop, item, etc., along with all of the settings. I haven’t actually worked on this in-engine yet, so it could be startlingly easy or horrifically painful — it really just depends.</p>
+<h2 class="blog-subpage-header">Conclusion</h2>
+<hr>
+In conclusion, adding mod support is quite the undertaking, but since I love seeing the cool things players have made for other games (and as a part-time modder myself), I’m really trying to get it right — hopefully preventing people from needing to dissect the entire program just to have a medkit look like a spinning rat.
 
-                    <h2 class="blog-subpage-header">Conclusion</h2>
-                    <hr>
-                    <p>
-                        In conclusion, adding mod support is quite the undertaking, but since I love seeing the cool things players have made for other games (and as a part-time modder myself) I’m really trying to get it right, hopefully preventing people from needing to dissect the entire program just to have a medkit look like a spinning rat.
-                        <br><br>
-                        As always, I appreciate those of you who’ve read till the end. And for the ones who’d like to join a meticulously-crafted safehouse filled with nice, welcoming survivors, my Discord is always open! Join it here: <a href="https://discord.com/invite/BGg7pRxaUe">https://discord.com/invite/BGg7pRxaUe</a>.
-                    </p>
+<p>As always, I appreciate those of you who’ve read till the end. And for the ones who’d like to join a meticulously-crafted safehouse filled with nice, welcoming survivors, my Discord is always open! Join here:<br><a href="https://discord.com/invite/BGg7pRxaUe">https://discord.com/invite/BGg7pRxaUe   </a></p>
+
+
                 </div>
             </div>
         </div>
     </div>
 
     <!-- cookie popup -->
-    <script async src="../../../js/fawastudios_cookie.js"></script>
-
+    <script async src="/js/fawastudios_cookie.js"></script>
     <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
         🍪🐑 This website uses cookies to improve your experience.
         <a href="cookiepolicy.html">Learn more</a>
@@ -115,6 +95,5 @@
             I Got It
         </button>
     </div>
-    <!-- cookie popup end -->
 </body>
 </html>
