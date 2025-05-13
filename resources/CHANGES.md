@@ -7,6 +7,11 @@ Plans:
 - Added code to news.html to get news info to add to the news page from resources/news.json
 - Renamed "changelog.txt" to "CHANGES.md"
 
+- Improved visuals of News page
+- Added search bar to News page
+- Added page numbers and pagination to News page
+- Added dropdown for filters to News page
+
 # 2025-03-16
 
 - Removed "i-am-poor-and-ugly.html", sorry :(

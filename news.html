@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,10 +14,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
-
-<body class="body-about" style="background-color: black">
-
-    <!------nav bar-------->
+<body class="body-news">
     <div id="navbar-placeholder"></div>
     <script>
         fetch('/navbar.html')
@@ -29,44 +25,47 @@
             .catch(error => console.error('Error loading navbar:', error));
     </script>
 
-    <!-- Main Content -->
-    <article class="grid">
+    <article class="news-grid">
         <div class="news-text">
-            <p></p>
-            <h1 style="font-size: 60px;color: white;text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">NEWS</h1>
-
-            <!-- Filter Buttons -->
-            <div class="btn-toolbar" role="toolbar">
-                <div class="btn-group mr-2" style="margin: auto; display: block;" role="group">
-                    <button class="btn btn-dark" onclick="filterSelection('news')">News & Dev</button>
-                    <button class="btn btn-dark" onclick="filterSelection('tutorials')">Tutorials</button>
-                    <button class="btn btn-dark" onclick="filterSelection('clownclear')">Clown Clear</button>
-                    <button class="btn btn-dark" onclick="filterSelection('fawasinteractive')">Fawas Interactive</button>
-                </div>
-            </div>
-
-            <!-- Below is a test for a search bar. Might not be in this update, but either way the proportions are correct, but make it look like an actual search bar -->
-            <!-- <p></p> -->
-            <!-- Filter Buttons -->
-            <!-- <div class="btn-toolbar" role="toolbar">  -->
-            <!--     <button style="width: 100%" class="btn btn-dark" onclick="filterSelection('all')">Enter search...</button>  -->
-            <!-- </div>  -->
-
-            <p></p>
+            <h1>NEWS</h1>
         </div>
 
-            <!-- News List -->
-            <div class="container">
-            <div id="news-container" class="row row-cols-1 row-cols-md-4 g-4"></div>
+        <!-- Top Bar with Search and Filter Dropdown -->
+        <div class="top-bar">
+            <div class="search-bar">
+                <input type="text" id="search-input" class="form-control" placeholder="Search news..." oninput="searchNews()" aria-label="Search news articles">
             </div>
+            <div class="filter-dropdown">
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select news filter">
+                        Filter: All
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+                        <li><a class="dropdown-item" href="#" onclick="filterSelection('all')">All</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterSelection('news')">News & Dev</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterSelection('tutorials')">Tutorials</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterSelection('clownclear')">Clown Clear</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterSelection('fawasinteractive')">Fawas Interactive</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+        <div class="container">
+            <div id="news-container" class="row row-cols-1 row-cols-md-4 g-4"></div>
+            <div id="no-results" class="no-results" style="display: none;" role="alert">
+                <p>What your looking for is missing :(</p>
+                <img src="images/General/404_Sheep.png" style="width: 40%; " />
+                <p>No blog posts in this category or search.</p>
+            </div>
+            <div class="pagination">
+                <button class="btn btn-dark" onclick="prevPage()" id="prev-btn" disabled>Previous</button>
+                <span id="page-info"></span>
+                <button class="btn btn-dark" onclick="nextPage()" id="next-btn">Next</button>
             </div>
         </div>
     </article>
 
-
-
-    <!-- Cookie Popup -->
     <script async src="js/fawastudios_cookie.js"></script>
     <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
         🍪🐑 This website uses cookies to improve your experience.
@@ -76,92 +75,162 @@
         </button>
     </div>
 
-    <script src="js/bootstrap.js"></script>
+    <!-- Load Bootstrap and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    <script>
+        let currentPage = 1;
+        const itemsPerPage = 12;
+        let newsList = [];
+        let currentFilter = "all";
+        let searchQuery = "";
+
+        async function loadNews() {
+            try {
+                const response = await fetch('resources/news.json');
+                newsList = await response.json();
+                displayPage(currentPage);
+                updatePagination();
+                updateDropdownLabel("all");
+            } catch (error) {
+                console.error('Error loading news:', error);
+            }
+        }
+
+        function displayPage(page) {
+            const container = document.getElementById("news-container");
+            const noResults = document.getElementById("no-results");
+            container.innerHTML = "";
+
+            let filteredNews = currentFilter === "all" 
+                ? newsList 
+                : newsList.filter(news => news.tags.includes(currentFilter));
+
+            if (searchQuery) {
+                filteredNews = filteredNews.filter(news => 
+                    news.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    news.description.toLowerCase().includes(searchQuery.toLowerCase())
+                );
+            }
+
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const paginatedNews = filteredNews.slice(start, end);
+
+            if (paginatedNews.length === 0) {
+                noResults.style.display = "block";
+                container.style.display = "none";
+            } else {
+                noResults.style.display = "none";
+                container.style.display = "flex";
+                paginatedNews.forEach(news => {
+                    const col = document.createElement("div");
+                    col.className = `col filterDiv ${news.tags.join(" ")} show`;
+                    col.innerHTML = `
+                        <div class="blog-post">
+                            <div class="content">
+                                <div class="thumbnail-container">
+                                    <img class="thumbnail" src="${news.thumbnail}" alt="${news.title}">
+                                </div>
+                                <h5 class="post-title">${news.title}</h5>
+                                <p class="publication-date">${news.date}</p>
+                                <p class="post-description">${news.description}</p>
+                                <a href="${news.url}" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(col);
+                });
+            }
+
+            updatePagination(filteredNews.length);
+        }
+
+        function updatePagination(totalItems) {
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+            document.getElementById("page-info").textContent = `Page ${currentPage} of ${totalPages}`;
+            document.getElementById("prev-btn").disabled = currentPage === 1;
+            document.getElementById("next-btn").disabled = currentPage === totalPages || totalPages === 0;
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                displayPage(currentPage);
+            }
+        }
+
+        function nextPage() {
+            const filteredNews = getFilteredNews();
+            if (currentPage < Math.ceil(filteredNews.length / itemsPerPage)) {
+                currentPage++;
+                displayPage(currentPage);
+            }
+        }
+
+        function getFilteredNews() {
+            let filteredNews = currentFilter === "all" 
+                ? newsList 
+                : newsList.filter(news => news.tags.includes(currentFilter));
+            if (searchQuery) {
+                filteredNews = filteredNews.filter(news => 
+                    news.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    news.description.toLowerCase().includes(searchQuery.toLowerCase())
+                );
+            }
+            return filteredNews;
+        }
+
+        function filterSelection(c) {
+            currentFilter = c;
+            currentPage = 1;
+            searchQuery = "";
+            document.getElementById("search-input").value = "";
+            displayPage(currentPage);
+            updateDropdownLabel(c);
+        }
+
+        function updateDropdownLabel(filter) {
+            const dropdownButton = document.getElementById("filterDropdown");
+            const labels = {
+                all: "All",
+                news: "News & Dev",
+                tutorials: "Tutorials",
+                clownclear: "Clown Clear",
+                fawasinteractive: "Fawas Interactive"
+            };
+            dropdownButton.textContent = `Filter: ${labels[filter]}`;
+        }
+
+        function searchNews() {
+            searchQuery = document.getElementById("search-input").value;
+            currentPage = 1;
+            displayPage(currentPage);
+        }
+
+        function w3AddClass(element, name) {
+            const arr1 = element.className.split(" ");
+            const arr2 = name.split(" ");
+            for (let i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) === -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            let arr1 = element.className.split(" ");
+            const arr2 = name.split(" ");
+            for (let i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        window.onload = loadNews;
+    </script>
 </body>
 </html>
-
-<script>
-  async function loadNews() {
-    const response = await fetch('resources/news.json');
-    const newsList = await response.json();
-
-    const container = document.getElementById("news-container");
-    container.innerHTML = ""; // Clear existing items
-
-    newsList.forEach(news => {
-      const col = document.createElement("div");
-      col.className = `col filterDiv ${news.tags.join(" ")} show`;
-
-      col.innerHTML = `
-        <div class="blog-post">
-          <div class="content">
-            <div class="thumbnail-container">
-              <img class="thumbnail" src="${news.thumbnail}" alt="${news.title}">
-            </div>
-            <h5 class="post-title">${news.title}</h5>
-            <p class="publication-date">${news.date}</p>
-            <p class="post-description">${news.description}</p>
-            <a href="${news.url}" class="btn btn-primary">Read More</a>
-          </div>
-        </div>
-      `;
-      container.appendChild(col);
-    });
-
-    // Reapply filtering logic if needed
-    window.filterSelection("all"); // Reset filters
-  }
-
-  window.onload = loadNews;
-</script>
-
-<!-- Contain this later, script for the filter buttons -->
-<script>
-    filterSelection("all")
-    function filterSelection(c) {
-        var x, i;
-        x = document.getElementsByClassName("filterDiv");
-        if (c == "all") c = "";
-        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-        for (i = 0; i < x.length; i++) {
-            w3RemoveClass(x[i], "show");
-            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-        }
-    }
-
-    // Show filtered elements
-    function w3AddClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-            if (arr1.indexOf(arr2[i]) == -1) {
-                element.className += " " + arr2[i];
-            }
-        }
-    }
-
-    // Hide elements that are not selected
-    function w3RemoveClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-            while (arr1.indexOf(arr2[i]) > -1) {
-                arr1.splice(arr1.indexOf(arr2[i]), 1);
-            }
-        }
-        element.className = arr1.join(" ");
-    }
-
-    // Add active class to the current control button (highlight it)
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
-            var current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-        });
-    }
-</script>
