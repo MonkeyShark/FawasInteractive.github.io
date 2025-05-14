@@ -29,6 +29,11 @@ Plans:
 - Moved footer styles from games.css to style.css
 - Added footer to news.html, index.html, and about.html
 
+- Made Contact page fit the newer style (and reduced visual problems)
+- Changed "News" page references to "Blog" to better encompass it.
+
+- Created clone of Games for Projects (projects.html), with Pasture browser info
+
 # 2025-03-16
 
 - Removed "i-am-poor-and-ugly.html", sorry :(
