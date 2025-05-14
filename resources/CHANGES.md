@@ -23,7 +23,11 @@ Plans:
 - Separated Contact CSS from style.css into contact.css
 
 - Added "all-games.css" and used that for Mods and Games
-- 
+- Added big sections for Clown Clear, Chimp Chowder, and Click Or Treat in Games page
+- Added a horizontal list of videos for aesthetic purposes in Games page
+
+- Moved footer styles from games.css to style.css
+- Added footer to news.html, index.html, and about.html
 
 # 2025-03-16
 

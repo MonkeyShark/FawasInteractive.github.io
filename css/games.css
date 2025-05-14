@@ -259,34 +259,6 @@
     border-color: #3F3787;
 }
 
-/* Footer */
-.footer-section {
-    background-color: #1f1f1f;
-    padding: 40px 0;
-    text-align: center;
-}
-
-.footer-section p {
-    margin: 0;
-    font-size: 1rem;
-    color: #ccc;
-}
-
-.social-links {
-    margin-top: 20px;
-}
-
-.social-icon {
-    color: #fff;
-    font-size: 1.8rem;
-    margin: 0 15px;
-    transition: color 0.3s;
-}
-
-.social-icon:hover {
-    color: #3F3787;
-}
-
 /* Cookie Popup */
 .cookie-popup {
     position: fixed;
