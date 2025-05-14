@@ -22,6 +22,9 @@ Plans:
 - Separated About CSS from style.css into about.css
 - Separated Contact CSS from style.css into contact.css
 
+- Added "all-games.css" and used that for Mods and Games
+- 
+
 # 2025-03-16
 
 - Removed "i-am-poor-and-ugly.html", sorry :(
