@@ -12,6 +12,8 @@ Plans:
 - Added page numbers and pagination to News page
 - Added dropdown for filters to News page
 
+- Moved boostrap css files from "css/" to "css/bootstrap/"
+
 # 2025-03-16
 
 - Removed "i-am-poor-and-ugly.html", sorry :(
