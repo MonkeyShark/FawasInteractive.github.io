@@ -1,0 +1,293 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-games {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 60vh;
+    background: url('/images/Banners/Games.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Video Row */
+.video-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.video-container {
+    flex: 1;
+    aspect-ratio: 1/1;
+    max-width: 300px;
+    transition: flex 0.3s ease, transform 0.3s ease, aspect-ratio 0.3s ease;
+    cursor: pointer;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+.video-container:hover {
+    flex: 1.5;
+    transform: scale(1.05);
+    aspect-ratio: 16/9;
+}
+
+/* Games Section */
+.games-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #1f1f1f, #101010);
+}
+
+.game-feature {
+    margin: 60px auto;
+    max-width: 1200px;
+    background: #151515;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.game-header {
+    padding: 40px;
+    background: linear-gradient(90deg, #3F3787, #2a2a2a);
+    text-align: center;
+}
+
+.game-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.game-meta {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.game-meta span i {
+    margin-right: 8px;
+    color: #fff;
+}
+
+.game-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.game-gallery {
+    width: 50%;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gallery-item {
+    width: 100%;
+}
+
+.gallery-main img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-thumbnails {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-thumbnail {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.gallery-thumbnail.active {
+    opacity: 1;
+    transform: scale(1.05);
+    border: 2px solid #3F3787;
+}
+
+.gallery-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+.gallery-thumbnail:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.game-details {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.game-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.game-details p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.game-details h4 {
+    font-size: 1.4rem;
+    margin: 20px 0 10px;
+}
+
+.game-details ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.game-details ul li {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.game-details ul li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #3F3787;
+}
+
+.game-details .btn {
+    background-color: #3F3787;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.game-details .btn:hover {
+    background-color: #5a4fb3;
+}
+
+/* Reverse Layout */
+.game-feature.reverse .game-content {
+    flex-direction: row-reverse;
+}
+
+/* See All Games Button */
+.see-all-games {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.see-all-games .btn {
+    padding: 14px 50px;
+    font-size: 1.3rem;
+    border-color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.see-all-games .btn:hover {
+    background-color: #3F3787;
+    color: #fff;
+    border-color: #3F3787;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-title { font-size: 2.5rem; }
+    .video-row { flex-wrap: wrap; }
+    .video-container { max-width: 200px; margin-bottom: 10px; }
+    .video-container:hover { aspect-ratio: 16/9; }
+    .game-content { flex-direction: column; }
+    .game-gallery, .game-details { width: 100%; padding: 0; }
+    .game-gallery { margin-bottom: 20px; }
+    .gallery-main img { height: 250px; width: 100%; object-fit: cover; }
+    .gallery-thumbnails { flex-wrap: wrap; justify-content: center; }
+    .gallery-thumbnail { width: 80px; height: 80px; margin: 5px; }
+    .game-title { font-size: 2.5rem; }
+    .game-meta { flex-direction: column; gap: 10px; }
+    .game-details h3 { font-size: 1.6rem; }
+    .game-details p { font-size: 1rem; }
+}
+
+@media (max-width: 576px) {
+    .hero-title { font-size: 2rem; }
+    .video-container { max-width: 150px; }
+    .gallery-main img { height: 200px; }
+    .gallery-thumbnail { width: 60px; height: 60px; }
+    .game-title { font-size: 2rem; }
+    .game-details .btn { padding: 10px 20px; font-size: 1rem; }
+}

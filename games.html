@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="List of FawaStudios Games">
-    <meta name="keywords" content="Fawas Interactive, FawaStudios, Fawas, Clown, Sheep, Games, Game Development">
+    <meta name="description" content="Explore Fawas Interactive's many games.">
+    <meta name="keywords" content="FawaStudios, Fawas Interactive, Clown Clear, Chimp Chowder, Click Or Treat, Games">
     <meta property="og:url" content="https://www.fawasinteractive.com/games">
     <meta name="theme-color" content="#3F3787">
     <meta property="og:image" content="https://fawasinteractive.com/images/General/FawasInteractive_Icon.png">
-    <title>Games - Fawas Interactive</title>
+    <title>Featured Games - Fawas Interactive</title>
     <link rel="shortcut icon" type="image/png" href="images/General/FawasInteractive_Icon.png">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="body-games" style="background-color: black">
-
-    <!------nav bar-------->
+<body class="body-games">
+    <!-- Navigation -->
     <div id="navbar-placeholder"></div>
     <script>
         fetch('/navbar.html')
@@ -28,53 +27,219 @@
             .catch(error => console.error('Error loading navbar:', error));
     </script>
 
-    <!-- Main Content -->
-    <div class="introduction">
-        <p></p>
-        <h1 style="font-size: 60px;color: white;text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">GAMES</h1>
-    </div>
-
-    <!-- Games List -->
-    <div class="games-content-box">
-        <section id="games-list">
-            <div class="container">
-                <div class="row featured-games">
-                    <div class="col-md-6 game text-center">
-                        <a href="https://www.clownclear.com" style="text-decoration:none">
-                            <img src="images/Games/ClownClear/ClownClear.png" class="game-img" alt="Clown Clear Banner">
-                            <h2 class="game-txt">Clown Clear</h2>
-                            <p class="game-description-txt">Fight hordes of mutant clown zombies.</p>
-                        </a>
-                    </div>
-                    <div class="col-md-3 game text-center">
-                        <a href="https://www.fawasinteractive.com/games/chimpchowder" style="text-decoration:none">
-                            <img src="images/Games/ChimpChowder/ChimpChowder.png" class="game-img" alt="Chimp Chowder Banner">
-                            <h2 class="game-txt">Chimp Chowder</h2>
-                            <p class="game-description-txt">Keep the chimps well fed, or else...</p>
-                        </a>
-                    </div>
-                    <div class="col-md-3 game text-center">
-                        <a href="https://www.fawasinteractive.com/clickortreat2" style="text-decoration:none">
-                            <img src="images/Games/ClickOrTreat/ClickOrTreat2.png" class="game-img" alt="Click Or Treat v2.1 Banner">
-                            <h2 class="game-txt">Click Or Treat: v2.1</h2>
-                            <p class="game-description-txt">Click on doors and hire monsters for candy.</p>
-                        </a>
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Developing Since 2017</h1>
+            <div class="video-row">
+                <div class="video-container">
+                    <video autoplay muted loop playsinline>
+                        <source src="/videos/ClownClear_MainMenu.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop playsinline>
+                        <source src="/videos/Cemented_MainMenu.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop playsinline>
+                        <source src="/videos/ClickOrTreat_Dimensions.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop playsinline>
+                        <source src="/videos/ClownClear_FPS.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop playsinline>
+                        <source src="/videos/ClickOrTreat2_Weather.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container">
+                    <video autoplay muted loop playsinline>
+                        <source src="/videos/Cemented_Gameplay.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <!-- Featured Games -->
+    <section id="featured-games" class="games-section">
+        <!-- Game 1: Clown Clear -->
+        <div class="game-feature">
+            <div class="game-header">
+                <h2 class="game-title">Clown Clear</h2>
+                <div class="game-meta">
+                    <span><i class="fas fa-dollar-sign"></i> $9.99</span>
+                    <span><i class="fas fa-gamepad"></i> Steam</span>
+                    <span><i class="fas fa-calendar-alt"></i> Coming Soon: Oct 2026</span>
+                </div>
+            </div>
+            <div class="game-content">
+                <div id="gallery-1" class="game-gallery">
+                    <div class="gallery-item gallery-main">
+                        <img src="/images/Games/ClownClear/SteamBanner.png" alt="Clown Clear Gameplay">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <div class="gallery-thumbnail" data-gallery="gallery-1" data-src="/images/Games/ClownClear/SteamBanner.png">
+                            <img src="/images/Games/ClownClear/SteamBanner.png" alt="Clown Clear Gameplay Thumbnail">
+                        </div>
+                        <div class="gallery-thumbnail" data-gallery="gallery-1" data-src="/images/Games/ClownClear/EnvironmentDark.png">
+                            <img src="/images/Games/ClownClear/EnvironmentDark.png" alt="Clown Clear Scene Thumbnail">
+                        </div>
+                        <div class="gallery-thumbnail" data-gallery="gallery-1" data-src="/images/Games/ClownClear/ClownPeak.png">
+                            <img src="/images/Games/ClownClear/ClownPeak.png" alt="Clown Clear Action Thumbnail">
+                        </div>
+                    </div>
+                </div>
+                <div class="game-details">
+                    <h3>About the Game</h3>
+                    <p>In this action-horror FPS, a mysterious plague twists its infected hosts into grotesque, clown-like horrors. You're immune—but not to dying. Hope's extinct. No cure. No salvation. Just you, your weapon, and whatever's still breathing. Clear up the mess, and leave mercy behind; they sure didn't.</p>
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Fast-paced combat with melee, ranged, and throwable weapons.</li>
+                        <li>Explore an eerie, autumn-themed world.</li>
+                        <li>Fight special enemies with fearsome attacks.</li>
+                        <li>Play through 6 separate character storylines.</li>
+                    </ul>
+                    <a href="https://www.clownclear.com" class="btn btn-primary btn-lg">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game 2: Click Or Treat -->
+        <div class="game-feature">
+            <div class="game-header">
+                <h2 class="game-title">Click Or Treat</h2>
+                <div class="game-meta">
+                    <span><i class="fas fa-dollar-sign"></i> Free</span>
+                    <span><i class="fas fa-gamepad"></i> Itch.io, GameJolt, Newgrounds</span>
+                    <span><i class="fas fa-calendar-alt"></i> Released: Oct 2021</span>
+                </div>
+            </div>
+            <div class="game-content">
+                <div id="gallery-3" class="game-gallery">
+                    <div class="gallery-item gallery-main">
+                        <img src="/images/Games/ClickOrTreat/ClickOrTreat_Screenshot.png" alt="Click Or Treat Gameplay">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <div class="gallery-thumbnail" data-gallery="gallery-3" data-src="/images/Games/ClickOrTreat/ClickOrTreat_Screenshot.png">
+                            <img src="/images/Games/ClickOrTreat/ClickOrTreat_Screenshot.png" alt="Click Or Treat Gameplay Thumbnail">
+                        </div>
+                        <div class="gallery-thumbnail" data-gallery="gallery-3" data-src="/images/Games/ClickOrTreat/ClickOrTreat_Icon.png">
+                            <img src="/images/Games/ClickOrTreat/ClickOrTreat_Icon.png" alt="Click Or Treat Scene Thumbnail">
+                        </div>
+                        <div class="gallery-thumbnail" data-gallery="gallery-3" data-src="/images/Games/ClickOrTreat/ClickOrTreat2.png">
+                            <img src="/images/Games/ClickOrTreat/ClickOrTreat2.png" alt="Click Or Treat Action Thumbnail">
+                        </div>
+                    </div>
+                </div>
+                <div class="game-details">
+                    <h3>About the Game</h3>
+                    <p>Click Or Treat: v2.1 is an addictive idle game set during Halloween night. Click doors to collect candy, hire monsters, and build your candy empire.</p>
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Simple yet engaging clicker mechanics</li>
+                        <li>Many different monster types to unlock</li>
+                        <li>Play in browser or on your desktop</li>
+                    </ul>
+                    <a href="https://fawasinteractive.itch.io/click-or-treat" class="btn btn-primary btn-lg">Play Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game 3: Chimp Chowder -->
+        <div class="game-feature reverse">
+            <div class="game-header">
+                <h2 class="game-title">Chimp Chowder</h2>
+                <div class="game-meta">
+                    <span><i class="fas fa-dollar-sign"></i> $0.99</span>
+                    <span><i class="fas fa-gamepad"></i> Steam, Itch.io</span>
+                    <span><i class="fas fa-calendar-alt"></i> Coming Soon: ???</span>
+                </div>
+            </div>
+            <div class="game-content">
+                <div id="gallery-2" class="game-gallery">
+                    <div class="gallery-item gallery-main">
+                        <img src="/images/Games/ChimpChowder/ChimpChowder_Icon.png" alt="Chimp Chowder Gameplay">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <div class="gallery-thumbnail" data-gallery="gallery-2" data-src="/images/Games/ChimpChowder/ChimpChowder_Icon.png">
+                            <img src="/images/Games/ChimpChowder/ChimpChowder_Icon.png" alt="Chimp Chowder Gameplay Thumbnail">
+                        </div>
+                        <div class="gallery-thumbnail" data-gallery="gallery-2" data-src="/images/Games/ChimpChowder/ChimpChowder_House.PNG">
+                            <img src="/images/Games/ChimpChowder/ChimpChowder_House.PNG" alt="Chimp Chowder Scene Thumbnail">
+                        </div>
+                        <div class="gallery-thumbnail" data-gallery="gallery-2" data-src="/images/Games/ChimpChowder/ChimpChowder_Models.png">
+                            <img src="/images/Games/ChimpChowder/ChimpChowder_Models.png" alt="Chimp Chowder Action Thumbnail">
+                        </div>
+                    </div>
+                </div>
+                <div class="game-details">
+                    <h3>About the Game</h3>
+                    <p>Chimp Chowder is a time-management game where you're forced to feed ravenous chimps on both sides. Feed them well, or they'll feed on you.</p>
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Anger and Greed meters that make the game increasingly difficult</li>
+                        <li>High scores to track your improvement</li>
+                        <li>In-game cosmetics, purchasble by currency earned in the game</li>
+                    </ul>
+                    <a href="https://www.fawasinteractive.com/games/chimpchowder" class="btn btn-primary btn-lg">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- See All Games Button -->
+        <div class="see-all-games">
+            <a href="all-games.html" class="btn btn-outline-light btn-lg">See All Games</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <p>© 2025 Fawas Interactive. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <!-- Cookie Popup -->
-    <script async src="js/fawastudios_cookie.js"></script>
-    <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
-        🍪🐑 This website uses cookies to improve your experience.
-        <a href="cookiepolicy.html">Learn more</a>
-        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
-            I Got It
-        </button>
+    <div id="cookie-popup" class="cookie-popup">
+        <p>🍪 We use cookies to enhance your experience. <a href="cookiepolicy.html">Learn more</a></p>
+        <button class="btn btn-primary btn-sm" onclick="hideCookiePopup()">Accept</button>
     </div>
 
-    <script src="js/bootstrap.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fawastudios_cookie.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.gallery-thumbnail').click(function() {
+                const galleryId = $(this).data('gallery');
+                const newSrc = $(this).data('src');
+                const $mainImg = $(`#${galleryId} .gallery-main img`);
+                const $thumbnails = $(`#${galleryId} .gallery-thumbnail`);
+
+                $mainImg.fadeOut(200, function() {
+                    $mainImg.attr('src', newSrc).fadeIn(200).on('error', function() {
+                        console.error('Failed to load image:', newSrc);
+                        $mainImg.attr('src', '/images/banners/HomeBannerSheep.png'); // Fallback image
+                    });
+                });
+                $thumbnails.removeClass('active');
+                $(this).addClass('active');
+            });
+            $('.gallery-thumbnail').first().addClass('active');
+        });
+    </script>
 </body>
 </html>

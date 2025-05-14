@@ -1,0 +1,203 @@
+@import url('/css/cookie-policy.css');
+@import url('/css/scrollbar.css');
+@import url('/css/navbar.css');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/*-----------Home----------*/
+.body-home {
+    background-image: url("/images/Banners/HomeBanner.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.introduction {
+    color: #d3d3d3;
+    text-align: center;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    padding: 5% 15%;
+    font-size: 1.2rem;
+    /* animation: fadeInText 2s ease-in-out; */
+    animation: fadeInText .3s ease-in-out;
+}
+
+.intro-logo {
+    width: 35%;
+    max-width: 100%;
+    filter: drop-shadow(5px 4px 4px #000000);
+    padding-bottom: 8%;
+}
+
+.content-box {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    bottom: 10%;
+    width: 25%;
+    background: linear-gradient(135deg, #121212, #080808); /* Gradient background */
+    border-radius: 20px;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.8));
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .content-box:hover {
+        transform: translateY(-10px); /* Lift on hover */
+    }
+
+.sheep-section {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    bottom: 10%;
+    width: 28%;
+}
+
+.sheep-image {
+    width: 130%;
+    max-width: 100%;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: bounce 2s infinite;
+}
+
+.text-bubble-image {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+    .text-bubble-image img {
+        width: 100%;
+    }
+
+    .text-bubble-image:hover {
+        transform: translateX(-50%) scale(1.05); /* Slight pop on hover */
+    }
+
+.text-inside-bubble {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: cursive;
+    width: 75%;
+    text-align: center;
+    color: #000000;
+    animation: textFade 1.5s ease-in-out;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes textFade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .body-home {
+        background-attachment: scroll;
+    }
+
+    .introduction {
+        padding: 10% 5%;
+        font-size: 1rem;
+    }
+
+    .intro-logo {
+        width: 80%;
+        padding-bottom: 20%;
+    }
+
+    .content-box {
+        position: relative;
+        width: 90%;
+        min-width: 300px; /* Fix thin card */
+        margin: 20px auto;
+        padding: 20px;
+        top: 0;
+        left: 0;
+        bottom: auto;
+    }
+
+    .sheep-section {
+        position: relative;
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .sheep-image {
+        width: 60%;
+        max-width: 100%;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .text-bubble-image {
+        position: absolute; /* Bubble above sheep */
+        top: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        margin: 0;
+    }
+
+    .text-inside-bubble {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.2rem;
+        width: 85%;
+        color: #000000;
+        z-index: 1;
+    }
+}

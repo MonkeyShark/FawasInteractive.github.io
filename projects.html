@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Fawas Interactive's projects.">
+    <meta name="keywords" content="FawaStudios, Fawas Interactive, Clown Clear, Chimp Chowder, Click Or Treat, Games">
+    <meta property="og:url" content="https://www.fawasinteractive.com/games">
+    <meta name="theme-color" content="#3F3787">
+    <meta property="og:image" content="https://fawasinteractive.com/images/General/FawasInteractive_Icon.png">
+    <title>Projects - Fawas Interactive</title>
+    <link rel="shortcut icon" type="image/png" href="images/General/FawasInteractive_Icon.png">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="body-games">
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Fawas Interactive Projects</h1>
+            <div class="video-row">
+                <div class="video-container">
+                    <video autoplay muted loop playsinline>
+                        <source src="/videos/Cemented_Launcher.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Games -->
+    <section id="featured-games" class="games-section">
+        <!-- Game 1: Clown Clear -->
+        <div class="game-feature">
+            <div class="game-header">
+                <h2 class="game-title">Fawas Pasture</h2>
+                <div class="game-meta">
+                    <span><i class="fas fa-dollar-sign"></i> Free</span>
+                    <span><i class="fas fa-gamepad"></i> Browser</span>
+                    <span><i class="fas fa-calendar-alt"></i> Coming Soon: ???</span>
+                </div>
+            </div>
+            <div class="game-content">
+                <div id="gallery-1" class="game-gallery">
+                    <div class="gallery-item gallery-main">
+                        <img src="/images/Projects/Pasture/Pasture_Banner.png" alt="Clown Clear Gameplay">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <div class="gallery-thumbnail" data-gallery="gallery-1" data-src="/images/Projects/Pasture/Pasture_Banner.png">
+                            <img src="/images/Projects/Pasture/Pasture_Banner.png" alt="Clown Clear Gameplay Thumbnail">
+                        </div>
+                        <div class="gallery-thumbnail" data-gallery="gallery-1" data-src="/images/Projects/Pasture/Pasture_Settings.png">
+                            <img src="/images/Projects/Pasture/Pasture_Settings.png" alt="Clown Clear Scene Thumbnail">
+                        </div>
+                        <div class="gallery-thumbnail" data-gallery="gallery-1" data-src="/images/Projects/Pasture/Pasture_SynthTheme.png">
+                            <img src="/images/Projects/Pasture/Pasture_SynthTheme.png" alt="Clown Clear Action Thumbnail">
+                        </div>
+                    </div>
+                </div>
+                <div class="game-details">
+                    <h3>About the Browser</h3>
+                    <p>Fawas Pasture is a browser created for customizability and productivity for developers.</p>
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Many Built-In Themes</li>
+                        <li>To Be Revealed!</li>
+                    </ul>
+                    <a href="https://www.clownclear.com" class="btn btn-primary btn-lg">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <p>© 2025 Fawas Interactive. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Popup -->
+    <div id="cookie-popup" class="cookie-popup">
+        <p>🍪 We use cookies to enhance your experience. <a href="cookiepolicy.html">Learn more</a></p>
+        <button class="btn btn-primary btn-sm" onclick="hideCookiePopup()">Accept</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fawastudios_cookie.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.gallery-thumbnail').click(function() {
+                const galleryId = $(this).data('gallery');
+                const newSrc = $(this).data('src');
+                const $mainImg = $(`#${galleryId} .gallery-main img`);
+                const $thumbnails = $(`#${galleryId} .gallery-thumbnail`);
+
+                $mainImg.fadeOut(200, function() {
+                    $mainImg.attr('src', newSrc).fadeIn(200).on('error', function() {
+                        console.error('Failed to load image:', newSrc);
+                        $mainImg.attr('src', '/images/banners/HomeBannerSheep.png'); // Fallback image
+                    });
+                });
+                $thumbnails.removeClass('active');
+                $(this).addClass('active');
+            });
+            $('.gallery-thumbnail').first().addClass('active');
+        });
+    </script>
+</body>
+</html>

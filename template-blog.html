@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="../../../">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - Fawas Interactive</title>
+    <link rel="shortcut icon" type="/image/png" href="/images/General/FawasInteractive_Icon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/news-subpage.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+    <script src="/js/bootstrap.js"></script>
+</head>
+<body class="body-contact" style="background-color: black">
+    <!------nav bar-------->
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <!-- Main Content -->
+    <div class="introduction">
+        <p></p>
+        <h1 style="font-size: 60px;color: white;text-shadow: 4px 4px 2px rgba(0,0,0,0.6);">NEWS</h1>
+    </div>
+
+    <!--------main section---------->
+    <div class="blog-subpage-content-box">
+        <div class="blog-subpage-content">
+            <div class="blog-subpage-panel">
+                <div class="blog-subpage-text">
+                    <p></p>
+
+                    <h5 class="blog-subpage-tag-and-date">{{tags}}<span style="color:white;"> | {{date}} <span style="color:lightgray; font-size: 14px">{{time}}</span></h5>
+
+                    <h1 class="blog-subpage-title">{{title}}</h1>
+
+                    <img class="blog-subpage-thumbnail" src="{{thumbnail}}" alt="Image of CNC characters">
+
+                    <hr />
+
+                    {{content}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cookie popup -->
+    <script async src="/js/fawastudios_cookie.js"></script>
+    <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
+        🍪🐑 This website uses cookies to improve your experience.
+        <a href="cookiepolicy.html">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
+            I Got It
+        </button>
+    </div>
+</body>
+</html>

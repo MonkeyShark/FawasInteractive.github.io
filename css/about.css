@@ -1,0 +1,122 @@
+/*-----------About----------*/
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px; /* Add space around content */
+    text-shadow: 1px 0 10px #000000;
+}
+
+.about-header {
+    color: #d3d3d3; /* Softer than lightgray */
+    text-align: center;
+    text-shadow: 1px 0 10px #000000;
+    margin-bottom: 30px; /* Space below header */
+}
+
+.body-about {
+    background-image: url("/images/Banners/About.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Desktop default */
+    color: #d3d3d3;
+    min-height: 100vh; /* Full page coverage */
+}
+
+.about-card {
+    background-image: linear-gradient(#1f1f1f, #101010);
+    color: #fff;
+    border-radius: 15px; /* Softer edges */
+    padding: 25px;
+    margin: 20px;
+    max-width: 30%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .about-card:hover {
+        transform: translateY(-5px); /* Subtle lift */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+.about-card-wide {
+    max-width: 60%;
+    text-align: center;
+}
+
+.about-card h1,
+.about-card h3 {
+    text-align: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif; /* Cleaner font */
+    margin-bottom: 15px;
+}
+
+.about-card h1 {
+    font-size: 2rem;
+}
+
+.about-card h3 {
+    font-size: 1.5rem;
+}
+
+.about-card hr {
+    border-color: #fff;
+    margin: 20px auto;
+    width: 50%; /* Shorter, centered */
+    border-width: 1px;
+}
+
+.about-content {
+    margin-bottom: 20px;
+    line-height: 1.6; /* Better readability */
+    font-size: 1.1rem;
+}
+
+.about-card ul {
+    padding-left: 25px;
+    list-style-type: disc; /* Clearer bullets */
+}
+
+.about-card a {
+    color: #66ccff; /* Brighter, themed link color */
+    text-decoration: none;
+}
+
+    .about-card a:hover {
+        text-decoration: underline;
+        color: #99ddff; /* Lighter on hover */
+    }
+
+/* Unchanged Logo CSS */
+.about-logo {
+    border-radius: 15px;
+    margin-top: -5px;
+    width: 50%;
+    height: auto;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .body-about {
+        background-attachment: scroll; /* Fix for mobile */
+    }
+
+    .about {
+        padding: 20px 10px;
+    }
+
+    .about-header h1 {
+        font-size: 2.5rem; /* Smaller but bold */
+    }
+
+    .about-card {
+        max-width: 100%; /* Full width on mobile */
+        margin: 15px 0;
+    }
+
+    .about-card-wide {
+        max-width: 100%; /* Stack naturally */
+    }
+}
