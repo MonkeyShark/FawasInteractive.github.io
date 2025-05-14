@@ -259,39 +259,6 @@
     border-color: #3F3787;
 }
 
-/* Cookie Popup */
-.cookie-popup {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background: #2a2a2a;
-    padding: 20px;
-    border-radius: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-}
-
-.cookie-popup p {
-    margin: 0;
-    font-size: 1rem;
-}
-
-.cookie-popup a {
-    color: #3F3787;
-    text-decoration: underline;
-}
-
-.cookie-popup button {
-    background-color: #3F3787;
-    border: none;
-    padding: 10px 25px;
-    font-size: 1rem;
-}
-
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
