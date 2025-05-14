@@ -34,6 +34,10 @@ Plans:
 
 - Created clone of Games for Projects (projects.html), with Pasture browser info
 
+- Separated Scrollbar CSS from style.css into scrollbar.css
+- Separated Navbar CSS from style.css into navbar.css
+- Separated Cookie Policy CSS from style.css into cookie-policy.css
+
 # 2025-03-16
 
 - Removed "i-am-poor-and-ugly.html", sorry :(

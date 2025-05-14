@@ -1,0 +1,20 @@
+/*-----------Scrollbar Design----------*/
+    body::-webkit-scrollbar {
+      width: 10px;
+      background-color: rgba(114, 137, 218, 0.1); /* Blurple color */
+      border-radius: 8px; /* Rounded edges */
+    }
+
+    body::-webkit-scrollbar-thumb { /* The thingy that actually moves */
+      background: linear-gradient(180deg, rgba(114, 137, 218, 0.5), rgba(155, 89, 182, 0.5)); /* Gradient from blurple to purple */
+      border-radius: 8px; /* Rounded edges */
+    }
+
+    body::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, rgba(84, 105, 212, 0.5), rgba(142, 68, 173, 0.5)); /* Gradientzo */
+    }
+
+    body::-webkit-scrollbar-track {
+      background-color: rgba(114, 137, 218, 0.1); /* Blurple */
+      border-radius: 8px; /* Rounded edges */
+    }
