@@ -132,7 +132,7 @@
 
 /*-----------Home----------*/
 .body-home {
-    background-image: url("images/Banners/HomeBanner.png");
+    background-image: url("/images/Banners/HomeBanner.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -343,7 +343,7 @@
 }
 
 .body-about {
-    background-image: url("images/Banners/About.png");
+    background-image: url("/images/Banners/About.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -451,7 +451,7 @@
 
 /*-----------News----------*/
 .body-news {
-    background-image: url("images/Banners/About.png");
+    background-image: url("/images/Banners/About.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -910,7 +910,7 @@
 
 /*-----------Games----------*/
 .body-games {
-    background-image: url("images/Banners/Games.png");
+    background-image: url("/images/Banners/Games.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1086,7 +1086,7 @@
 
 /*-----------Contact----------*/
 .body-contact {
-    background-image: url("images/Banners/Games.png");
+    background-image: url("/images/Banners/Games.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1172,7 +1172,7 @@
 }
 
 .body-missing {
-    background-image: url("images/Banners/Missing.png");
+    background-image: url("/images/Banners/Missing.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
