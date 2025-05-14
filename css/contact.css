@@ -1,8 +1,12 @@
 /* Contact Page Styles */
 body {
-    background: linear-gradient(135deg, #1a1a1a 0%, #3F3787 100%);
-    min-height: 100vh;
-    font-family: 'Arial', sans-serif;
+    background-image: url("/images/Banners/Games.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Desktop default */
+    color: #d3d3d3;
+    min-height: 100vh; /* Full page coverage */
 }
 
 .container {
