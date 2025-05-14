@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact FawaStudios">
-    <meta name="keywords" content="Fawas Interactive, FawaStudios, Fawas, Clown, Sheep, Games, Game Development">
-    <meta content="https://www.fawasinteractive.com/contact" property="og:url">
-    <meta content="#3F3787" data-react-helmet="true" name="theme-color">
+    <meta name="description" content="Contact FawaStudios for inquiries, feedback, or support.">
+    <meta name="keywords" content="Fawas Interactive, FawaStudios, Games, Game Development">
+    <meta property="og:url" content="https://www.fawasinteractive.com/contact">
     <meta property="og:image" content="https://fawasinteractive.com/images/General/FawasInteractive_Icon.png">
+    <meta name="theme-color" content="#3F3787">
     <title>Contact - Fawas Interactive</title>
     <link rel="shortcut icon" type="image/png" href="images/General/FawasInteractive_Icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/css/contact.css">
 </head>
-
-<body class="body-contact" style="background-color: black">
-
-    <!------nav bar-------->
+<body>
+    <!-- Navbar -->
     <div id="navbar-placeholder"></div>
     <script>
         fetch('/navbar.html')
@@ -30,28 +27,37 @@
     </script>
 
     <!-- Main Content -->
-    <div class="introduction">
-        <h1>Need Something?</h1>
-        <p>Contact us on <a href="https://twitter.com/messages/compose?recipient_id=1243019567594704897">Twitter</a> or send us an email at <a href="mailto:fawastudios@gmail.com">fawastudios@gmail.com</a></p>
-        <hr>
-        <p><i>Have some feedback? Fill out this form!</i></p>
-    </div>
-
-    <!-- Google Forms Embed -->
-    <article class="grid">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd2K2fwwmtmBFtjsoC6KD4ciCn6lQjDATz0zjO4ym3BBVeXqg/viewform?embedded=true" width="90%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </article>
+    <section class="container my-5">
+        <div class="text-center">
+            <h1 class="display-4 fw-bold text-white">Need Something?</h1>
+            <p class="lead text-light">Reach out via Twitter, email, or our feedback form.</p>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8">
+                <div class="card bg-dark text-light shadow-lg border-0">
+                    <div class="card-body p-4">
+                        <h3 class="card-title mb-4">Contact Us</h3>
+                        <p>
+                            <a href="https://twitter.com/messages/compose?recipient_id=1243019567594704897" class="btn btn-outline-light me-2">Message on Twitter</a>
+                            <a href="mailto:fawastudios@gmail.com" class="btn btn-outline-light">Email Us</a>
+                        </p>
+                        <hr class="bg-light">
+                        <h4 class="mt-4">Feedback</h4>
+                        <p class="text-muted">Share your thoughts to help us improve!</p>
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd2K2fwwmtmBFtjsoC6KD4ciCn6lQjDATz0zjO4ym3BBVeXqg/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Cookie Popup -->
-    <script async src="js/fawastudios_cookie.js"></script>
-    <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
-        🍪🐑 This website uses cookies to improve your experience.
-        <a href="cookiepolicy.html">Learn more</a>
-        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
-            I Got It
-        </button>
+    <div id="cookie-popup" class="alert alert-dark text-center position-fixed bottom-0 w-100 mb-0" role="alert">
+        🍪🐑 We use cookies to enhance your experience. <a href="cookiepolicy.html" class="text-light">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">Accept</button>
     </div>
 
-    <script src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script async src="js/fawastudios_cookie.js"></script>
 </body>
 </html>
