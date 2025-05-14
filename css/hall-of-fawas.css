@@ -1,0 +1,43 @@
+/*-----------Hall Of Fawas----------*/
+.body-fawas {
+    background-color: #000;
+}
+
+.hall-of-fawas {
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+    text-shadow: #000000 1px 0 10px;
+}
+
+.hall-of-fawas h1 {
+    font-size: 36px;
+}
+
+.fawas-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.fawas-item {
+    /*background-color: #2d2d2d;*/
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(#0000001f, #00000054);
+}
+
+.fawas-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.fawas-item p {
+    font-size: 18px;
+    font-weight: bold;
+}

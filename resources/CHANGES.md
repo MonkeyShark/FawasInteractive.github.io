@@ -16,6 +16,11 @@ Plans:
 - Moved style.css to /css/ folder
 - Separated News Subpage CSS from style.css into news-subpage.css
 - Separated Games CSS from style.css into games.css
+- Separated News CSS from style.css into news.css
+- Separated Hall of Fawas CSS from style.css into hall-of-fawas.css
+- Separated 404 CSS from style.css into 404.css
+- Separated About CSS from style.css into about.css
+- Separated Contact CSS from style.css into contact.css
 
 # 2025-03-16
 
