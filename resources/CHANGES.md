@@ -13,10 +13,9 @@ Plans:
 - Added dropdown for filters to News page
 
 - Moved boostrap css files from "css/" to "css/bootstrap/"
-
 - Moved style.css to /css/ folder
-
 - Separated News Subpage CSS from style.css into news-subpage.css
+- Separated Games CSS from style.css into games.css
 
 # 2025-03-16
 
