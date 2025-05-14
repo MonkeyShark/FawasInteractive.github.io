@@ -14,6 +14,10 @@ Plans:
 
 - Moved boostrap css files from "css/" to "css/bootstrap/"
 
+- Moved style.css to /css/ folder
+
+- Separated News Subpage CSS from style.css into news-subpage.css
+
 # 2025-03-16
 
 - Removed "i-am-poor-and-ugly.html", sorry :(
