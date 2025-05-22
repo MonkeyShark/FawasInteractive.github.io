@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cura Bellum</title>
+  <style>
+    :root {
+      --bg-dark: #2a2418; /* Dark mud brown */
+      --bg-panel: #3b3323; /* Tarnished bronze-brown */
+      --border-dark: #5c4f36; /* Dull bronze */
+      --text-light: #d8cbb5; /* Aged parchment off-white */
+      --accent-green: #6b7d3e; /* Sickly olive green */
+      --accent-red: #8b2c2c; /* Deep crimson */
+      --accent-yellow: #a68a4b; /* Tarnished gold */
+      --card-bg: #403829; /* Darker bronze for empty regions */
+      --card-hover: #5c4f36; /* Matches border-dark */
+      --highlight-bg: #3f4a3f; /* Muted green-gray */
+      --virus-gradient: linear-gradient(135deg, #7a1f1f, #b85c38); /* Blood red to rust */
+      --ceva-gradient: linear-gradient(135deg, #3b6b6b, #5e7d3e); /* Teal to olive */
+      --title-green: #8aa347; /* Brighter sickly green */
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Roboto', Arial, sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: var(--bg-panel);
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--title-green);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      opacity: 0.85;
+    }
+
+    .main-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: var(--bg-dark);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .main-menu h2 {
+      font-size: 2rem;
+      color: var(--title-green);
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    .main-menu button {
+      background-color: var(--accent-red);
+      color: var(--text-light);
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0.5rem;
+      transition: background-color 0.2s;
+    }
+
+    .main-menu button:hover {
+      background-color: #a13636; /* Lighter crimson */
+    }
+
+    .win-screen {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 20;
+    }
+
+    .win-screen h2 {
+      font-size: 3rem;
+      color: var(--title-green);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      margin-bottom: 2rem;
+    }
+
+    .win-screen button {
+      background-color: var(--accent-red);
+      color: var(--text-light);
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .win-screen button:hover {
+      background-color: #a13636;
+    }
+
+    .status {
+      background-color: var(--accent-yellow);
+      color: var(--bg-dark);
+      text-align: center;
+      padding: 0.8rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+
+    .score-panel {
+      background-color: var(--bg-panel);
+      padding: 1rem;
+      text-align: center;
+      color: var(--text-light);
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-around;
+      margin: 0.5rem auto;
+      max-width: 1200px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+
+    .score-panel .team {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .message-log {
+      background-color: var(--bg-panel);
+      padding: 1rem;
+      max-height: 150px;
+      overflow-y: auto;
+      margin: 0.5rem auto;
+      max-width: 1200px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+
+    .message-log p {
+      margin: 0.2rem 0;
+      opacity: 0.9;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .message-log p.latest {
+      background-color: var(--highlight-bg);
+      padding: 0.3rem;
+      border-radius: 4px;
+      animation: fadeOut 3s forwards;
+    }
+
+    @keyframes fadeOut {
+      0% { background-color: var(--highlight-bg); }
+      100% { background-color: transparent; }
+    }
+
+    .team-icon {
+      font-size: 1.2rem;
+    }
+
+    .virus-icon::before { content: "🦠"; }
+    .ceva-icon::before { content: "🛡️"; }
+
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: none;
+    }
+
+    .region {
+      background-color: var(--bg-panel);
+      border: 2px solid var(--border-dark);
+      border-radius: 10px;
+      padding: 1rem;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .region:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .region h3 {
+      color: var(--title-green);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+      letter-spacing: 0.5px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .empty-region {
+      text-align: center;
+      color: var(--accent-yellow);
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-top: 0.5rem;
+    }
+
+    .controls {
+      background-color: var(--bg-panel);
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+
+    .controls button {
+      background-color: var(--accent-red);
+      color: var(--text-light);
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0.5rem;
+      transition: background-color 0.2s;
+    }
+
+    .controls button:hover {
+      background-color: #a13636;
+    }
+
+    .hands {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .hand {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+    }
+
+    .hand h3 {
+      color: var(--title-green);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+      letter-spacing: 0.5px;
+    }
+
+    .card {
+      border: 1px solid var(--border-dark);
+      border-radius: 8px;
+      padding: 0.8rem;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      color: var(--text-light);
+      font-size: 0.8rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .card.virus {
+      background: var(--virus-gradient);
+    }
+
+    .card.ceva {
+      background: var(--ceva-gradient);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      background: var(--card-hover);
+    }
+
+    .card strong {
+      color: var(--text-light);
+      font-weight: bold;
+    }
+
+    .card small {
+      color: var(--text-light);
+      opacity: 0.8;
+      font-size: 0.7rem;
+    }
+
+    @media (max-width: 768px) {
+      .game-board {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      header h1 { font-size: 2rem; }
+      .region h3 { font-size: 1.2rem; }
+      .hand h3 { font-size: 1.1rem; }
+      .status, .score-panel, .message-log { font-size: 0.9rem; }
+      .hand { min-width: 100%; }
+      .cards { grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); }
+      .card { font-size: 0.7rem; }
+      .card small { font-size: 0.65rem; }
+      .main-menu h2 { font-size: 1.5rem; }
+      .main-menu button { font-size: 1rem; padding: 0.8rem 1.5rem; }
+      .win-screen h2 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-menu" id="mainMenu">
+    <h2>Cura Bellum</h2>
+    <button onclick="startGame('Virus')">Play as Virus vs. CEVA Bot</button>
+    <button onclick="startGame('CEVA')">Play as CEVA vs. Virus Bot</button>
+    <button onclick="startGame('Player')">Player vs. Player</button>
+  </div>
+
+  <div class="win-screen" id="winScreen">
+    <h2 id="winMessage">Game Over!</h2>
+    <button onclick="resetGame()">Replay</button>
+  </div>
+
+  <header>
+    <h1>Cura Bellum</h1>
+    <p>Virus vs. CEVA - By Ethan Fulmer</p>
+  </header>
+
+  <div class="status" id="statusBar">Round 1 – Current Player: Virus</div>
+  <div class="score-panel" id="scorePanel">
+    <div class="team"><span class="virus-icon"></span> Virus: <span>0 regions</span></div>
+    <div class="team"><span class="ceva-icon"></span> CEVA: <span>0 regions</span></div>
+  </div>
+  <div class="message-log" id="messageLog"></div>
+  <div class="game-board" id="gameBoard"></div>
+
+  <div class="controls" id="controls">
+    <button onclick="endTurn()">End Turn</button>
+    <div class="hands">
+      <div>
+        <h3><span class="virus-icon"></span> Virus Hand</h3>
+        <div class="hand" id="virusHand"></div>
+      </div>
+      <div>
+        <h3><span class="ceva-icon"></span> CEVA Hand</h3>
+        <div class="hand" id="cevaHand"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="card.js"></script>
+  <script src="bot.js"></script>
+</body>
+</html>
