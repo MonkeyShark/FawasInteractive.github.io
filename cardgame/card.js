@@ -195,23 +195,95 @@ function renderHands() {
 
   gameState.hands.Virus.forEach((card, idx) => {
     const cardDiv = document.createElement("div");
-    cardDiv.className = "card virus";
+    cardDiv.className = "card virus draggable";
+    cardDiv.setAttribute("draggable", "true");
+    cardDiv.setAttribute("data-card", card);
+    cardDiv.setAttribute("data-index", idx);
     cardDiv.innerHTML = `<strong>${card}</strong><br><small>${cardDescriptions[card]}</small>`;
     if (currentPlayer === "Virus" && (playerRole === "Virus" || !botActive)) {
       cardDiv.onclick = () => selectCard(idx, card);
+      cardDiv.ondragstart = (e) => dragStart(e, idx, card);
+      cardDiv.ondragend = dragEnd;
     }
     virusHandDiv.appendChild(cardDiv);
   });
 
   gameState.hands.CEVA.forEach((card, idx) => {
     const cardDiv = document.createElement("div");
-    cardDiv.className = "card ceva";
+    cardDiv.className = "card ceva draggable";
+    cardDiv.setAttribute("draggable", "true");
+    cardDiv.setAttribute("data-card", card);
+    cardDiv.setAttribute("data-index", idx);
     cardDiv.innerHTML = `<strong>${card}</strong><br><small>${cardDescriptions[card]}</small>`;
     if (currentPlayer === "CEVA" && (playerRole === "CEVA" || !botActive)) {
       cardDiv.onclick = () => selectCard(idx, card);
+      cardDiv.ondragstart = (e) => dragStart(e, idx, card);
+      cardDiv.ondragend = dragEnd;
     }
     cevaHandDiv.appendChild(cardDiv);
   });
+
+  // Add drag-and-drop listeners to regions
+  regions.forEach(region => {
+    const regionDiv = document.getElementById(region);
+    regionDiv.ondragover = (e) => dragOver(e, region);
+    regionDiv.ondragenter = (e) => dragEnter(e, region);
+    regionDiv.ondragleave = (e) => dragLeave(e, region);
+    regionDiv.ondrop = (e) => drop(e, region);
+  });
+}
+
+function dragStart(e, index, card) {
+  if (currentPlayer === "Virus" && (playerRole !== "Virus" && botActive)) return;
+  if (currentPlayer === "CEVA" && (playerRole !== "CEVA" && botActive)) return;
+  e.dataTransfer.setData("text/plain", JSON.stringify({ index, card }));
+  e.target.classList.add("dragging");
+  selectedCardIndex = index;
+  selectedCard = card;
+}
+
+function dragEnd(e) {
+  e.target.classList.remove("dragging");
+}
+
+function dragOver(e, region) {
+  e.preventDefault();
+  // Check if the region is a valid drop target
+  if (currentPlayer === "CEVA" && gameState.activeEffects.some(e => (e.effect === "Civil Unrest" || e.effect === "Immune Suppressor") && e.region === region && e.turnsRemaining > 0)) {
+    document.getElementById(region).classList.add("dropzone-blocked");
+  } else if (selectedCard === "Spread" && !canUseSpread(region)) {
+    document.getElementById(region).classList.add("dropzone-blocked");
+  } else if (selectedCard === "Memory Cells" && gameState.playedCards.length === 0) {
+    document.getElementById(region).classList.add("dropzone-blocked");
+  } else {
+    document.getElementById(region).classList.add("dropzone");
+  }
+}
+
+function dragEnter(e, region) {
+  e.preventDefault();
+  if (currentPlayer === "CEVA" && gameState.activeEffects.some(e => (e.effect === "Civil Unrest" || e.effect === "Immune Suppressor") && e.region === region && e.turnsRemaining > 0)) {
+    document.getElementById(region).classList.add("dropzone-blocked");
+  } else if (selectedCard === "Spread" && !canUseSpread(region)) {
+    document.getElementById(region).classList.add("dropzone-blocked");
+  } else if (selectedCard === "Memory Cells" && gameState.playedCards.length === 0) {
+    document.getElementById(region).classList.add("dropzone-blocked");
+  } else {
+    document.getElementById(region).classList.add("dropzone");
+  }
+}
+
+function dragLeave(e, region) {
+  document.getElementById(region).classList.remove("dropzone", "dropzone-blocked");
+}
+
+function drop(e, region) {
+  e.preventDefault();
+  document.getElementById(region).classList.remove("dropzone", "dropzone-blocked");
+  const data = JSON.parse(e.dataTransfer.getData("text/plain"));
+  selectedCardIndex = data.index;
+  selectedCard = data.card;
+  placeCard(region);
 }
 
 function selectCard(index, card) {
@@ -235,10 +307,14 @@ function placeCard(region) {
   }
   if (selectedCard === "Spread" && !canUseSpread(region)) {
     addMessage(`No virus cards to move in ${region}!`);
+    selectedCardIndex = null;
+    selectedCard = null;
     return;
   }
   if (selectedCard === "Memory Cells" && gameState.playedCards.length === 0) {
     addMessage(`No cards to replay with Memory Cells!`);
+    selectedCardIndex = null;
+    selectedCard = null;
     return;
   }
   if (gameState.activeEffects.some(e => e.effect === "Heat Resistance" && e.region === region && (selectedCard === "Fever" || selectedCard === "Inflammation" || selectedCard === "Government Response"))) {
@@ -256,6 +332,9 @@ function placeCard(region) {
   renderHands();
   updateAllRegionsUI();
   updateScores();
+  if (botActive && playerRole !== currentPlayer) {
+    setTimeout(playBotTurn, 1000);
+  }
 }
 
 function canUseSpread(region) {
@@ -415,6 +494,8 @@ function applyCardEffect(region, card) {
 
 function updateRegionUI(region) {
   const regionDiv = document.getElementById(region);
+  regionDiv.classList.add(region.toLowerCase().replace(/\s+/g, "-"));
+
   const cardsDiv = regionDiv.querySelector(".cards");
   const title = regionDiv.querySelector("h3");
   const controlIcon = title.querySelector(".control-icon");

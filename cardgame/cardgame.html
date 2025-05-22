@@ -7,29 +7,36 @@
   <style>
     :root {
       --bg-dark: #2a2418; /* Dark mud brown */
-      --bg-panel: #3b3323; /* Tarnished bronze-brown */
+      --bg-panel: #423e34; /* Tarnished bronze-brown */
       --border-dark: #5c4f36; /* Dull bronze */
-      --text-light: #d8cbb5; /* Aged parchment off-white */
-      --accent-green: #6b7d3e; /* Sickly olive green */
+      --text-light: #e6cb9b; /* Aged parchment off-white */
+      --accent-green: #50661a; /* Sickly olive green */
       --accent-red: #8b2c2c; /* Deep crimson */
-      --accent-yellow: #a68a4b; /* Tarnished gold */
+      --accent-yellow: #ffffff; /* Tarnished gold */
       --card-bg: #403829; /* Darker bronze for empty regions */
       --card-hover: #5c4f36; /* Matches border-dark */
       --highlight-bg: #3f4a3f; /* Muted green-gray */
       --virus-gradient: linear-gradient(135deg, #7a1f1f, #b85c38); /* Blood red to rust */
       --ceva-gradient: linear-gradient(135deg, #3b6b6b, #5e7d3e); /* Teal to olive */
-      --title-green: #8aa347; /* Brighter sickly green */
+      --title-green: #c6e966; /* Brighter sickly green */
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background-color: var(--bg-dark);
-      color: var(--text-light);
-      font-family: 'Roboto', Arial, sans-serif;
-      line-height: 1.5;
-      overflow-x: hidden;
-    }
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+  background-image: 
+    linear-gradient(rgba(42, 36, 24, 0.85), rgba(42, 36, 24, 0.85)),
+    url('brains.png');
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  background-attachment: fixed;
+}
+
 
     header {
       background-color: var(--bg-panel);
@@ -127,8 +134,28 @@
       background-color: #a13636;
     }
 
+    /* Dragging styles */
+.card.draggable {
+  cursor: grab;
+}
+
+.card.dragging {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+.region.dropzone {
+  border: 2px dashed var(--accent-yellow);
+  background-color: var(--highlight-bg);
+}
+
+.region.dropzone-blocked {
+  border: 2px dashed var(--accent-red);
+  cursor: not-allowed;
+}
+
     .status {
-      background-color: var(--accent-yellow);
+      background-color: #a53535;
       color: var(--bg-dark);
       text-align: center;
       padding: 0.8rem;
@@ -243,6 +270,49 @@
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
       letter-spacing: 0.5px;
     }
+
+    .region.north-america {
+  background-image: url('grass.png');
+  background-size: cover;
+  background-blend-mode: overlay;
+    }
+
+    .region.south-america {
+    background-image: url('grass1.png');
+    background-size: cover;
+    background-blend-mode: overlay;
+    }
+
+    .region.africa {
+    background-image: url('sand.png');
+    background-size: cover;
+    background-blend-mode: overlay;
+    }
+
+    .region.europe {
+    background-image: url('stone.png');
+    background-size: cover;
+    background-blend-mode: overlay;
+    }
+
+    .region.asia {
+    background-image: url('planks.png');
+    background-size: cover;
+    background-blend-mode: overlay;
+    }
+
+    .region.oceania {
+    background-image: url('sand.png');
+    background-size: cover;
+    background-blend-mode: overlay;
+    }
+
+    .region.antarctica {
+    background-image: url('snow.png');
+    background-size: cover;
+    background-blend-mode: overlay;
+    }
+
 
     .cards {
       display: grid;
@@ -369,6 +439,7 @@
 <body>
   <div class="main-menu" id="mainMenu">
     <h2>Cura Bellum</h2>
+    <p>May have issues. Tried to get as many fixed as possible.</p>
     <button onclick="startGame('Virus')">Play as Virus vs. CEVA Bot</button>
     <button onclick="startGame('CEVA')">Play as CEVA vs. Virus Bot</button>
     <button onclick="startGame('Player')">Player vs. Player</button>
