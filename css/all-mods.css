@@ -22,8 +22,8 @@
     font-size: 20px;
     text-align: center;
     padding-top: 10px;
-    font-family: cursive;
-    animation: slideIn 1s ease-in-out; /* Slide-in for title text */
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;;
+    animation: slideIn 1s ease-in-out; /* Slide-in for title */
 }
 
 .mod-description-text-box {
@@ -44,7 +44,7 @@
     text-align: center;
     color: white;
     font-size: 16px;
-    font-family: cursive;
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;;
 }
 
 /* Keyframes for animations */
@@ -74,6 +74,31 @@
     }
 }
 
+.mod-stats {
+    margin-top: 10px;
+    text-align: center;
+}
+.stats-box {
+    background: rgba(31, 31, 31, 0.8);
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #705373;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+.stats-txt {
+    margin: 2px 0;
+    color: white;
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;;
+    font-size: 14px;
+    text-shadow: #000000 1px 0 5px;
+}
+.stats-date {
+    margin: 5px 0 0;
+    color: #b0b0b0; /* Lighter gray */
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;;
+    font-size: 12px;
+    text-shadow: #000000 1px 0 3px;
+}
 
 /* These are used for "Mods" filtering */
 .filterDiv {
