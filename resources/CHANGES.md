@@ -1,6 +1,10 @@
 Plans:
 -Remake Games page, smaller format, hide unnecessary info
 
+# 2025-06-11
+
+- Changed things around on mods.html, added bloody footprints mod
+
 # 2025-05-13
 
 - Made news pages load from markdown files to make blog creation easier.
