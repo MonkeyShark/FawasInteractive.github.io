@@ -1,6 +1,12 @@
 Plans:
 -Remake Games page, smaller format, hide unnecessary info
 
+# 2025-06-12
+
+- Revamped About page, rewrote basically everything on there. Added pictures for me and the sheep.
+- Updated FawasInteractive_Icon.png with the modern icon (long time coming), and changed it to .webp
+- Fixed bug where Chimp Chowder images on the Games page weren't showing
+
 # 2025-06-11
 
 - Changed things around on mods.html, added bloody footprints mod

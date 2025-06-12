@@ -1,122 +1,240 @@
-/*-----------About----------*/
+/* About Section */
 .about {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 40px 20px; /* Add space around content */
+    padding: 40px 20px;
     text-shadow: 1px 0 10px #000000;
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 .about-header {
-    color: #d3d3d3; /* Softer than lightgray */
+    color: #ffffff;
+    font-size: 60px;
     text-align: center;
-    text-shadow: 1px 0 10px #000000;
-    margin-bottom: 30px; /* Space below header */
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+    margin: 40px 0;
+}
+
+.about-header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.header-subtitle {
+    font-size: 1.2rem;
+    color: #66ccff;
+    margin-top: 10px;
 }
 
 .body-about {
     background-image: url("/images/Banners/About.png");
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Desktop default */
-    color: #d3d3d3;
-    min-height: 100vh; /* Full page coverage */
+    background-attachment: fixed;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.about-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.about-secondary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .about-card {
-    background-image: linear-gradient(#1f1f1f, #101010);
-    color: #fff;
-    border-radius: 15px; /* Softer edges */
-    padding: 25px;
-    margin: 20px;
-    max-width: 30%;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-image: linear-gradient(rgb(31, 31, 31), rgb(16, 16, 16));
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+    opacity: 0;
 }
 
-    .about-card:hover {
-        transform: translateY(-5px); /* Subtle lift */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    }
-
-.about-card-wide {
-    max-width: 60%;
-    text-align: center;
+.about-card.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.about-card h1,
+.about-card.animate-card {
+    transform: translateY(0px);
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.about-card-large {
+    min-height: 400px;
+}
+
 .about-card h3 {
     text-align: center;
-    color: #fff;
-    font-family: 'Arial', sans-serif; /* Cleaner font */
+    font-size: 1.8rem;
+    font-family: 'Arial', sans-serif;
     margin-bottom: 15px;
-}
-
-.about-card h1 {
-    font-size: 2rem;
-}
-
-.about-card h3 {
-    font-size: 1.5rem;
+    color: #8770ed;
 }
 
 .about-card hr {
-    border-color: #fff;
+    border-color: #8770ed;
     margin: 20px auto;
-    width: 50%; /* Shorter, centered */
-    border-width: 1px;
+    width: 40%;
+    border-width: 2px;
 }
 
 .about-content {
-    margin-bottom: 20px;
-    line-height: 1.6; /* Better readability */
+    line-height: 1.7;
     font-size: 1.1rem;
 }
 
-.about-card ul {
-    padding-left: 25px;
-    list-style-type: disc; /* Clearer bullets */
-}
-
 .about-card a {
-    color: #66ccff; /* Brighter, themed link color */
+    color: #8770ed;
     text-decoration: none;
 }
 
-    .about-card a:hover {
-        text-decoration: underline;
-        color: #99ddff; /* Lighter on hover */
-    }
-
-/* Unchanged Logo CSS */
-.about-logo {
-    border-radius: 15px;
-    margin-top: -5px;
-    width: 50%;
-    height: auto;
+.about-card a:hover {
+    color: #8770ed;
+    text-decoration: underline;
 }
 
-/* Mobile Adjustments */
+.btn-primary {
+    color: white !important;
+    background-color: #291c63 !important;
+    border-color: #291c63 !important;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #291c63;
+    border-color: #291c63;
+}
+
+.team-photo {
+width: 100%;
+max-width: 400px;
+height: auto;
+border-radius: 10px;
+object-fit: cover;
+display: block;
+margin: 0 auto 20px;
+transition: transform 0.3s ease;
+}
+
+.team-photo:hover {
+    transform: scale(1.05);
+}
+
+/* Trivia & Inspirations Grid */
+.trivia-grid, .inspiration-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    text-align: left;
+}
+
+.trivia-item, .inspiration-item {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.trivia-item:hover, .inspiration-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.trivia-item h4, .inspiration-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #8770ed;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trivia-item p, .inspiration-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Card Styles (Trivia) */
+.trivia-item:nth-child(1) {
+    border-left: 4px solid #e8e3ff;
+}
+.trivia-item:nth-child(2) {
+    border-left: 4px solid #cf82bc;
+}
+.trivia-item:nth-child(3){
+    border-left: 4px solid #7a5c2e;
+}
+
+/* Card Styles (Inspo) */
+.inspiration-item:nth-child(1) {
+    border-left: 4px solid #30baff;
+}
+.inspiration-item:nth-child(2) {
+    border-left: 4px solid #da9a3b;
+}
+.inspiration-item:nth-child(3) {
+    border-left: 4px solid #917e67;
+}
+
+/* Mobile (this specifically) */
+@media (max-width: 768px) {
+    .trivia-grid, .inspiration-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .trivia-item, .inspiration-item {
+        padding: 15px;
+    }
+
+    .trivia-item h4, .inspiration-item h4 {
+        font-size: 1.1rem;
+    }
+
+    .trivia-item p, .inspiration-item p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
     .body-about {
-        background-attachment: scroll; /* Fix for mobile */
+        background-attachment: scroll;
+    }
+
+    .about-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-subtitle {
+        font-size: 1rem;
     }
 
     .about {
         padding: 20px 10px;
     }
 
-    .about-header h1 {
-        font-size: 2.5rem; /* Smaller but bold */
+    .about-main, .about-secondary {
+        grid-template-columns: 1fr;
     }
 
-    .about-card {
-        max-width: 100%; /* Full width on mobile */
-        margin: 15px 0;
-    }
-
-    .about-card-wide {
-        max-width: 100%; /* Stack naturally */
+    .about-card-large {
+        min-height: auto;
     }
 }

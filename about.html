@@ -1,73 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Everything you need to know about Fawas Interactive.">
-    <meta name="keywords" content="Fawas Interactive, FawaStudios, Fawas Interactive, Fawas, Clown, Sheep, Games, Game Development">
+    <meta name="description" content="About Fawas Interactive, a game development studio.">
+    <meta name="keywords" content="Fawas Interactive, FawaStudios, Game Development, Indie Games, Clown Clear, Fawas">
     <meta content="https://www.fawasinteractive.com/about" property="og:url">
     <meta content="#3F3787" data-react-helmet="true" name="theme-color">
-    <meta property="og:image" content="https://fawasinteractive.com/images/General/FawasInteractive_Icon.png">
+    <meta property="og:image" content="https://fawasinteractive.com/images/General/FawasInteractive_Icon.webp">
     <title>About - Fawas Interactive</title>
-    <link rel="shortcut icon" type="image/png" href="images/General/FawasInteractive_Icon.png">
+    <link rel="shortcut icon" type="image/png" href="images/General/FawasInteractive_Icon.webp">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/about.css">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
-<body class="body-about" style="background-color: black">
-
-    <!------nav bar-------->
+<body class="body-about">
+    <!-- Navbar -->
     <div id="navbar-placeholder"></div>
     <script>
         fetch('/navbar.html')
             .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-            })
+            .then(data => document.getElementById('navbar-placeholder').innerHTML = data)
             .catch(error => console.error('Error loading navbar:', error));
     </script>
 
-    <!-- Main Content -->
+    <!-- Header -->
     <div class="about-header">
-        <p></p>
-        <h1 style="font-size: 60px; color: white; text-shadow: 4px 4px 2px rgba(0,0,0,0.6); padding-top: 20px;">ABOUT US</h1>
+        <h1>ABOUT</h1>
     </div>
+
+    <!-- Main Content -->
     <section class="about">
-        <div class="about-card">
-            <div class="about-content">
-                <h3><strong><u>Fawas Interactive</u></strong></h3>
-                <hr>
-                <p>Fawas Interactive first made its entry into the game industry to fulfill the creative itch of an avid gamer, with the goal of creating various amounts of fun and unique experiences.</p>
-                <p>Beginning in 2017 (under the former name: FawaStudios), a large amount of nearly lost-to-time projects were created, some bad, and some downright horrible. However, amidst that steaming pile of garbage came some very valuable lessons and a lot of experience.</p>
-                <p>Flashing forward, Fawas Interactive is still moving along in pursuit of its original goal, with no plans to stop. We sincerely hope you join us as we continue to learn, grow, and create.</p>
+        <div class="about-main">
+            <!-- Company Info -->
+            <div class="about-card about-card-large animate-card">
+                <div class="about-content">
+                    <h3><strong><u>Fawas Interactive</u></strong></h3>
+                    <hr>
+                    <p>Fawas Interactive is a game development company driven by big ambitions and a passion for creating fun, unique experiences. We believe in giving players the freedom to enjoy and shape their experience however they want, and I’m committed to supporting things like user-generated content and optimization in any way I reasonably can.</p>
+                    <p>Beginning in 2017 (under the former name: <em>FawaStudios</em>), a large amount of nearly lost-to-time projects were created, some bad, and some basically unplayable. But every misstep taught me something, helped me improve, and kept me committed to making things people can actually enjoy.</p>
+                    <p>All these years later, Fawas Interactive is still here and still rapidly improving, much faster than before. It'd be great if you could join us on Discord, check out our latest games, and / or become part of the community, each person that benefits from Fawas Interactive is another massive reason to keep going!</p>
+                    <a href="https://discord.com/invite/BGg7pRxaUe" class="btn btn-primary btn-sm">Join Our Community</a>
+                    <img src="images/General/FawasInteractive_Icon.webp" alt="Fawas, Mascot of Fawas Interactive" class="team-photo">
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="about-card about-card-large animate-card">
+                <div class="about-content">
+                    <h3><strong><u>Meet the Team (Me)</u></strong></h3>
+                    <hr>
+                    <div class="team-profile">
+                        <img src="images/Team/Ethan.webp" alt="Ethan, Founder of Fawas Interactive" class="team-photo">
+                        <p>My name's Ethan, and I'm the person responsible for Fawas Interactive. I'm a picky game enthusiast (picky everything enthusiast actually) with a love of all things game development and a burning desire to make positive change in the industry. As cheesy as that sounds, I don't know if I can word it any better without underemphasizing how much it means to me.</p>
+                        <p>I'm very passionate about what I do, and Fawas gives me an outlet to share my love for things like Halloween, FPS games, the Source engine, camping, and spooky atmospheres. My life is far from perfect and I often feel like having key interests feels surreal, but when the overwhelming nature of life breaks me down, feeling like I'm creating for the greater good builds me back up, even if it takes some time to.</p>
+                        <p>Outside of treating my game development studio like it's going to grant me immortality, I really love social hangouts, crime dramas (recently <em>Dexter</em> and <em>The Punisher</em>), eating food, and listening to music (primarily rock). </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="about-card">
-            <div class="about-content">
-                <h3><strong><u>Meet the Team (of One)</u></strong></h3>
-                <hr>
-                <p>My name's Ethan, and I'm the creative force behind Fawas Interactive. I'm a picky game enthusiast from the United States with a love of all things game development and a burning desire to make positive change in the industry.</p>
-                <p>I'm very passionate about what I do, and Fawas gives me an outlet to share my love for things like Halloween, FPS games, the Source engine, camping, and everything spooky.</p>
-                <p>When I'm not rambling to my friends about game development, I'm either obsessing over old zombie games, eating (my favorite), listening to rock music, or drawing.</p>
+
+        <!-- Secondary Content -->
+        <div class="about-secondary">
+            <!-- Trivia Section -->
+            <div class="about-card animate-card">
+                <div class="about-content">
+                    <h3><strong><u>Quick Trivia</u></strong></h3>
+                    <hr>
+                    <div class="trivia-grid">
+                        <div class="trivia-item">
+                            <h4><i class="fas fa-sheep"></i> Fawas The Sheep</h4>
+                            <p>Our beautiful sheep mascot, Fawas, short for "Fleece As White As Snow," is one of our most valuable assets. He's based off of a real stuffed sheep I still have, that will be framed on my office wall once I succeed in becoming rich and famous.</p>
+                        </div>
+                        <div class="trivia-item">
+                            <h4><i class="fas fa-gamepad"></i> Clown Clear</h4>
+                            <p><a href="https://www.clownclear.com/about.html">Clown Clear</a> is currently our most heavily developed project and has been steadily moving forward for a few years now. It contains zombie clowns, violence, pink clown goo, guts, guns, everything you'd want.</p>
+                        </div>
+                        <div class="trivia-item">
+                            <h4><i class="fas fa-cube"></i> First Game</h4>
+                            <p>“Box Game”, it featured a player controller, a weird bean-stalk, and a big brick box accessible after simple parkour. If you were lucky enough to make it through the 5 janky jumps using the movement system that I may or may not have stolen from a youtube tutorial, you'd hop in and find a sphere. That was probably really funny to me back then.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inspirations Section -->
+            <div class="about-card animate-card">
+                <div class="about-content">
+                    <h3><strong><u>Inspirations</u></strong></h3>
+                    <hr>
+                    <div class="inspiration-grid">
+                        <div class="inspiration-item">
+                            <h4><i class="fas fa-code"></i> S&box</h4>
+                            <p>A game engine like <em>Unity</em> or <em>Unreal</em> with minimal bloat built on the <em>Source 2</em> engine (Source games are my favorite). The project is planned to have a platform mode similar to <em>Roblox</em>, but also a standalone exporter where they don't take any royalties, it's the successor to <em>Garry's Mod</em>, a game built entirely around modding and community. It's currently in a developer preview, but it's still my choice of game engine for most if not all 3D games from this point on, as it's leagues better than anything I've used before.</p>
+                        </div>
+                        <div class="inspiration-item">
+                            <h4><i class="fas fa-zombie"></i> The Indie Stone</h4>
+                            <p>Makers of <em>Project Zomboid</em>, a deeply immersive and moddable zombie survival game that’s all about realism and sandbox freedom. It takes everything I love about sandbox games and amplifies it by 200%, you can move almost any furniture or item, and place it anywhere you want, with the only limitation being your imagination and the fact computers have performance requirements. Not only that, you can drive your car into a grocery store if the door’s big enough. Their dedication to player freedom, and spending years to iron out the kinks on a project they care deeply for, is unlike any other I've seen on the scale they've managed to make for themselves.</p>
+                        </div>
+                        <div class="inspiration-item">
+                            <h4><i class="fas fa-tv"></i> Over The Garden Wall</h4>
+                            <p>One of the best shows I've ever seen, <em>Over The Garden Wall</em> falls perfectly in line with what my definition of a masterpiece is. The writing is great, the characters are great, the voice acting is great, the music is great, the art is great, it'd be a hard sell to get me to find something in the show I can't point out as great. On a more objective note though, the team who created it clearly had a lot of passion for it, and took a lot of care to make sure it was impossible to screw up. Nothing gives me the same feeling I get when I rewatch it, or see clips of it, and the atmosphere they built never leaves me when I'm designing my games.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="about-card about-card-wide">
-            <div class="about-content">
-                <h3><strong><u>Quick Trivia</u></strong></h3>
-                <hr>
-                <p>Get to know Fawas Interactive further with some quick trivia!</p>
-                <strong>Fawas The Sheep:</strong><br>You may have noticed the adorable sheep mascot scattered throughout our branding, we call him Fawas, short for "Fleece As White As Snow".<br><br>
-                <strong>Clown Clear:</strong><br>Clown Clear is currently our most heavily developed project and has been steadily moving forward for a few years now. You can find out more at: <a href="https://www.clownclear.com/about.html">www.clownclear.com/about</a><br><br>
-                <strong>First Game:</strong><br>Fawas' first ever game was called “Box Game”. It featured a player controller, a weird bean-stalk looking thing, and a big brick box accessible after some simple parkour. If you were lucky enough to make it through the 5 janky jumps using the movement system that I may or may not have stolen from a youtube tutorial, you'd hop in and find a sphere. That was probably really funny to me back then.
-            </div>
-        </div>
-        <img src="images/Banners/About_Logo.png" class="about-logo">
     </section>
 
+    <!-- Footer -->
     <footer class="footer-section">
         <div class="container">
             <p>© 2025 Fawas Interactive. All rights reserved.</p>
@@ -84,11 +127,23 @@
     <div id="cookie-popup" class="alert alert-dark text-center mb-0" role="alert">
         🍪🐑 This website uses cookies to improve your experience.
         <a href="cookiepolicy.html">Learn more</a>
-        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">
-            I Got It
-        </button>
+        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="hideCookiePopup()">I Got It</button>
     </div>
 
     <script src="js/bootstrap.js"></script>
+    <script>
+        // Scroll animation for cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.animate-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.2 });
+            cards.forEach(card => observer.observe(card));
+        });
+    </script>
 </body>
 </html>
