@@ -1,6 +1,11 @@
 Plans:
 -Remake Games page, smaller format, hide unnecessary info
 
+# 2025-07-21
+
+- Updated stats for Bodily Functions mod on Mods page
+- Updated about page
+
 # 2025-06-12
 
 - Revamped About page, rewrote basically everything on there. Added pictures for me and the sheep.
