@@ -5,6 +5,7 @@ Plans:
 
 - Updated stats for Bodily Functions mod on Mods page
 - Updated about page
+- Added Despawn Engine to Projects page
 
 # 2025-06-12
 
